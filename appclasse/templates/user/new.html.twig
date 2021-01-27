@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New User{% endblock %}
+
+{% block body %}
+    <section class="container s ">
+        <div class="columns is-multiline">
+            <div class="column is-8 is-offset-2 register">
+                <div class="columns">
+                    <div class="column left valtext">
+                        <h1 class="title is-1">Registrat com a Arbitre!</h1>
+                        <h2 class="subtitle colored is-4">Crea els millors torneigos</h2>
+                        <p>'De pocas partidas he aprendido tanto como de la mayoría de mis derrotas. (J. R. Capablanca, ex campeón del mundo)'</p>
+                    </div>
+                    <div class="column right has-text-centered">
+                        <h1 class="title is-4">Registrat ara!</h1>
+                        <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit</p>
+
+                        {{ include('user/_form.html.twig') }}
+                        {% for message in app.flashes('error')%}
+                            <div class="notification is-danger">
+                                <button class="delete"></button>
+                                {{  message  }}
+                            </div>
+                        {% endfor %}
+                        {% for message in app.flashes('success')%}
+                            <div class="notification is-success">
+                                <button class="delete"></button>
+                                {{  message  }}
+                            </div>
+                        {% endfor %}
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    {#<a href="{{ path('user_index') }}">back to list</a>#}
+{% endblock %}

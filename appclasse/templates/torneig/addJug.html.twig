@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Afegir Jugadors{% endblock %}
+
+{% block body %}
+<h1>Torneig index</h1>
+<h2>{{ bool }}</h2>
+<table class="table">
+    <thead>
+    <tr>
+        <th>Nom Jugador</th>
+        <th>Codi Fide</th>
+        <th>Elo Fide</th>
+        <th>Pais</th>
+        <th> {{ torneig.theParticipants|length }}</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for jugador in jugadors %}
+        <tr>
+        <td>{{ jugador.nom }}</td>
+        <td>{{ jugador.codiFide }}</td>
+        <td>{{ jugador.elo }}</td>
+        <td>{{ jugador.pais }}</td>
+            {% set alreadyIn = false %}
+        {% for theplay in jugadorsInTournament %}
+            {%if theplay.nom  == jugador.nom %}
+                {% set alreadyIn = true %}
+            {% endif %}
+        {% endfor %}
+            {% if alreadyIn == true %}
+                <td>
+                    <form {{ path('torneig_addJugadors',{'id': torneig.id}) }} method="post">
+                        <input type="hidden" value="delete" name="action">
+                        <input type="hidden" value="{{ jugador.id }}" name="idJug">
+                        <button>Borraa</button>
+                    </form>
+                </td>
+                {% else  %}
+                    <td>
+                        <form {{ path('torneig_addJugadors',{'id': torneig.id}) }} method="post">
+                            <input type="hidden" value="add" name="action">
+                            <input type="hidden" value="{{ jugador.id }}" name="idJug">
+                            <button>Afegir</button>
+                        </form>
+                    </td>
+            {% endif %}
+        </tr>
+
+            {% else %}
+
+        <tr>
+            <td colspan="6">no records found</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

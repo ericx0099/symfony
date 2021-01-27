@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Jugador{% endblock %}
+
+{% block body %}
+<section class="container s ">
+    <div class="columns is-multiline">
+
+        <div class="column is-8 is-offset-2 register">
+
+            <div class="columns">
+                <div class="column right has-text-centered">
+                    <h1 class="title is-4">Afageix Jugador</h1>
+              {#      <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit</p>#}
+                    {{ include('jugador/_form.html.twig') }}
+
+                    <a class="has-text-primary-dark" href="{{ path('jugador_index') }}">back to list</a>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}
