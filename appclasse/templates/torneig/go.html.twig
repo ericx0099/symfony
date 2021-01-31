@@ -1,0 +1,82 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ torneig.nom }}{% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+    <script src="//cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+{% endblock %}
+{% block body
+%}
+    <script>
+        $(document).ready( function () {
+            $('#tables').DataTable();
+        })
+    </script>
+    <h1 class="has-text-centered is-size-3 m-5 has-text-weight-bold ">Nom Torneig: <span class="has-text-primary">{{ torneig.nom }}</span></h1>
+    <div class="is-flex is-justify-content-center">
+        <div class="is-flex is-justify-content-space-evenly " style="width: 50%" >
+
+            <div class="level-item has-text-centered">
+                <div>
+                    <p class="heading is-size-7">Data</p>
+                    <p class="title is-size-3-mobile">{{ torneig.data ? torneig.data|date('Y-m-d') : '?' }}</p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered">
+                <div>
+                    <p class="heading is-size-7">Rondes</p>
+                    <p class="title is-size-3-mobile">{{ torneig.numRondes ? torneig.numRondes : '?' }}</p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered">
+                <div>
+                    <p class="heading is-size-7">Numero Participants</p>
+                    <p class="title is-size-3-mobile">{{ torneig.theParticipants ? torneig.theParticipants|length : '?'}}</p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered" id="getX">
+                <div>
+                    <p class="heading is-size-7">Arbitre:</p>
+                    <p class="title is-size-3-mobile">{{ torneig.propietari ? torneig.propietari.nom :'?' }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="has-text-centered has-text-primary  is-size-2 m-5">Rànquing inicial</p>
+
+    <div class="is-flex is-justify-content-center">
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th>T.</th>
+                <th>Nom</th>
+                <th>Fide</th>
+                <th>Club/Ciutat</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for jugador in torneig.theParticipants %}
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td><a href="{{ path("jugador_perfil",{'id':jugador.id}) }}">{{ jugador.nom }}</a></td>
+                    <td>{{ jugador.elo }}</td>
+                    <td>{{ jugador.equip }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <script>
+        let button = document.createElement("button");
+
+        button.className = "button is-primary";
+        button.innerText = "Rondes";
+        let x = document.getElementById("getX").getBoundingClientRect();
+        button.style.top = x.top+10+"px";
+        button.style.left = x.left+"px";
+        button.style.right = x.right+"px";
+        document.body.appendChild("button");
+
+    </script>
+{% endblock %}

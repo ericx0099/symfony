@@ -1,0 +1,32 @@
+version: '3.3'
+services:
+  myapp:
+    image: 'bitnami/symfony:1'
+    ports:
+      - '8000:8000'
+    volumes:
+      - '.:/app'
+    environment:
+      - SYMFONY_PROJECT_NAME=appclasse
+      - MARIADB_HOST=mariadb
+      - MARIADB_PORT_NUMBER=3306
+      - MARIADB_USER=eric
+      - MARIADB_PASSWORD=12345678
+      - MARIADB_DATABASE=dbtest
+    depends_on:
+      - mariadb
+
+  mariadb:
+    image: 'bitnami/mariadb:10.3'
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+      - MARIADB_USER=eric
+      - MARIADB_PASSWORD=12345678
+      - MARIADB_DATABASE=dbtest
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    environment:
+      PMA_HOST: mariadb
+    ports:
+      - "8090:80"

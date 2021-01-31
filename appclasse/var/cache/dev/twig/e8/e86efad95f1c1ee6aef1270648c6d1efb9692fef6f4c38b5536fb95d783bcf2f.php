@@ -1,0 +1,317 @@
+<?php
+
+use Twig\Environment;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Extension\SandboxExtension;
+use Twig\Markup;
+use Twig\Sandbox\SecurityError;
+use Twig\Sandbox\SecurityNotAllowedTagError;
+use Twig\Sandbox\SecurityNotAllowedFilterError;
+use Twig\Sandbox\SecurityNotAllowedFunctionError;
+use Twig\Source;
+use Twig\Template;
+
+/* user/torneigos.html.twig */
+class __TwigTemplate_89a59a9f5e4a46cb152599d599b2e77a4eb9a503104a7ac220c344df15c84016 extends Template
+{
+    private $source;
+    private $macros = [];
+
+    public function __construct(Environment $env)
+    {
+        parent::__construct($env);
+
+        $this->source = $this->getSourceContext();
+
+        $this->blocks = [
+            'title' => [$this, 'block_title'],
+            'style' => [$this, 'block_style'],
+            'body' => [$this, 'block_body'],
+        ];
+    }
+
+    protected function doGetParent(array $context)
+    {
+        // line 1
+        return "base.html.twig";
+    }
+
+    protected function doDisplay(array $context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "user/torneigos.html.twig"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "user/torneigos.html.twig"));
+
+        $this->parent = $this->loadTemplate("base.html.twig", "user/torneigos.html.twig", 1);
+        $this->parent->display($context, array_merge($this->blocks, $blocks));
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+    }
+
+    // line 3
+    public function block_title($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
+
+        echo "Afegir Jugadors";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 4
+    public function block_style($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "style"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "style"));
+
+        // line 5
+        echo "    <link rel=\"stylesheet\" href=\"//cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css\">
+    <script src=\"//cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js\"></script>
+";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 8
+    public function block_body($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
+
+        // line 9
+        echo "
+    <script>
+        \$(document).ready( function () {
+            \$('#tables').DataTable();
+        })
+    </script>
+
+
+    <h1 class=\"has-text-weight-bold is-size-2 has-text-centered\">Els meus torneigos</h1>
+    <div class=\"is-flex is-justify-content-center mt-5\">
+
+        <div style=\"width: 50%\">
+            <table class=\"table\" id=\"tables\">
+                <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Num. Rondes</th>
+                    <th>Data</th>
+                    <th>Num. Participants</th>
+                    <th>Id</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+
+                </tr>
+                </thead>
+                <tbody>
+                ";
+        // line 37
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 37, $this->source); })()), "torneigs", [], "any", false, false, false, 37));
+        $context['_iterated'] = false;
+        foreach ($context['_seq'] as $context["_key"] => $context["torneig"]) {
+            // line 38
+            echo "                    <tr>
+                        <td>";
+            // line 39
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["torneig"], "nom", [], "any", false, false, false, 39), "html", null, true);
+            echo "</td>
+                        <td>";
+            // line 40
+            ((twig_get_attribute($this->env, $this->source, $context["torneig"], "rondes", [], "any", false, false, false, 40)) ? (print (twig_escape_filter($this->env, twig_join_filter(twig_get_attribute($this->env, $this->source, $context["torneig"], "rondes", [], "any", false, false, false, 40), ", "), "html", null, true))) : (print ("")));
+            echo "</td>
+                        <td>";
+            // line 41
+            ((twig_get_attribute($this->env, $this->source, $context["torneig"], "data", [], "any", false, false, false, 41)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["torneig"], "data", [], "any", false, false, false, 41), "Y-m-d"), "html", null, true))) : (print ("")));
+            echo "</td>
+                        <td>";
+            // line 42
+            echo twig_escape_filter($this->env, twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, $context["torneig"], "theParticipants", [], "any", false, false, false, 42)), "html", null, true);
+            echo "</td>
+                        <td>";
+            // line 43
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["torneig"], "id", [], "any", false, false, false, 43), "html", null, true);
+            echo "</td>
+
+                        <td>
+                            <a class=\"button is-warning  is-small\" href=\"";
+            // line 46
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("torneig_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["torneig"], "id", [], "any", false, false, false, 46)]), "html", null, true);
+            echo "\">edit</a>
+                        </td>
+                        <td>
+                            <a class=\"button is-primary is-small\" href=\"";
+            // line 49
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("torneig_addJugadors", ["id" => twig_get_attribute($this->env, $this->source, $context["torneig"], "id", [], "any", false, false, false, 49)]), "html", null, true);
+            echo "\">Jugadors</a>
+                        </td>
+                        <td>
+                            <a class=\"button is-info  is-small\" href=\"";
+            // line 52
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("torneig_gestiorondes", ["id" => twig_get_attribute($this->env, $this->source, $context["torneig"], "id", [], "any", false, false, false, 52)]), "html", null, true);
+            echo "\">Rondes</a>
+                        </td>
+                        <td>
+                            <a class=\"button is-success  is-small\" href=\"";
+            // line 55
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("torneig_start", ["id" => twig_get_attribute($this->env, $this->source, $context["torneig"], "id", [], "any", false, false, false, 55)]), "html", null, true);
+            echo "\">Go!</a>
+                        </td>
+                    </tr>
+                ";
+            $context['_iterated'] = true;
+        }
+        if (!$context['_iterated']) {
+            // line 59
+            echo "                    <tr>
+                        <td colspan=\"6\">No tens torneigos</td>
+                    </tr>
+                ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['torneig'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 63
+        echo "                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+
+    <p  class=\"has-text-weight-bold is-size-4 has-text-centered m-5\"><a href=\"";
+        // line 70
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("torneig_blank");
+        echo "\">Create nou torneig</a></p>
+";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    public function getTemplateName()
+    {
+        return "user/torneigos.html.twig";
+    }
+
+    public function isTraitable()
+    {
+        return false;
+    }
+
+    public function getDebugInfo()
+    {
+        return array (  216 => 70,  207 => 63,  198 => 59,  189 => 55,  183 => 52,  177 => 49,  171 => 46,  165 => 43,  161 => 42,  157 => 41,  153 => 40,  149 => 39,  146 => 38,  141 => 37,  111 => 9,  101 => 8,  89 => 5,  79 => 4,  60 => 3,  37 => 1,);
+    }
+
+    public function getSourceContext()
+    {
+        return new Source("{% extends 'base.html.twig' %}
+
+{% block title %}Afegir Jugadors{% endblock %}
+{% block style %}
+    <link rel=\"stylesheet\" href=\"//cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css\">
+    <script src=\"//cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js\"></script>
+{% endblock %}
+{% block body %}
+
+    <script>
+        \$(document).ready( function () {
+            \$('#tables').DataTable();
+        })
+    </script>
+
+
+    <h1 class=\"has-text-weight-bold is-size-2 has-text-centered\">Els meus torneigos</h1>
+    <div class=\"is-flex is-justify-content-center mt-5\">
+
+        <div style=\"width: 50%\">
+            <table class=\"table\" id=\"tables\">
+                <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Num. Rondes</th>
+                    <th>Data</th>
+                    <th>Num. Participants</th>
+                    <th>Id</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+
+                </tr>
+                </thead>
+                <tbody>
+                {% for torneig in user.torneigs %}
+                    <tr>
+                        <td>{{ torneig.nom }}</td>
+                        <td>{{ torneig.rondes ? torneig.rondes|join(', ') : '' }}</td>
+                        <td>{{ torneig.data ? torneig.data|date('Y-m-d') : '' }}</td>
+                        <td>{{ torneig.theParticipants|length}}</td>
+                        <td>{{ torneig.id }}</td>
+
+                        <td>
+                            <a class=\"button is-warning  is-small\" href=\"{{ path('torneig_edit', {'id': torneig.id}) }}\">edit</a>
+                        </td>
+                        <td>
+                            <a class=\"button is-primary is-small\" href=\"{{ path('torneig_addJugadors', {'id': torneig.id}) }}\">Jugadors</a>
+                        </td>
+                        <td>
+                            <a class=\"button is-info  is-small\" href=\"{{ path('torneig_gestiorondes', {'id': torneig.id}) }}\">Rondes</a>
+                        </td>
+                        <td>
+                            <a class=\"button is-success  is-small\" href=\"{{ path('torneig_start', {'id': torneig.id}) }}\">Go!</a>
+                        </td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan=\"6\">No tens torneigos</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+
+    <p  class=\"has-text-weight-bold is-size-4 has-text-centered m-5\"><a href=\"{{ path('torneig_blank') }}\">Create nou torneig</a></p>
+{% endblock %}
+", "user/torneigos.html.twig", "/app/appclasse/templates/user/torneigos.html.twig");
+    }
+}

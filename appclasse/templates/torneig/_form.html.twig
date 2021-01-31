@@ -1,0 +1,6 @@
+{{ form_start(form) }}
+    {{ form_widget(form) }}
+    <br>
+<p>El numero de rondes és: <span id="demo"></span></p>
+    <button class="button is-block is-primary is-fullwidth is-medium mt-5">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }}

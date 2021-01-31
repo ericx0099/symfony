@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Torneig{% endblock %}
+
+{% block body %}
+    <h1>Torneig</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ torneig.id }}</td>
+            </tr>
+            <tr>
+                <th>Rondes</th>
+                <td>{{ torneig.rondes ? torneig.rondes|join(', ') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Data</th>
+                <td>{{ torneig.data ? torneig.data|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>TheParticipants</th>
+                <td>{{ torneig.theParticipants ? torneig.theParticipants|join(', ') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ torneig.nom }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('torneig_index') }}">back to list</a>
+
+    <a href="{{ path('torneig_edit', {'id': torneig.id}) }}">edit</a>
+
+    {{ include('torneig/_delete_form.html.twig') }}
+{% endblock %}

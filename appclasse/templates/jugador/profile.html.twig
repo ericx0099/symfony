@@ -1,0 +1,69 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Jugador{% endblock %}
+
+{% block body %}
+    <div class="all">
+        <h1 class="has-text-weight-bold is-size-2">Perfil de <span class="has-text-primary">{{ jugador.nom }}</span></h1>
+
+        <div>
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <th>Elo(Fide)</th>
+                        <td>{{ jugador.elo }}</td>
+                    </tr>
+                    <tr>
+                        <th>Nom</th>
+                        <td>{{ jugador.nom }}</td>
+                    </tr>
+                    <tr>
+                        <th>Pais</th>
+                        <td>{{ jugador.pais }}</td>
+                    </tr>
+                    <tr>
+                        <th>Equip</th>
+                        <td>{{ jugador.equip }}</td>
+                    </tr>
+                    <tr>
+                        <th>DataNaixament</th>
+                        <td>{{ jugador.dataNaixament ? jugador.dataNaixament|date('Y-m-d') : '' }}</td>
+                    </tr>
+                    <tr>
+                        <th>CodiFide</th>
+                        <td>{{ jugador.codiFide }}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div>
+
+              <p class="has-text-weight-bold is-size-4">Ha participat en:</p>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Num.</th>
+                        <th>Torneig</th>
+                        <th>Data</th>
+                        <th>Punts Finals</th>
+                    </tr>
+                    </thead>
+                    {% for torneig in torneigosParticipat %}
+                        <tbody>
+                        <tr>
+                            <td>{{ loop.index }}</td>
+                            <td>{{ torneig.nom }}</td>
+                            <td>{{ torneig.data ? torneig.data|date('Y-m-d') : '' }}</td>
+                            <td>"puntsfinals"</td>
+                        </tr>
+                        </tbody>
+                        {% else %}
+                            <p>No ha participat en cap torneig</p>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

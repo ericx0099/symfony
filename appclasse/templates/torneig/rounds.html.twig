@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ torneig.nom }}{% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+    <script src="//cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+{% endblock %}
+{% block body %}
+    <h1 class="has-text-centered is-size-3 m-5">Nom Torneig: <span class="has-text-primary">{{ torneig.nom }}</span></h1>
+    <div class="is-flex is-justify-content-space-evenly " >
+        <div class="level-item has-text-centered">
+            <div>
+                <p class="heading">Data</p>
+                <p class="title">{{ dataa }}</p>
+            </div>
+        </div>
+        <div class="level-item has-text-centered">
+            <div>
+                <p class="heading">Rondes</p>
+                <p class="title">{{ torneig.rondes|length }}</p>
+            </div>
+        </div>
+        <div class="level-item has-text-centered">
+            <div>
+                <p class="heading">Numero Participants</p>
+                <p class="title">{{ torneig.theParticipants|length }}</p>
+            </div>
+        </div>
+        <div class="level-item has-text-centered">
+            <div>
+                <p class="heading">Arbitre:</p>
+                <p class="title">{{ torneig.propietari.nom }}</p>
+            </div>
+        </div>
+    </div>
+    <table>
+        <thead>
+        <tr>
+            <th>T.</th>
+            <th>Nom</th>
+            <th>Fide</th>
+            <th>Club/Ciutat</th>
+        </tr>
+        </thead>
+        {% set break = false %}
+        {% for ronda in torneig.rondes if not break %}
+            {% if ronda.numRondes == torneig.rondes|length %}
+                {% for taula in ronda.partides %}
+
+                {% set break = true %}
+            {% endif %}
+        {% endfor %}
+    </table>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Rondes{% endblock %}
+
+{% block body %}
+    <h1>Rondes del torneig {{ torneig.nom }}</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Num Ronda</th>
+                <th>Gestionar</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for ronda in torneig.rondes %}
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>Gestiona</td>
+                </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="6">no hi han rondes</td>
+                    </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

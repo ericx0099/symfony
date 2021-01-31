@@ -1,0 +1,71 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Afegir Jugadors{% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+    <script src="//cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+{% endblock %}
+{% block body %}
+
+    <script>
+        $(document).ready( function () {
+            $('#tables').DataTable();
+        })
+    </script>
+
+
+    <h1 class="has-text-weight-bold is-size-2 has-text-centered">Els meus torneigos</h1>
+    <div class="is-flex is-justify-content-center mt-5">
+
+        <div style="width: 50%">
+            <table class="table" id="tables">
+                <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Num. Rondes</th>
+                    <th>Data</th>
+                    <th>Num. Participants</th>
+                    <th>Id</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+
+                </tr>
+                </thead>
+                <tbody>
+                {% for torneig in user.torneigs %}
+                    <tr>
+                        <td>{{ torneig.nom }}</td>
+                        <td>{{ torneig.rondes ? torneig.rondes|join(', ') : '' }}</td>
+                        <td>{{ torneig.data ? torneig.data|date('Y-m-d') : '' }}</td>
+                        <td>{{ torneig.theParticipants|length}}</td>
+                        <td>{{ torneig.id }}</td>
+
+                        <td>
+                            <a class="button is-warning  is-small" href="{{ path('torneig_edit', {'id': torneig.id}) }}">edit</a>
+                        </td>
+                        <td>
+                            <a class="button is-primary is-small" href="{{ path('torneig_addJugadors', {'id': torneig.id}) }}">Jugadors</a>
+                        </td>
+                        <td>
+                            <a class="button is-info  is-small" href="{{ path('torneig_gestiorondes', {'id': torneig.id}) }}">Rondes</a>
+                        </td>
+                        <td>
+                            <a class="button is-success  is-small" href="{{ path('torneig_start', {'id': torneig.id}) }}">Go!</a>
+                        </td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="6">No tens torneigos</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+
+    <p  class="has-text-weight-bold is-size-4 has-text-centered m-5"><a href="{{ path('torneig_blank') }}">Create nou torneig</a></p>
+{% endblock %}
