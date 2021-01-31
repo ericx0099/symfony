@@ -52,13 +52,13 @@
                         <tbody>
                         <tr>
                             <td>{{ loop.index }}</td>
-                            <td>{{ torneig.nom }}</td>
+                            <td><a href="{{ path('torneig_perfil',{'id':torneig.id}) }}">{{ torneig.nom ? torneig.nom : '?'}}</a></td>
                             <td>{{ torneig.data ? torneig.data|date('Y-m-d') : '' }}</td>
                             <td>"puntsfinals"</td>
                         </tr>
                         </tbody>
                         {% else %}
-                            <p>No ha participat en cap torneig</p>
+                            <p>No ha participat en cap torneig :(</p>
                     {% endfor %}
                 </table>
             </div>

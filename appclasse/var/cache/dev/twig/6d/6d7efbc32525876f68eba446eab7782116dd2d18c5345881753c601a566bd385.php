@@ -177,10 +177,12 @@ class __TwigTemplate_7a91f6718893b4a646808c129c9c1b5fd72ba91fa4b2f29f5c778df3dd7
             // line 54
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 54), "html", null, true);
             echo "</td>
-                            <td>";
+                            <td><a href=\"";
             // line 55
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["torneig"], "nom", [], "any", false, false, false, 55), "html", null, true);
-            echo "</td>
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("torneig_perfil", ["id" => twig_get_attribute($this->env, $this->source, $context["torneig"], "id", [], "any", false, false, false, 55)]), "html", null, true);
+            echo "\">";
+            ((twig_get_attribute($this->env, $this->source, $context["torneig"], "nom", [], "any", false, false, false, 55)) ? (print (twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["torneig"], "nom", [], "any", false, false, false, 55), "html", null, true))) : (print ("?")));
+            echo "</a></td>
                             <td>";
             // line 56
             ((twig_get_attribute($this->env, $this->source, $context["torneig"], "data", [], "any", false, false, false, 56)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["torneig"], "data", [], "any", false, false, false, 56), "Y-m-d"), "html", null, true))) : (print ("")));
@@ -201,7 +203,7 @@ class __TwigTemplate_7a91f6718893b4a646808c129c9c1b5fd72ba91fa4b2f29f5c778df3dd7
         }
         if (!$context['_iterated']) {
             // line 61
-            echo "                            <p>No ha participat en cap torneig</p>
+            echo "                            <p>No ha participat en cap torneig :(</p>
                     ";
         }
         $_parent = $context['_parent'];
@@ -235,7 +237,7 @@ class __TwigTemplate_7a91f6718893b4a646808c129c9c1b5fd72ba91fa4b2f29f5c778df3dd7
 
     public function getDebugInfo()
     {
-        return array (  211 => 63,  204 => 61,  186 => 56,  182 => 55,  178 => 54,  174 => 52,  156 => 51,  136 => 34,  129 => 30,  122 => 26,  115 => 22,  108 => 18,  101 => 14,  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  213 => 63,  206 => 61,  188 => 56,  182 => 55,  178 => 54,  174 => 52,  156 => 51,  136 => 34,  129 => 30,  122 => 26,  115 => 22,  108 => 18,  101 => 14,  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -294,13 +296,13 @@ class __TwigTemplate_7a91f6718893b4a646808c129c9c1b5fd72ba91fa4b2f29f5c778df3dd7
                         <tbody>
                         <tr>
                             <td>{{ loop.index }}</td>
-                            <td>{{ torneig.nom }}</td>
+                            <td><a href=\"{{ path('torneig_perfil',{'id':torneig.id}) }}\">{{ torneig.nom ? torneig.nom : '?'}}</a></td>
                             <td>{{ torneig.data ? torneig.data|date('Y-m-d') : '' }}</td>
                             <td>\"puntsfinals\"</td>
                         </tr>
                         </tbody>
                         {% else %}
-                            <p>No ha participat en cap torneig</p>
+                            <p>No ha participat en cap torneig :(</p>
                     {% endfor %}
                 </table>
             </div>

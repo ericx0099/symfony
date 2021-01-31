@@ -85,22 +85,29 @@ class __TwigTemplate_cefcf69eab1077e8cbb47f366b59f2d6e6c5828abf6be122698f343718e
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <h1>Edit User</h1>
+        echo "
+<section class=\"container s \">
+    <div class=\"columns is-multiline\">
 
-    ";
-        // line 8
+        <div class=\"column is-8 is-offset-2 register\">
+
+            <div class=\"columns\">
+                <div class=\"column right has-text-centered\">
+                    <h1>Edit User</h1>
+                    ";
+        // line 15
         echo twig_include($this->env, $context, "user/_form.html.twig", ["button_label" => "Update"]);
         echo "
-
-    <a href=\"";
-        // line 10
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("user_index");
-        echo "\">back to list</a>
-
-    ";
-        // line 12
+             ";
+        // line 17
+        echo "                    ";
         echo twig_include($this->env, $context, "user/_delete_form.html.twig");
         echo "
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -122,7 +129,7 @@ class __TwigTemplate_cefcf69eab1077e8cbb47f366b59f2d6e6c5828abf6be122698f343718e
 
     public function getDebugInfo()
     {
-        return array (  102 => 12,  97 => 10,  92 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  103 => 17,  99 => 15,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -132,13 +139,23 @@ class __TwigTemplate_cefcf69eab1077e8cbb47f366b59f2d6e6c5828abf6be122698f343718e
 {% block title %}Edit User{% endblock %}
 
 {% block body %}
-    <h1>Edit User</h1>
 
-    {{ include('user/_form.html.twig', {'button_label': 'Update'}) }}
+<section class=\"container s \">
+    <div class=\"columns is-multiline\">
 
-    <a href=\"{{ path('user_index') }}\">back to list</a>
+        <div class=\"column is-8 is-offset-2 register\">
 
-    {{ include('user/_delete_form.html.twig') }}
+            <div class=\"columns\">
+                <div class=\"column right has-text-centered\">
+                    <h1>Edit User</h1>
+                    {{ include('user/_form.html.twig', {'button_label': 'Update'}) }}
+             {#       <a href=\"{{ path('user_index') }}\">back to list</a>#}
+                    {{ include('user/_delete_form.html.twig') }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}
 ", "user/edit.html.twig", "/app/appclasse/templates/user/edit.html.twig");
     }

@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}User{% endblock %}
+
+{% block body %}
+
+<div class="all">
+    <h1 class="has-text-weight-bold is-size-2">Perfil del arbit:  <span class="has-text-primary">{{ user.nom }}</span></h1>
+    <table class="table">
+        <tbody>
+        <tr>
+            <th>Email</th>
+            <td>{{ user.email }}</td>
+        </tr>
+        <tr>
+            <th>Nom</th>
+            <td>{{ user.nom }}</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h2 class="has-text-weight-bold is-size-4">Ha Organitzat {{ user.torneigs|length }} torneigos</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Num.</th>
+                <th>Torneig</th>
+                <th>Data</th>
+            </tr>
+        </thead>
+        {% for torneig in user.torneigs %}
+            <tbody>
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td><a href="{{ path('torneig_perfil',{ 'id':torneig.id }) }}">{{ torneig.nom ? torneig.nom : '?'}}</a></td>
+                    <td>{{ torneig.data ? torneig.data|date('Y-m-d') : '?' }}</td>
+                </tr>
+            </tbody>
+        {% else %}
+            <p>No ha Organitzat en cap torneig :(</p>
+        {% endfor %}
+    </table>
+</div>
+
+
+
+
+
+{% endblock %}

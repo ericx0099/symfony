@@ -3,6 +3,8 @@
 namespace App\Controller;
 
 use App\Entity\Jugador;
+use App\Entity\Torneig;
+use App\Entity\User;
 use App\Repository\TorneigRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -60,11 +62,25 @@ class TestController extends AbstractController
                 }
             }
         }
-
-        /*torneigosParticipat*/
         return $this->render('jugador/profile.html.twig', [
             'jugador' => $jugador,
             'torneigosParticipat' => $torneigosParticipat
+        ]);
+    }
+    /**
+     * @Route("/arbitre/{id}",  name="arbitre_perfil")
+     */
+    public function arbitreProfile(Request $request, User $user){
+        return $this->render('user/profile.html.twig', [
+            'user' => $user
+        ]);
+    }
+    /**
+     * @Route("/tornieg/{id}",  name="torneig_perfil")
+     */
+    public function torneigPerfil(Request $request, Torneig $tornieg){
+        return $this->render('torneig/profile.html.twig', [
+            'torneig' => $tornieg
         ]);
     }
 }

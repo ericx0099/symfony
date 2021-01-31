@@ -88,6 +88,14 @@ class __TwigTemplate_89a59a9f5e4a46cb152599d599b2e77a4eb9a503104a7ac220c344df15c
         // line 5
         echo "    <link rel=\"stylesheet\" href=\"//cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css\">
     <script src=\"//cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js\"></script>
+
+    <style>
+        h1{
+            background: -webkit-linear-gradient(blue, #00d1b2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -97,7 +105,7 @@ class __TwigTemplate_89a59a9f5e4a46cb152599d599b2e77a4eb9a503104a7ac220c344df15c
 
     }
 
-    // line 8
+    // line 16
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -107,7 +115,7 @@ class __TwigTemplate_89a59a9f5e4a46cb152599d599b2e77a4eb9a503104a7ac220c344df15c
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 9
+        // line 17
         echo "
     <script>
         \$(document).ready( function () {
@@ -137,56 +145,56 @@ class __TwigTemplate_89a59a9f5e4a46cb152599d599b2e77a4eb9a503104a7ac220c344df15c
                 </thead>
                 <tbody>
                 ";
-        // line 37
+        // line 45
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 37, $this->source); })()), "torneigs", [], "any", false, false, false, 37));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 45, $this->source); })()), "torneigs", [], "any", false, false, false, 45));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["torneig"]) {
-            // line 38
+            // line 46
             echo "                    <tr>
                         <td>";
-            // line 39
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["torneig"], "nom", [], "any", false, false, false, 39), "html", null, true);
+            // line 47
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["torneig"], "nom", [], "any", false, false, false, 47), "html", null, true);
             echo "</td>
                         <td>";
-            // line 40
-            ((twig_get_attribute($this->env, $this->source, $context["torneig"], "rondes", [], "any", false, false, false, 40)) ? (print (twig_escape_filter($this->env, twig_join_filter(twig_get_attribute($this->env, $this->source, $context["torneig"], "rondes", [], "any", false, false, false, 40), ", "), "html", null, true))) : (print ("")));
+            // line 48
+            ((twig_get_attribute($this->env, $this->source, $context["torneig"], "rondes", [], "any", false, false, false, 48)) ? (print (twig_escape_filter($this->env, twig_join_filter(twig_get_attribute($this->env, $this->source, $context["torneig"], "rondes", [], "any", false, false, false, 48), ", "), "html", null, true))) : (print ("")));
             echo "</td>
                         <td>";
-            // line 41
-            ((twig_get_attribute($this->env, $this->source, $context["torneig"], "data", [], "any", false, false, false, 41)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["torneig"], "data", [], "any", false, false, false, 41), "Y-m-d"), "html", null, true))) : (print ("")));
+            // line 49
+            ((twig_get_attribute($this->env, $this->source, $context["torneig"], "data", [], "any", false, false, false, 49)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["torneig"], "data", [], "any", false, false, false, 49), "Y-m-d"), "html", null, true))) : (print ("")));
             echo "</td>
                         <td>";
-            // line 42
-            echo twig_escape_filter($this->env, twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, $context["torneig"], "theParticipants", [], "any", false, false, false, 42)), "html", null, true);
+            // line 50
+            echo twig_escape_filter($this->env, twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, $context["torneig"], "theParticipants", [], "any", false, false, false, 50)), "html", null, true);
             echo "</td>
                         <td>";
-            // line 43
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["torneig"], "id", [], "any", false, false, false, 43), "html", null, true);
+            // line 51
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["torneig"], "id", [], "any", false, false, false, 51), "html", null, true);
             echo "</td>
 
                         <td>
                             <a class=\"button is-warning  is-small\" href=\"";
-            // line 46
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("torneig_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["torneig"], "id", [], "any", false, false, false, 46)]), "html", null, true);
+            // line 54
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("torneig_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["torneig"], "id", [], "any", false, false, false, 54)]), "html", null, true);
             echo "\">edit</a>
                         </td>
                         <td>
                             <a class=\"button is-primary is-small\" href=\"";
-            // line 49
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("torneig_addJugadors", ["id" => twig_get_attribute($this->env, $this->source, $context["torneig"], "id", [], "any", false, false, false, 49)]), "html", null, true);
+            // line 57
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("torneig_addJugadors", ["id" => twig_get_attribute($this->env, $this->source, $context["torneig"], "id", [], "any", false, false, false, 57)]), "html", null, true);
             echo "\">Jugadors</a>
                         </td>
                         <td>
                             <a class=\"button is-info  is-small\" href=\"";
-            // line 52
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("torneig_gestiorondes", ["id" => twig_get_attribute($this->env, $this->source, $context["torneig"], "id", [], "any", false, false, false, 52)]), "html", null, true);
+            // line 60
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("torneig_gestiorondes", ["id" => twig_get_attribute($this->env, $this->source, $context["torneig"], "id", [], "any", false, false, false, 60)]), "html", null, true);
             echo "\">Rondes</a>
                         </td>
                         <td>
                             <a class=\"button is-success  is-small\" href=\"";
-            // line 55
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("torneig_start", ["id" => twig_get_attribute($this->env, $this->source, $context["torneig"], "id", [], "any", false, false, false, 55)]), "html", null, true);
+            // line 63
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("torneig_start", ["id" => twig_get_attribute($this->env, $this->source, $context["torneig"], "id", [], "any", false, false, false, 63)]), "html", null, true);
             echo "\">Go!</a>
                         </td>
                     </tr>
@@ -194,7 +202,7 @@ class __TwigTemplate_89a59a9f5e4a46cb152599d599b2e77a4eb9a503104a7ac220c344df15c
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 59
+            // line 67
             echo "                    <tr>
                         <td colspan=\"6\">No tens torneigos</td>
                     </tr>
@@ -203,7 +211,7 @@ class __TwigTemplate_89a59a9f5e4a46cb152599d599b2e77a4eb9a503104a7ac220c344df15c
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['torneig'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 63
+        // line 71
         echo "                </tbody>
             </table>
         </div>
@@ -212,7 +220,7 @@ class __TwigTemplate_89a59a9f5e4a46cb152599d599b2e77a4eb9a503104a7ac220c344df15c
 
 
     <p  class=\"has-text-weight-bold is-size-4 has-text-centered m-5\"><a href=\"";
-        // line 70
+        // line 78
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("torneig_blank");
         echo "\">Create nou torneig</a></p>
 ";
@@ -236,7 +244,7 @@ class __TwigTemplate_89a59a9f5e4a46cb152599d599b2e77a4eb9a503104a7ac220c344df15c
 
     public function getDebugInfo()
     {
-        return array (  216 => 70,  207 => 63,  198 => 59,  189 => 55,  183 => 52,  177 => 49,  171 => 46,  165 => 43,  161 => 42,  157 => 41,  153 => 40,  149 => 39,  146 => 38,  141 => 37,  111 => 9,  101 => 8,  89 => 5,  79 => 4,  60 => 3,  37 => 1,);
+        return array (  224 => 78,  215 => 71,  206 => 67,  197 => 63,  191 => 60,  185 => 57,  179 => 54,  173 => 51,  169 => 50,  165 => 49,  161 => 48,  157 => 47,  154 => 46,  149 => 45,  119 => 17,  109 => 16,  89 => 5,  79 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -247,6 +255,14 @@ class __TwigTemplate_89a59a9f5e4a46cb152599d599b2e77a4eb9a503104a7ac220c344df15c
 {% block style %}
     <link rel=\"stylesheet\" href=\"//cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css\">
     <script src=\"//cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js\"></script>
+
+    <style>
+        h1{
+            background: -webkit-linear-gradient(blue, #00d1b2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
 {% endblock %}
 {% block body %}
 

@@ -25,9 +25,9 @@ return [
         ],
         '/miPerfil' => [[['_route' => 'test', '_controller' => 'App\\Controller\\TestController::miPerfil'], null, null, null, false, false, null]],
         '/misTorneos' => [[['_route' => 'user_torneigos', '_controller' => 'App\\Controller\\TestController::misTorneos'], null, null, null, false, false, null]],
-        '/torneig' => [[['_route' => 'torneig_index', '_controller' => 'App\\Controller\\TorneigController::index'], null, ['GET' => 0], null, true, false, null]],
-        '/torneig/new' => [[['_route' => 'torneig_new', '_controller' => 'App\\Controller\\TorneigController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        '/torneig/blank' => [[['_route' => 'torneig_blank', '_controller' => 'App\\Controller\\TorneigController::createBlank'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/torneigadmin' => [[['_route' => 'torneig_index', '_controller' => 'App\\Controller\\TorneigController::index'], null, ['GET' => 0], null, true, false, null]],
+        '/torneigadmin/new' => [[['_route' => 'torneig_new', '_controller' => 'App\\Controller\\TorneigController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/torneigadmin/blank' => [[['_route' => 'torneig_blank', '_controller' => 'App\\Controller\\TorneigController::createBlank'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/user' => [[['_route' => 'user_index', '_controller' => 'App\\Controller\\UserController::index'], null, ['GET' => 0], null, true, false, null]],
         '/user/new' => [[['_route' => 'user_new', '_controller' => 'App\\Controller\\UserController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
     ],
@@ -54,25 +54,29 @@ return [
                     .'|(*:210)'
                 .')'
                 .'|/perfil/([^/]++)(*:235)'
-                .'|/torneig(?'
-                    .'|/([^/]++)(?'
-                        .'|(*:266)'
-                        .'|/(?'
-                            .'|edit(*:282)'
-                            .'|addJugadors(*:301)'
+                .'|/arbitre/([^/]++)(*:260)'
+                .'|/torn(?'
+                    .'|ieg/([^/]++)(*:288)'
+                    .'|eigadmin(?'
+                        .'|/([^/]++)(?'
+                            .'|(*:319)'
+                            .'|/(?'
+                                .'|edit(*:335)'
+                                .'|addJugadors(*:354)'
+                            .')'
+                            .'|(*:363)'
                         .')'
-                        .'|(*:310)'
+                        .'|([^/]++)/(?'
+                            .'|([^/]++)/deleteJugador(*:406)'
+                            .'|rondes(*:420)'
+                        .')'
+                        .'|/([^/]++)/start(*:444)'
                     .')'
-                    .'|([^/]++)/(?'
-                        .'|([^/]++)/deleteJugador(*:353)'
-                        .'|rondes(*:367)'
-                    .')'
-                    .'|/([^/]++)/start(*:391)'
                 .')'
                 .'|/user/([^/]++)(?'
-                    .'|(*:417)'
-                    .'|/edit(*:430)'
-                    .'|(*:438)'
+                    .'|(*:471)'
+                    .'|/edit(*:484)'
+                    .'|(*:492)'
                 .')'
             .')/?$}sDu',
     ],
@@ -88,16 +92,18 @@ return [
         202 => [[['_route' => 'jugador_edit', '_controller' => 'App\\Controller\\JugadorController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
         210 => [[['_route' => 'jugador_delete', '_controller' => 'App\\Controller\\JugadorController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
         235 => [[['_route' => 'jugador_perfil', '_controller' => 'App\\Controller\\TestController::userProfile'], ['id'], null, null, false, true, null]],
-        266 => [[['_route' => 'torneig_show', '_controller' => 'App\\Controller\\TorneigController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        282 => [[['_route' => 'torneig_edit', '_controller' => 'App\\Controller\\TorneigController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        301 => [[['_route' => 'torneig_addJugadors', '_controller' => 'App\\Controller\\TorneigController::addJugadors'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        310 => [[['_route' => 'torneig_delete', '_controller' => 'App\\Controller\\TorneigController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
-        353 => [[['_route' => 'torneig_deleteJugador', '_controller' => 'App\\Controller\\TorneigController::deleteJugador'], ['id', 'idJ'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        367 => [[['_route' => 'torneig_gestiorondes', '_controller' => 'App\\Controller\\TorneigController::gestioRondes'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        391 => [[['_route' => 'torneig_start', '_controller' => 'App\\Controller\\TorneigController::startTourn'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        417 => [[['_route' => 'user_show', '_controller' => 'App\\Controller\\UserController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        430 => [[['_route' => 'user_edit', '_controller' => 'App\\Controller\\UserController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        438 => [
+        260 => [[['_route' => 'arbitre_perfil', '_controller' => 'App\\Controller\\TestController::arbitreProfile'], ['id'], null, null, false, true, null]],
+        288 => [[['_route' => 'torneig_perfil', '_controller' => 'App\\Controller\\TestController::torneigPerfil'], ['id'], null, null, false, true, null]],
+        319 => [[['_route' => 'torneig_show', '_controller' => 'App\\Controller\\TorneigController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        335 => [[['_route' => 'torneig_edit', '_controller' => 'App\\Controller\\TorneigController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        354 => [[['_route' => 'torneig_addJugadors', '_controller' => 'App\\Controller\\TorneigController::addJugadors'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        363 => [[['_route' => 'torneig_delete', '_controller' => 'App\\Controller\\TorneigController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
+        406 => [[['_route' => 'torneig_deleteJugador', '_controller' => 'App\\Controller\\TorneigController::deleteJugador'], ['id', 'idJ'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        420 => [[['_route' => 'torneig_gestiorondes', '_controller' => 'App\\Controller\\TorneigController::gestioRondes'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        444 => [[['_route' => 'torneig_start', '_controller' => 'App\\Controller\\TorneigController::startTourn'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        471 => [[['_route' => 'user_show', '_controller' => 'App\\Controller\\UserController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        484 => [[['_route' => 'user_edit', '_controller' => 'App\\Controller\\UserController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        492 => [
             [['_route' => 'user_delete', '_controller' => 'App\\Controller\\UserController::delete'], ['id'], ['DELETE' => 0], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

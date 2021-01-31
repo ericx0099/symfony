@@ -16,7 +16,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 /**
- * @Route("/torneig")
+ * @Route("/torneigadmin")
  */
 class TorneigController extends AbstractController
 {
