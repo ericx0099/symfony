@@ -152,10 +152,12 @@ class __TwigTemplate_89a59a9f5e4a46cb152599d599b2e77a4eb9a503104a7ac220c344df15c
         foreach ($context['_seq'] as $context["_key"] => $context["torneig"]) {
             // line 46
             echo "                    <tr>
-                        <td>";
+                        <td><a href=\"";
             // line 47
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("torneig_perfil", ["id" => twig_get_attribute($this->env, $this->source, $context["torneig"], "id", [], "any", false, false, false, 47)]), "html", null, true);
+            echo "\">";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["torneig"], "nom", [], "any", false, false, false, 47), "html", null, true);
-            echo "</td>
+            echo "</a></td>
                         <td>";
             // line 48
             ((twig_get_attribute($this->env, $this->source, $context["torneig"], "rondes", [], "any", false, false, false, 48)) ? (print (twig_escape_filter($this->env, twig_join_filter(twig_get_attribute($this->env, $this->source, $context["torneig"], "rondes", [], "any", false, false, false, 48), ", "), "html", null, true))) : (print ("")));
@@ -244,7 +246,7 @@ class __TwigTemplate_89a59a9f5e4a46cb152599d599b2e77a4eb9a503104a7ac220c344df15c
 
     public function getDebugInfo()
     {
-        return array (  224 => 78,  215 => 71,  206 => 67,  197 => 63,  191 => 60,  185 => 57,  179 => 54,  173 => 51,  169 => 50,  165 => 49,  161 => 48,  157 => 47,  154 => 46,  149 => 45,  119 => 17,  109 => 16,  89 => 5,  79 => 4,  60 => 3,  37 => 1,);
+        return array (  226 => 78,  217 => 71,  208 => 67,  199 => 63,  193 => 60,  187 => 57,  181 => 54,  175 => 51,  171 => 50,  167 => 49,  163 => 48,  157 => 47,  154 => 46,  149 => 45,  119 => 17,  109 => 16,  89 => 5,  79 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -295,7 +297,7 @@ class __TwigTemplate_89a59a9f5e4a46cb152599d599b2e77a4eb9a503104a7ac220c344df15c
                 <tbody>
                 {% for torneig in user.torneigs %}
                     <tr>
-                        <td>{{ torneig.nom }}</td>
+                        <td><a href=\"{{ path(\"torneig_perfil\",{'id':torneig.id}) }}\">{{ torneig.nom }}</a></td>
                         <td>{{ torneig.rondes ? torneig.rondes|join(', ') : '' }}</td>
                         <td>{{ torneig.data ? torneig.data|date('Y-m-d') : '' }}</td>
                         <td>{{ torneig.theParticipants|length}}</td>

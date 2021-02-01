@@ -93,7 +93,9 @@ class __TwigTemplate_b4074ef67888d687de142f5318368306073206a57a66c99acea8b00128e
             ";
         } else {
             // line 41
-            echo "                <a class=\"navbar-item\">
+            echo "                <a class=\"navbar-item\" href=\"";
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("torneig_all_public");
+            echo "\">
                     Torneigos
                 </a>
             ";
@@ -340,7 +342,7 @@ class __TwigTemplate_b4074ef67888d687de142f5318368306073206a57a66c99acea8b00128e
 
     public function getDebugInfo()
     {
-        return array (  321 => 103,  311 => 102,  300 => 13,  290 => 12,  179 => 105,  177 => 102,  174 => 98,  164 => 91,  158 => 88,  152 => 84,  142 => 77,  136 => 74,  131 => 71,  129 => 70,  102 => 45,  96 => 41,  88 => 37,  86 => 36,  67 => 20,  60 => 15,  58 => 12,  45 => 1,);
+        return array (  323 => 103,  313 => 102,  302 => 13,  292 => 12,  181 => 105,  179 => 102,  176 => 98,  166 => 91,  160 => 88,  154 => 84,  144 => 77,  138 => 74,  133 => 71,  131 => 70,  104 => 45,  96 => 41,  88 => 37,  86 => 36,  67 => 20,  60 => 15,  58 => 12,  45 => 1,);
     }
 
     public function getSourceContext()
@@ -385,7 +387,7 @@ class __TwigTemplate_b4074ef67888d687de142f5318368306073206a57a66c99acea8b00128e
                     Mis Torneos
                 </a>
             {% else %}
-                <a class=\"navbar-item\">
+                <a class=\"navbar-item\" href=\"{{ path(\"torneig_all_public\") }}\">
                     Torneigos
                 </a>
             {% endif %}
