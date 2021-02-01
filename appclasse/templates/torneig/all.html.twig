@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Afegir Jugadors{% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+    <script src="//cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+{% endblock %}
+{% block body %}
+    <div class="container">
+        <h1 class="is-size-4 has-text-centered mt-5">Tots els torneigos</h1>
+        <div class="is-flex is-justify-content-center mt-5">
+            <div style="width: 50%">
+                <table class="table" id="table">
+                    <thead>
+                        <tr>
+                            <th>Num</th>
+                            <th>Nom</th>
+                            <th>Participants</th>
+                            <th>Rondes</th>
+                            <th>Data</th>
+                            <th>Arbitre</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for torneig in torneigos %}
+                        <tr>
+                            <td>{{ loop.index }}</td>
+                            <td><a href="{{ path("torneig_perfil",{'id' : torneig.id}) }}">{{torneig.nom ? torneig.nom : "?"}}</a></td>
+                            <td>{{ torneig.theParticipants ? torneig.theParticipants|length : "?" }}</td>
+                            <td>{{ torneig.rondes ? torneig.rondes|length : "?" }}</td>
+                            <td>{{ torneig.data ? torneig.data|date('Y-m-d') : '?' }}</td>
+                            <td><a href="{{ path('arbitre_perfil',{'id':torneig.propietari.id}) }}">{{ torneig.propietari ? torneig.propietari.nom : "?" }}</a></td>
+                        </tr>
+                        {% else %}
+                            <tr>
+                                <td>Encara no hi han torneigos :(</td>
+                            </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

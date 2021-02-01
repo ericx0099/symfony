@@ -37,7 +37,8 @@
             <div class="level-item has-text-centered" id="getX">
                 <div>
                     <p class="heading is-size-7">Arbitre:</p>
-                    <p class="title is-size-3-mobile">{{ torneig.propietari ? torneig.propietari.nom :'?' }}</p>
+                    <p class="title is-size-3-mobile"><a href="{{ path("arbitre_perfil",{'id':torneig.propietari.id}) }}">{{ torneig.propietari ? torneig.propietari.nom :'?' }}</a></p>
+
                 </div>
             </div>
         </div>

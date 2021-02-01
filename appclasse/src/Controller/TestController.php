@@ -76,11 +76,19 @@ class TestController extends AbstractController
         ]);
     }
     /**
-     * @Route("/tornieg/{id}",  name="torneig_perfil")
+     * @Route("/torneig/{id}",  name="torneig_perfil")
      */
     public function torneigPerfil(Request $request, Torneig $tornieg){
         return $this->render('torneig/profile.html.twig', [
             'torneig' => $tornieg
+        ]);
+    }
+    /**
+     * @Route("/torneig",  name="torneig_all_public")
+     */
+    public function torneigs(TorneigRepository $torneigRepository) : Response{
+        return $this->render('torneig/all.html.twig', [
+            'torneigos' => $torneigRepository->findAll()
         ]);
     }
 }

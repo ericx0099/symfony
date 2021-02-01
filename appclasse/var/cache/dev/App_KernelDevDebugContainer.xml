@@ -2993,7 +2993,7 @@
         <argument>null</argument>
       </call>
       <call method="add">
-        <argument type="service" id=".security.request_matcher.MPgsSBH"/>
+        <argument type="service" id=".security.request_matcher.PhWyZj_"/>
         <argument type="collection">
           <argument>ROLE_USER</argument>
         </argument>
@@ -3462,8 +3462,8 @@
     <service id=".security.request_matcher.uJjIu5E" class="Symfony\Component\HttpFoundation\RequestMatcher">
       <argument>^/jugador</argument>
     </service>
-    <service id=".security.request_matcher.MPgsSBH" class="Symfony\Component\HttpFoundation\RequestMatcher">
-      <argument>^/torneig</argument>
+    <service id=".security.request_matcher.PhWyZj_" class="Symfony\Component\HttpFoundation\RequestMatcher">
+      <argument>^/torneigadmin</argument>
     </service>
     <service id=".security.request_matcher._Klewus" class="Symfony\Component\HttpFoundation\RequestMatcher">
       <argument>^/ronda</argument>
@@ -4253,7 +4253,7 @@
         <argument key="userRepository" type="service" id="App\Repository\UserRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.MPDaMvI" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.ctIEqlC" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\JugadorController::delete" type="service" id=".service_locator.ptI9rup"/>
@@ -4265,6 +4265,7 @@
         <argument key="App\Controller\TestController::miPerfil" type="service" id=".service_locator.EDW3bs1"/>
         <argument key="App\Controller\TestController::misTorneos" type="service" id=".service_locator.EDW3bs1"/>
         <argument key="App\Controller\TestController::torneigPerfil" type="service" id=".service_locator.gJXMHQI"/>
+        <argument key="App\Controller\TestController::torneigs" type="service" id=".service_locator.B6HzPCZ"/>
         <argument key="App\Controller\TestController::userProfile" type="service" id=".service_locator.tj2DXap"/>
         <argument key="App\Controller\TorneigController::addJugadors" type="service" id=".service_locator.657b3tR"/>
         <argument key="App\Controller\TorneigController::createBlank" type="service" id=".service_locator.MF_tnrX"/>
@@ -4294,6 +4295,7 @@
         <argument key="App\Controller\TestController:miPerfil" type="service" id=".service_locator.EDW3bs1"/>
         <argument key="App\Controller\TestController:misTorneos" type="service" id=".service_locator.EDW3bs1"/>
         <argument key="App\Controller\TestController:torneigPerfil" type="service" id=".service_locator.gJXMHQI"/>
+        <argument key="App\Controller\TestController:torneigs" type="service" id=".service_locator.B6HzPCZ"/>
         <argument key="App\Controller\TestController:userProfile" type="service" id=".service_locator.tj2DXap"/>
         <argument key="App\Controller\TorneigController:addJugadors" type="service" id=".service_locator.657b3tR"/>
         <argument key="App\Controller\TorneigController:createBlank" type="service" id=".service_locator.MF_tnrX"/>
@@ -4600,12 +4602,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.MPDaMvI"/>
+      <argument type="service" id=".service_locator.ctIEqlC"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.MPDaMvI"/>
+      <argument type="service" id=".service_locator.ctIEqlC"/>
     </service>
     <service id=".errored..service_locator.KfwZsne.Symfony\Component\HttpFoundation\Response" class="Symfony\Component\HttpFoundation\Response"/>
     <service id=".errored..service_locator.KfbR3DY.Symfony\Component\Config\Loader\LoaderInterface" class="Symfony\Component\Config\Loader\LoaderInterface"/>
@@ -4969,7 +4971,7 @@
     <service id="Twig\Environment" alias="twig"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.Kbr2i2X" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.MPDaMvI"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.ctIEqlC"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface" alias="logger"/>
     <service id=".service_locator.wKF4yn1" alias=".service_locator.anofQPJ"/>

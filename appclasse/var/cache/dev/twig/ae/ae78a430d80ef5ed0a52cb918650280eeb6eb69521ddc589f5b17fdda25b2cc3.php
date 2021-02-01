@@ -62,7 +62,10 @@ class __TwigTemplate_b4074ef67888d687de142f5318368306073206a57a66c99acea8b00128e
 
 <nav class=\"navbar \" role=\"navigation\" aria-label=\"main navigation\">
     <div class=\"navbar-brand\">
-        <a class=\"navbar-item\" href=\"https://bulma.io\">
+        <a class=\"navbar-item\" href=\"";
+        // line 20
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("inici");
+        echo "\">
             <img src=\"https://res.cloudinary.com/teepublic/image/private/s--98tHC0MX--/t_Preview/b_rgb:ffffff,c_lpad,f_jpg,h_630,q_90,w_1200/v1543702206/production/designs/3681922_0.jpg\" width=\"112\" height=\"58\">
         </a>
 
@@ -337,7 +340,7 @@ class __TwigTemplate_b4074ef67888d687de142f5318368306073206a57a66c99acea8b00128e
 
     public function getDebugInfo()
     {
-        return array (  318 => 103,  308 => 102,  297 => 13,  287 => 12,  176 => 105,  174 => 102,  171 => 98,  161 => 91,  155 => 88,  149 => 84,  139 => 77,  133 => 74,  128 => 71,  126 => 70,  99 => 45,  93 => 41,  85 => 37,  83 => 36,  60 => 15,  58 => 12,  45 => 1,);
+        return array (  321 => 103,  311 => 102,  300 => 13,  290 => 12,  179 => 105,  177 => 102,  174 => 98,  164 => 91,  158 => 88,  152 => 84,  142 => 77,  136 => 74,  131 => 71,  129 => 70,  102 => 45,  96 => 41,  88 => 37,  86 => 36,  67 => 20,  60 => 15,  58 => 12,  45 => 1,);
     }
 
     public function getSourceContext()
@@ -361,7 +364,7 @@ class __TwigTemplate_b4074ef67888d687de142f5318368306073206a57a66c99acea8b00128e
 
 <nav class=\"navbar \" role=\"navigation\" aria-label=\"main navigation\">
     <div class=\"navbar-brand\">
-        <a class=\"navbar-item\" href=\"https://bulma.io\">
+        <a class=\"navbar-item\" href=\"{{path(\"inici\")}}\">
             <img src=\"https://res.cloudinary.com/teepublic/image/private/s--98tHC0MX--/t_Preview/b_rgb:ffffff,c_lpad,f_jpg,h_630,q_90,w_1200/v1543702206/production/designs/3681922_0.jpg\" width=\"112\" height=\"58\">
         </a>
 

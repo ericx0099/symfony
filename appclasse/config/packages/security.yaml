@@ -40,6 +40,6 @@ security:
     # Note: Only the *first* access control that matches will be used
     access_control:
          - { path: ^/jugador, roles: ROLE_USER }
-         - { path: ^/torneig, roles: ROLE_USER }
+         - { path: ^/torneigadmin, roles: ROLE_USER }
          - { path: ^/ronda, roles: ROLE_USER }
         # - { path: ^/profile, roles: ROLE_USER }

@@ -92,8 +92,8 @@ class __TwigTemplate_b57dd24c5031b09b1eb066bd99e227c6e3c588f082e130997724ba83260
                 <div class=\"columns\">
 
                     <div class=\"column right has-text-centered\">
-                        <h1 class=\"title is-4\">Registrat ara!</h1>
-                        <p class=\"description\">Lorem ipsum dolor, sit amet consectetur adipisicing elit</p>
+                        <h1 class=\"title is-4\">Login aqui!</h1>
+                        <p class=\"description\">Crea i gestiona torneigos sense dificultat</p>
 
                         <form method=\"post\" class=\"box\">
                             ";
@@ -126,13 +126,13 @@ class __TwigTemplate_b57dd24c5031b09b1eb066bd99e227c6e3c588f082e130997724ba83260
         echo twig_escape_filter($this->env, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 26, $this->source); })()), "html", null, true);
         echo "</h2>
                             <h1 class=\"h3 mb-3 font-weight-normal\">Please sign in</h1>
-                            <label for=\"inputEmail\">Email</label>
+                            <label for=\"inputEmail \">Email</label>
                             <input type=\"email\" value=\"";
         // line 29
         echo twig_escape_filter($this->env, (isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new RuntimeError('Variable "last_username" does not exist.', 29, $this->source); })()), "html", null, true);
-        echo "\" name=\"email\" id=\"inputEmail\" class=\"form-control\" required autofocus>
+        echo "\" name=\"email\" id=\"inputEmail\" class=\"form-control input\" required autofocus>
                             <label for=\"inputPassword\">Password</label>
-                            <input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control\" required>
+                            <input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control input\" required>
 
                             <input type=\"hidden\" name=\"_csrf_token\"
                                    value=\"";
@@ -144,7 +144,7 @@ class __TwigTemplate_b57dd24c5031b09b1eb066bd99e227c6e3c588f082e130997724ba83260
                             ";
         // line 47
         echo "
-                            <button class=\"btn btn-lg btn-primary\" type=\"submit\">
+                            <button class=\"button is-block is-primary is-fullwidth is-medium mt-5\" type=\"submit\">
                                 Sign in
                             </button>
                         </form>
@@ -201,8 +201,8 @@ class __TwigTemplate_b57dd24c5031b09b1eb066bd99e227c6e3c588f082e130997724ba83260
                 <div class=\"columns\">
 
                     <div class=\"column right has-text-centered\">
-                        <h1 class=\"title is-4\">Registrat ara!</h1>
-                        <p class=\"description\">Lorem ipsum dolor, sit amet consectetur adipisicing elit</p>
+                        <h1 class=\"title is-4\">Login aqui!</h1>
+                        <p class=\"description\">Crea i gestiona torneigos sense dificultat</p>
 
                         <form method=\"post\" class=\"box\">
                             {% if error %}
@@ -216,10 +216,10 @@ class __TwigTemplate_b57dd24c5031b09b1eb066bd99e227c6e3c588f082e130997724ba83260
                             {% endif %}
                             <h2>{{ error }}</h2>
                             <h1 class=\"h3 mb-3 font-weight-normal\">Please sign in</h1>
-                            <label for=\"inputEmail\">Email</label>
-                            <input type=\"email\" value=\"{{ last_username }}\" name=\"email\" id=\"inputEmail\" class=\"form-control\" required autofocus>
+                            <label for=\"inputEmail \">Email</label>
+                            <input type=\"email\" value=\"{{ last_username }}\" name=\"email\" id=\"inputEmail\" class=\"form-control input\" required autofocus>
                             <label for=\"inputPassword\">Password</label>
-                            <input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control\" required>
+                            <input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control input\" required>
 
                             <input type=\"hidden\" name=\"_csrf_token\"
                                    value=\"{{ csrf_token('authenticate') }}\"
@@ -236,7 +236,7 @@ class __TwigTemplate_b57dd24c5031b09b1eb066bd99e227c6e3c588f082e130997724ba83260
                             </div>
                             #}
 
-                            <button class=\"btn btn-lg btn-primary\" type=\"submit\">
+                            <button class=\"button is-block is-primary is-fullwidth is-medium mt-5\" type=\"submit\">
                                 Sign in
                             </button>
                         </form>
