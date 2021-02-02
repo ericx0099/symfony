@@ -85,7 +85,7 @@ class __TwigTemplate_b4074ef67888d687de142f5318368306073206a57a66c99acea8b00128e
         // line 36
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_USER")) {
             // line 37
-            echo "                <a class=\"navbar-item\" href=\"";
+            echo "                <a class=\"navbar-item is-selected\" href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("user_torneigos");
             echo "\">
                     Mis Torneos
@@ -383,7 +383,7 @@ class __TwigTemplate_b4074ef67888d687de142f5318368306073206a57a66c99acea8b00128e
                 Home
             </a>
             {% if is_granted(\"ROLE_USER\") %}
-                <a class=\"navbar-item\" href=\"{{ path(\"user_torneigos\") }}\">
+                <a class=\"navbar-item is-selected\" href=\"{{ path(\"user_torneigos\") }}\">
                     Mis Torneos
                 </a>
             {% else %}

@@ -121,7 +121,7 @@ class __TwigTemplate_21da77b67ce6790e7c248c1a1c5d2406dd91111399f034808cba3f6501f
         }
         table a:active,
         table a:hover {
-            color: #bd5a35;
+            color: rgb(0, 209, 178);
             text-decoration:underline;
         }
 
@@ -376,7 +376,7 @@ class __TwigTemplate_21da77b67ce6790e7c248c1a1c5d2406dd91111399f034808cba3f6501f
         }
         table a:active,
         table a:hover {
-            color: #bd5a35;
+            color: rgb(0, 209, 178);
             text-decoration:underline;
         }
 

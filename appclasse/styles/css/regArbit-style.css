@@ -81,4 +81,7 @@ input:focus {
 .valtext{
     vertical-align: center;
 }
-
+ .current
+ {
+     color: rgb(0, 209, 178);
+ }

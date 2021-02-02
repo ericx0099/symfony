@@ -34,7 +34,7 @@
                 Home
             </a>
             {% if is_granted("ROLE_USER") %}
-                <a class="navbar-item" href="{{ path("user_torneigos") }}">
+                <a class="navbar-item is-selected" href="{{ path("user_torneigos") }}">
                     Mis Torneos
                 </a>
             {% else %}
