@@ -176,8 +176,8 @@ class __TwigTemplate_d6eeeaa5bee8fcd28bd190003574490f2d8f70d67486bc603448366fab0
          </div>
     </div>
 
-        <div class=\"is-flex is-justify-content-center m-5\">
-            <table>
+        <div class=\"is-flex is-justify-content-center m-5 shadow\" >
+            <table >
                 <thead>
                     <tr>
                         <th>Ordre</th>
@@ -285,6 +285,11 @@ class __TwigTemplate_d6eeeaa5bee8fcd28bd190003574490f2d8f70d67486bc603448366fab0
             </table>
         </div>
     <style>
+        .shadow {
+            border: 4px solid #00d1b2;
+            border-top: none;
+            border-bottom: none;
+        }
 
         .jugadorsTorn
         {
@@ -473,8 +478,8 @@ class __TwigTemplate_d6eeeaa5bee8fcd28bd190003574490f2d8f70d67486bc603448366fab0
          </div>
     </div>
 
-        <div class=\"is-flex is-justify-content-center m-5\">
-            <table>
+        <div class=\"is-flex is-justify-content-center m-5 shadow\" >
+            <table >
                 <thead>
                     <tr>
                         <th>Ordre</th>
@@ -512,6 +517,11 @@ class __TwigTemplate_d6eeeaa5bee8fcd28bd190003574490f2d8f70d67486bc603448366fab0
             </table>
         </div>
     <style>
+        .shadow {
+            border: 4px solid #00d1b2;
+            border-top: none;
+            border-bottom: none;
+        }
 
         .jugadorsTorn
         {

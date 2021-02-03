@@ -117,7 +117,7 @@ class Ronda
                 $partida->setJugadorB($ptorneig[$i]);
                 //falta revisar
                 $partida->setJugadorN($ptorneig[$i + $parelles]);
-            } else {
+            } else { 
 
                 //mirar si tinc el jugador emparellat
                 $jugadoract = null;

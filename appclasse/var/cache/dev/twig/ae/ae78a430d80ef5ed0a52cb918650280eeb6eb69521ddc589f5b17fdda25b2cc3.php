@@ -278,6 +278,33 @@ class __TwigTemplate_b4074ef67888d687de142f5318368306073206a57a66c99acea8b00128e
     }
 
 </style>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        // Get all \"navbar-burger\" elements
+        const \$navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+        // Check if there are any navbar burgers
+        if (\$navbarBurgers.length > 0) {
+
+            // Add a click event on each of them
+            \$navbarBurgers.forEach( el => {
+                el.addEventListener('click', () => {
+
+                    // Get the target from the \"data-target\" attribute
+                    const target = el.dataset.target;
+                    const \$target = document.getElementById(target);
+
+                    // Toggle the \"is-active\" class on both the \"navbar-burger\" and the \"navbar-menu\"
+                    el.classList.toggle('is-active');
+                    \$target.classList.toggle('is-active');
+
+                });
+            });
+        }
+
+    });
+</script>
 </body>
 </html>";
         
@@ -342,7 +369,7 @@ class __TwigTemplate_b4074ef67888d687de142f5318368306073206a57a66c99acea8b00128e
 
     public function getDebugInfo()
     {
-        return array (  323 => 103,  313 => 102,  302 => 13,  292 => 12,  181 => 105,  179 => 102,  176 => 98,  166 => 91,  160 => 88,  154 => 84,  144 => 77,  138 => 74,  133 => 71,  131 => 70,  104 => 45,  96 => 41,  88 => 37,  86 => 36,  67 => 20,  60 => 15,  58 => 12,  45 => 1,);
+        return array (  350 => 103,  340 => 102,  329 => 13,  319 => 12,  181 => 105,  179 => 102,  176 => 98,  166 => 91,  160 => 88,  154 => 84,  144 => 77,  138 => 74,  133 => 71,  131 => 70,  104 => 45,  96 => 41,  88 => 37,  86 => 36,  67 => 20,  60 => 15,  58 => 12,  45 => 1,);
     }
 
     public function getSourceContext()
@@ -551,6 +578,33 @@ class __TwigTemplate_b4074ef67888d687de142f5318368306073206a57a66c99acea8b00128e
     }
 
 </style>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        // Get all \"navbar-burger\" elements
+        const \$navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+        // Check if there are any navbar burgers
+        if (\$navbarBurgers.length > 0) {
+
+            // Add a click event on each of them
+            \$navbarBurgers.forEach( el => {
+                el.addEventListener('click', () => {
+
+                    // Get the target from the \"data-target\" attribute
+                    const target = el.dataset.target;
+                    const \$target = document.getElementById(target);
+
+                    // Toggle the \"is-active\" class on both the \"navbar-burger\" and the \"navbar-menu\"
+                    el.classList.toggle('is-active');
+                    \$target.classList.toggle('is-active');
+
+                });
+            });
+        }
+
+    });
+</script>
 </body>
 </html>", "base.html.twig", "/app/appclasse/templates/base.html.twig");
     }
