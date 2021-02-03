@@ -90,15 +90,14 @@ class __TwigTemplate_d6eeeaa5bee8fcd28bd190003574490f2d8f70d67486bc603448366fab0
         // line 8
         ((twig_get_attribute($this->env, $this->source, (isset($context["torneig"]) || array_key_exists("torneig", $context) ? $context["torneig"] : (function () { throw new RuntimeError('Variable "torneig" does not exist.', 8, $this->source); })()), "nom", [], "any", false, false, false, 8)) ? (print (twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["torneig"]) || array_key_exists("torneig", $context) ? $context["torneig"] : (function () { throw new RuntimeError('Variable "torneig" does not exist.', 8, $this->source); })()), "nom", [], "any", false, false, false, 8), "html", null, true))) : (print ("?")));
         echo "</span></h1>
-        <div class=\"is-flex is-justify-content-center\">
+        <div class=\"is-flex is-justify-content-center p-3\" style=\"background-color: #e6e6e6 \">
             <div class=\"is-flex is-justify-content-space-evenly \" style=\"width: 50%\" >
-
                 <div class=\"level-item has-text-centered\">
                     <div>
                         <p class=\"heading is-size-5\">Data</p>
                         <p class=\"title is-size-3-mobile\">";
-        // line 15
-        ((twig_get_attribute($this->env, $this->source, (isset($context["torneig"]) || array_key_exists("torneig", $context) ? $context["torneig"] : (function () { throw new RuntimeError('Variable "torneig" does not exist.', 15, $this->source); })()), "data", [], "any", false, false, false, 15)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["torneig"]) || array_key_exists("torneig", $context) ? $context["torneig"] : (function () { throw new RuntimeError('Variable "torneig" does not exist.', 15, $this->source); })()), "data", [], "any", false, false, false, 15), "Y-m-d"), "html", null, true))) : (print ("?")));
+        // line 14
+        ((twig_get_attribute($this->env, $this->source, (isset($context["torneig"]) || array_key_exists("torneig", $context) ? $context["torneig"] : (function () { throw new RuntimeError('Variable "torneig" does not exist.', 14, $this->source); })()), "data", [], "any", false, false, false, 14)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["torneig"]) || array_key_exists("torneig", $context) ? $context["torneig"] : (function () { throw new RuntimeError('Variable "torneig" does not exist.', 14, $this->source); })()), "data", [], "any", false, false, false, 14), "Y-m-d"), "html", null, true))) : (print ("?")));
         echo "</p>
                     </div>
                 </div>
@@ -106,8 +105,8 @@ class __TwigTemplate_d6eeeaa5bee8fcd28bd190003574490f2d8f70d67486bc603448366fab0
                     <div>
                         <p class=\"heading is-size-5\">Rondes</p>
                         <p class=\"title is-size-3-mobile\">";
-        // line 21
-        ((twig_get_attribute($this->env, $this->source, (isset($context["torneig"]) || array_key_exists("torneig", $context) ? $context["torneig"] : (function () { throw new RuntimeError('Variable "torneig" does not exist.', 21, $this->source); })()), "numRondes", [], "any", false, false, false, 21)) ? (print (twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["torneig"]) || array_key_exists("torneig", $context) ? $context["torneig"] : (function () { throw new RuntimeError('Variable "torneig" does not exist.', 21, $this->source); })()), "numRondes", [], "any", false, false, false, 21), "html", null, true))) : (print ("?")));
+        // line 20
+        ((twig_get_attribute($this->env, $this->source, (isset($context["torneig"]) || array_key_exists("torneig", $context) ? $context["torneig"] : (function () { throw new RuntimeError('Variable "torneig" does not exist.', 20, $this->source); })()), "numRondes", [], "any", false, false, false, 20)) ? (print (twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["torneig"]) || array_key_exists("torneig", $context) ? $context["torneig"] : (function () { throw new RuntimeError('Variable "torneig" does not exist.', 20, $this->source); })()), "numRondes", [], "any", false, false, false, 20), "html", null, true))) : (print ("?")));
         echo "</p>
                     </div>
                 </div>
@@ -115,8 +114,8 @@ class __TwigTemplate_d6eeeaa5bee8fcd28bd190003574490f2d8f70d67486bc603448366fab0
                     <div>
                         <p class=\"heading is-size-5\">Numero Participants</p>
                         <p class=\"title is-size-3-mobile\">";
-        // line 27
-        ((twig_get_attribute($this->env, $this->source, (isset($context["torneig"]) || array_key_exists("torneig", $context) ? $context["torneig"] : (function () { throw new RuntimeError('Variable "torneig" does not exist.', 27, $this->source); })()), "theParticipants", [], "any", false, false, false, 27)) ? (print (twig_escape_filter($this->env, twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["torneig"]) || array_key_exists("torneig", $context) ? $context["torneig"] : (function () { throw new RuntimeError('Variable "torneig" does not exist.', 27, $this->source); })()), "theParticipants", [], "any", false, false, false, 27)), "html", null, true))) : (print ("?")));
+        // line 26
+        ((twig_get_attribute($this->env, $this->source, (isset($context["torneig"]) || array_key_exists("torneig", $context) ? $context["torneig"] : (function () { throw new RuntimeError('Variable "torneig" does not exist.', 26, $this->source); })()), "theParticipants", [], "any", false, false, false, 26)) ? (print (twig_escape_filter($this->env, twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["torneig"]) || array_key_exists("torneig", $context) ? $context["torneig"] : (function () { throw new RuntimeError('Variable "torneig" does not exist.', 26, $this->source); })()), "theParticipants", [], "any", false, false, false, 26)), "html", null, true))) : (print ("?")));
         echo "</p>
                     </div>
                 </div>
@@ -124,10 +123,10 @@ class __TwigTemplate_d6eeeaa5bee8fcd28bd190003574490f2d8f70d67486bc603448366fab0
                     <div>
                         <p class=\"heading is-size-5\">Arbitre</p>
                         <p class=\"title is-size-3-mobile\"><a class=\"refTorn\" href=\"";
-        // line 33
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("arbitre_perfil", ["id" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["torneig"]) || array_key_exists("torneig", $context) ? $context["torneig"] : (function () { throw new RuntimeError('Variable "torneig" does not exist.', 33, $this->source); })()), "propietari", [], "any", false, false, false, 33), "id", [], "any", false, false, false, 33)]), "html", null, true);
+        // line 32
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("arbitre_perfil", ["id" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["torneig"]) || array_key_exists("torneig", $context) ? $context["torneig"] : (function () { throw new RuntimeError('Variable "torneig" does not exist.', 32, $this->source); })()), "propietari", [], "any", false, false, false, 32), "id", [], "any", false, false, false, 32)]), "html", null, true);
         echo "\">";
-        ((twig_get_attribute($this->env, $this->source, (isset($context["torneig"]) || array_key_exists("torneig", $context) ? $context["torneig"] : (function () { throw new RuntimeError('Variable "torneig" does not exist.', 33, $this->source); })()), "propietari", [], "any", false, false, false, 33)) ? (print (twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["torneig"]) || array_key_exists("torneig", $context) ? $context["torneig"] : (function () { throw new RuntimeError('Variable "torneig" does not exist.', 33, $this->source); })()), "propietari", [], "any", false, false, false, 33), "nom", [], "any", false, false, false, 33), "html", null, true))) : (print ("?")));
+        ((twig_get_attribute($this->env, $this->source, (isset($context["torneig"]) || array_key_exists("torneig", $context) ? $context["torneig"] : (function () { throw new RuntimeError('Variable "torneig" does not exist.', 32, $this->source); })()), "propietari", [], "any", false, false, false, 32)) ? (print (twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["torneig"]) || array_key_exists("torneig", $context) ? $context["torneig"] : (function () { throw new RuntimeError('Variable "torneig" does not exist.', 32, $this->source); })()), "propietari", [], "any", false, false, false, 32), "nom", [], "any", false, false, false, 32), "html", null, true))) : (print ("?")));
         echo "</a></p>
                     </div>
                 </div>
@@ -138,9 +137,9 @@ class __TwigTemplate_d6eeeaa5bee8fcd28bd190003574490f2d8f70d67486bc603448366fab0
              <p class=\"has-text-weight-bold is-size-4 has-text-centered\">Rondes:</p>
              <div class=\"is-flex is-justify-content-space-around\">
                  ";
-        // line 42
+        // line 41
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["torneig"]) || array_key_exists("torneig", $context) ? $context["torneig"] : (function () { throw new RuntimeError('Variable "torneig" does not exist.', 42, $this->source); })()), "rondes", [], "any", false, false, false, 42));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["torneig"]) || array_key_exists("torneig", $context) ? $context["torneig"] : (function () { throw new RuntimeError('Variable "torneig" does not exist.', 41, $this->source); })()), "rondes", [], "any", false, false, false, 41));
         $context['loop'] = [
           'parent' => $context['_parent'],
           'index0' => 0,
@@ -155,9 +154,9 @@ class __TwigTemplate_d6eeeaa5bee8fcd28bd190003574490f2d8f70d67486bc603448366fab0
             $context['loop']['last'] = 1 === $length;
         }
         foreach ($context['_seq'] as $context["_key"] => $context["ronda"]) {
-            // line 43
+            // line 42
             echo "                     <p><a href=\"\">Ronda ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 43), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 42), "html", null, true);
             echo "</a></p>
                  ";
             ++$context['loop']['index0'];
@@ -172,13 +171,13 @@ class __TwigTemplate_d6eeeaa5bee8fcd28bd190003574490f2d8f70d67486bc603448366fab0
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['ronda'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 45
+        // line 44
         echo "             </div>
          </div>
     </div>
 
         <div class=\"is-flex is-justify-content-center m-5\">
-            <table class=\"table\">
+            <table>
                 <thead>
                     <tr>
                         <th>Ordre</th>
@@ -190,9 +189,9 @@ class __TwigTemplate_d6eeeaa5bee8fcd28bd190003574490f2d8f70d67486bc603448366fab0
                 </thead>
                 <tbody>
                     ";
-        // line 61
+        // line 60
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["torneig"]) || array_key_exists("torneig", $context) ? $context["torneig"] : (function () { throw new RuntimeError('Variable "torneig" does not exist.', 61, $this->source); })()), "theparticipants", [], "any", false, false, false, 61));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["torneig"]) || array_key_exists("torneig", $context) ? $context["torneig"] : (function () { throw new RuntimeError('Variable "torneig" does not exist.', 60, $this->source); })()), "theparticipants", [], "any", false, false, false, 60));
         $context['_iterated'] = false;
         $context['loop'] = [
           'parent' => $context['_parent'],
@@ -208,29 +207,59 @@ class __TwigTemplate_d6eeeaa5bee8fcd28bd190003574490f2d8f70d67486bc603448366fab0
             $context['loop']['last'] = 1 === $length;
         }
         foreach ($context['_seq'] as $context["_key"] => $context["jugador"]) {
-            // line 62
-            echo "                        <tr>
-                            <td>";
-            // line 63
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 63), "html", null, true);
-            echo "</td>
-                            <td><a class=\"jugadorsTorn\" href=\"";
-            // line 64
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("jugador_perfil", ["id" => twig_get_attribute($this->env, $this->source, $context["jugador"], "id", [], "any", false, false, false, 64)]), "html", null, true);
-            echo "\">";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jugador"], "nom", [], "any", false, false, false, 64), "html", null, true);
-            echo "</a></td>
-                            <td>";
-            // line 65
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jugador"], "elo", [], "any", false, false, false, 65), "html", null, true);
-            echo "</td>
-                            <td>";
-            // line 66
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jugador"], "equip", [], "any", false, false, false, 66), "html", null, true);
-            echo "</td>
-                            <td>\"punts finals\"</td>
-                        </tr>
+            // line 61
+            echo "                        ";
+            if ((twig_get_attribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 61) % 2 == 1)) {
+                // line 62
+                echo "                            <tr>
+                                <td>";
+                // line 63
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 63), "html", null, true);
+                echo "</td>
+                                <td><a class=\"jugadorsTorn\" href=\"";
+                // line 64
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("jugador_perfil", ["id" => twig_get_attribute($this->env, $this->source, $context["jugador"], "id", [], "any", false, false, false, 64)]), "html", null, true);
+                echo "\">";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jugador"], "nom", [], "any", false, false, false, 64), "html", null, true);
+                echo "</a></td>
+                                <td>";
+                // line 65
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jugador"], "elo", [], "any", false, false, false, 65), "html", null, true);
+                echo "</td>
+                                <td>";
+                // line 66
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jugador"], "equip", [], "any", false, false, false, 66), "html", null, true);
+                echo "</td>
+                                <td>\"punts finals\"</td>
+                            </tr>
+                            ";
+            } else {
+                // line 70
+                echo "                                <tr style=\"background: #e6e6e6\">
+                                    <td>";
+                // line 71
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 71), "html", null, true);
+                echo "</td>
+                                    <td><a class=\"jugadorsTorn\" href=\"";
+                // line 72
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("jugador_perfil", ["id" => twig_get_attribute($this->env, $this->source, $context["jugador"], "id", [], "any", false, false, false, 72)]), "html", null, true);
+                echo "\">";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jugador"], "nom", [], "any", false, false, false, 72), "html", null, true);
+                echo "</a></td>
+                                    <td>";
+                // line 73
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jugador"], "elo", [], "any", false, false, false, 73), "html", null, true);
+                echo "</td>
+                                    <td>";
+                // line 74
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jugador"], "equip", [], "any", false, false, false, 74), "html", null, true);
+                echo "</td>
+                                    <td>\"punts finals\"</td>
+                                </tr>
                         ";
+            }
+            // line 78
+            echo "                        ";
             $context['_iterated'] = true;
             ++$context['loop']['index0'];
             ++$context['loop']['index'];
@@ -242,7 +271,7 @@ class __TwigTemplate_d6eeeaa5bee8fcd28bd190003574490f2d8f70d67486bc603448366fab0
             }
         }
         if (!$context['_iterated']) {
-            // line 70
+            // line 79
             echo "                            <tr>
                                 <td>Algo ha anat malament..</td>
                             </tr>
@@ -251,11 +280,12 @@ class __TwigTemplate_d6eeeaa5bee8fcd28bd190003574490f2d8f70d67486bc603448366fab0
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['jugador'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 74
+        // line 83
         echo "                </tbody>
             </table>
         </div>
     <style>
+
         .jugadorsTorn
         {
             text-decoration: none;
@@ -287,19 +317,18 @@ class __TwigTemplate_d6eeeaa5bee8fcd28bd190003574490f2d8f70d67486bc603448366fab0
         }
 
         table {
-            font-family:Arial, Helvetica, sans-serif;
             color:#666;
-            font-size:20px;
+            font-size:25px;
             text-shadow: 1px 1px 0px #fff;
-            background:#eaebec;
             margin:20px;
             border:#ccc 1px solid;
             -moz-border-radius:3px;
             -webkit-border-radius:3px;
-            border-radius:3px;
+            border-radius:5px;
             -moz-box-shadow: 0 1px 2px #d1d1d1;
             -webkit-box-shadow: 0 1px 2px #d1d1d1;
             box-shadow: 0 1px 2px #d1d1d1;
+            text-transform: uppercase;
         }
         table a{
             color:#00d1b2;
@@ -319,7 +348,7 @@ class __TwigTemplate_d6eeeaa5bee8fcd28bd190003574490f2d8f70d67486bc603448366fab0
             padding:21px 25px 22px 25px;
             border-top:1px solid #fafafa;
             border-bottom:1px solid #e0e0e0;
-
+            letter-spacing: 1.5px;
             background: #ededed;
             background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#ebebeb));
             background: -moz-linear-gradient(top,  #ededed,  #ebebeb);
@@ -353,14 +382,9 @@ class __TwigTemplate_d6eeeaa5bee8fcd28bd190003574490f2d8f70d67486bc603448366fab0
             border-bottom:1px solid #e0e0e0;
             border-left: 1px solid #e0e0e0;
 
-            background: #fafafa;
+       /*     background: #fafafa;
             background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#fafafa));
-            background: -moz-linear-gradient(top,  #fbfbfb,  #fafafa);
-        }
-        table tr.even td {
-            background: #f6f6f6;
-            background: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#f6f6f6));
-            background: -moz-linear-gradient(top,  #f8f8f8,  #f6f6f6);
+            background: -moz-linear-gradient(top,  #fbfbfb,  #fafafa);*/
         }
         table tr:last-child td {
             border-bottom:0;
@@ -375,10 +399,6 @@ class __TwigTemplate_d6eeeaa5bee8fcd28bd190003574490f2d8f70d67486bc603448366fab0
             -webkit-border-bottom-right-radius:3px;
             border-bottom-right-radius:3px;
         }
-        table tr:hover td {
-            background: #f2f2f2;
-            background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#f0f0f0));
-            background: -moz-linear-gradient(top,  #f2f2f2,  #f0f0f0);}
     </style>
 ";
         
@@ -401,7 +421,7 @@ class __TwigTemplate_d6eeeaa5bee8fcd28bd190003574490f2d8f70d67486bc603448366fab0
 
     public function getDebugInfo()
     {
-        return array (  255 => 74,  246 => 70,  229 => 66,  225 => 65,  219 => 64,  215 => 63,  212 => 62,  194 => 61,  176 => 45,  159 => 43,  142 => 42,  128 => 33,  119 => 27,  110 => 21,  101 => 15,  91 => 8,  88 => 7,  78 => 6,  59 => 4,  36 => 1,);
+        return array (  284 => 83,  275 => 79,  262 => 78,  255 => 74,  251 => 73,  245 => 72,  241 => 71,  238 => 70,  231 => 66,  227 => 65,  221 => 64,  217 => 63,  214 => 62,  211 => 61,  193 => 60,  175 => 44,  158 => 42,  141 => 41,  127 => 32,  118 => 26,  109 => 20,  100 => 14,  91 => 8,  88 => 7,  78 => 6,  59 => 4,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -414,9 +434,8 @@ class __TwigTemplate_d6eeeaa5bee8fcd28bd190003574490f2d8f70d67486bc603448366fab0
 {% block body %}
 
         <h1 class=\"heading is-size-2 has-text-centered m-5\">Informació Del Torneig:  <span class=\"has-text-secondary has-text-weight-bold\">{{ torneig.nom ? torneig.nom : '?' }}</span></h1>
-        <div class=\"is-flex is-justify-content-center\">
+        <div class=\"is-flex is-justify-content-center p-3\" style=\"background-color: #e6e6e6 \">
             <div class=\"is-flex is-justify-content-space-evenly \" style=\"width: 50%\" >
-
                 <div class=\"level-item has-text-centered\">
                     <div>
                         <p class=\"heading is-size-5\">Data</p>
@@ -455,7 +474,7 @@ class __TwigTemplate_d6eeeaa5bee8fcd28bd190003574490f2d8f70d67486bc603448366fab0
     </div>
 
         <div class=\"is-flex is-justify-content-center m-5\">
-            <table class=\"table\">
+            <table>
                 <thead>
                     <tr>
                         <th>Ordre</th>
@@ -467,13 +486,23 @@ class __TwigTemplate_d6eeeaa5bee8fcd28bd190003574490f2d8f70d67486bc603448366fab0
                 </thead>
                 <tbody>
                     {% for jugador in torneig.theparticipants %}
-                        <tr>
-                            <td>{{ loop.index }}</td>
-                            <td><a class=\"jugadorsTorn\" href=\"{{ path(\"jugador_perfil\",{'id':jugador.id}) }}\">{{ jugador.nom }}</a></td>
-                            <td>{{ jugador.elo }}</td>
-                            <td>{{ jugador.equip }}</td>
-                            <td>\"punts finals\"</td>
-                        </tr>
+                        {% if loop.index is odd %}
+                            <tr>
+                                <td>{{ loop.index }}</td>
+                                <td><a class=\"jugadorsTorn\" href=\"{{ path(\"jugador_perfil\",{'id':jugador.id}) }}\">{{ jugador.nom }}</a></td>
+                                <td>{{ jugador.elo }}</td>
+                                <td>{{ jugador.equip }}</td>
+                                <td>\"punts finals\"</td>
+                            </tr>
+                            {% else %}
+                                <tr style=\"background: #e6e6e6\">
+                                    <td>{{ loop.index }}</td>
+                                    <td><a class=\"jugadorsTorn\" href=\"{{ path(\"jugador_perfil\",{'id':jugador.id}) }}\">{{ jugador.nom }}</a></td>
+                                    <td>{{ jugador.elo }}</td>
+                                    <td>{{ jugador.equip }}</td>
+                                    <td>\"punts finals\"</td>
+                                </tr>
+                        {% endif %}
                         {% else %}
                             <tr>
                                 <td>Algo ha anat malament..</td>
@@ -483,6 +512,7 @@ class __TwigTemplate_d6eeeaa5bee8fcd28bd190003574490f2d8f70d67486bc603448366fab0
             </table>
         </div>
     <style>
+
         .jugadorsTorn
         {
             text-decoration: none;
@@ -514,19 +544,18 @@ class __TwigTemplate_d6eeeaa5bee8fcd28bd190003574490f2d8f70d67486bc603448366fab0
         }
 
         table {
-            font-family:Arial, Helvetica, sans-serif;
             color:#666;
-            font-size:20px;
+            font-size:25px;
             text-shadow: 1px 1px 0px #fff;
-            background:#eaebec;
             margin:20px;
             border:#ccc 1px solid;
             -moz-border-radius:3px;
             -webkit-border-radius:3px;
-            border-radius:3px;
+            border-radius:5px;
             -moz-box-shadow: 0 1px 2px #d1d1d1;
             -webkit-box-shadow: 0 1px 2px #d1d1d1;
             box-shadow: 0 1px 2px #d1d1d1;
+            text-transform: uppercase;
         }
         table a{
             color:#00d1b2;
@@ -546,7 +575,7 @@ class __TwigTemplate_d6eeeaa5bee8fcd28bd190003574490f2d8f70d67486bc603448366fab0
             padding:21px 25px 22px 25px;
             border-top:1px solid #fafafa;
             border-bottom:1px solid #e0e0e0;
-
+            letter-spacing: 1.5px;
             background: #ededed;
             background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#ebebeb));
             background: -moz-linear-gradient(top,  #ededed,  #ebebeb);
@@ -580,14 +609,9 @@ class __TwigTemplate_d6eeeaa5bee8fcd28bd190003574490f2d8f70d67486bc603448366fab0
             border-bottom:1px solid #e0e0e0;
             border-left: 1px solid #e0e0e0;
 
-            background: #fafafa;
+       /*     background: #fafafa;
             background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#fafafa));
-            background: -moz-linear-gradient(top,  #fbfbfb,  #fafafa);
-        }
-        table tr.even td {
-            background: #f6f6f6;
-            background: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#f6f6f6));
-            background: -moz-linear-gradient(top,  #f8f8f8,  #f6f6f6);
+            background: -moz-linear-gradient(top,  #fbfbfb,  #fafafa);*/
         }
         table tr:last-child td {
             border-bottom:0;
@@ -602,10 +626,6 @@ class __TwigTemplate_d6eeeaa5bee8fcd28bd190003574490f2d8f70d67486bc603448366fab0
             -webkit-border-bottom-right-radius:3px;
             border-bottom-right-radius:3px;
         }
-        table tr:hover td {
-            background: #f2f2f2;
-            background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#f0f0f0));
-            background: -moz-linear-gradient(top,  #f2f2f2,  #f0f0f0);}
     </style>
 {% endblock %}", "torneig/profile.html.twig", "/app/appclasse/templates/torneig/profile.html.twig");
     }

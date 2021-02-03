@@ -60,13 +60,13 @@ class __TwigTemplate_b4074ef67888d687de142f5318368306073206a57a66c99acea8b00128e
         echo "</head>
 <body>
 
-<nav class=\"navbar \" role=\"navigation\" aria-label=\"main navigation\">
+<nav class=\"navbar is-primary\" role=\"navigation\" aria-label=\"main navigation\">
     <div class=\"navbar-brand\">
         <a class=\"navbar-item\" href=\"";
         // line 20
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("inici");
         echo "\">
-            <img src=\"https://res.cloudinary.com/teepublic/image/private/s--98tHC0MX--/t_Preview/b_rgb:ffffff,c_lpad,f_jpg,h_630,q_90,w_1200/v1543702206/production/designs/3681922_0.jpg\" width=\"112\" height=\"58\">
+            <img src=\"https://www.shareicon.net/data/128x128/2015/10/31/664739_knight_512x512.png\">
         </a>
 
         <a role=\"button\" class=\"navbar-burger\" aria-label=\"menu\" aria-expanded=\"false\" data-target=\"navbarBasicExample\">
@@ -133,7 +133,7 @@ class __TwigTemplate_b4074ef67888d687de142f5318368306073206a57a66c99acea8b00128e
             echo "            <div class=\"navbar-end\">
                 <div class=\"navbar-item\">
                     <div class=\"buttons\">
-                        <a class=\"button is-primary\" href=\"";
+                        <a class=\"button is-primary\" style=\"border: 1px solid white\" href=\"";
             // line 74
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("user_edit", ["id" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 74, $this->source); })()), "user", [], "any", false, false, false, 74), "id", [], "any", false, false, false, 74)]), "html", null, true);
             echo "\">
@@ -155,7 +155,7 @@ class __TwigTemplate_b4074ef67888d687de142f5318368306073206a57a66c99acea8b00128e
             <div class=\"navbar-end\">
                 <div class=\"navbar-item\">
                     <div class=\"buttons\">
-                        <a class=\"button is-primary\" href=\"";
+                        <a class=\"button is-primary\" style=\"border: 1px solid white\" href=\"";
             // line 88
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("user_new");
             echo "\">
@@ -364,10 +364,10 @@ class __TwigTemplate_b4074ef67888d687de142f5318368306073206a57a66c99acea8b00128e
 </head>
 <body>
 
-<nav class=\"navbar \" role=\"navigation\" aria-label=\"main navigation\">
+<nav class=\"navbar is-primary\" role=\"navigation\" aria-label=\"main navigation\">
     <div class=\"navbar-brand\">
         <a class=\"navbar-item\" href=\"{{path(\"inici\")}}\">
-            <img src=\"https://res.cloudinary.com/teepublic/image/private/s--98tHC0MX--/t_Preview/b_rgb:ffffff,c_lpad,f_jpg,h_630,q_90,w_1200/v1543702206/production/designs/3681922_0.jpg\" width=\"112\" height=\"58\">
+            <img src=\"https://www.shareicon.net/data/128x128/2015/10/31/664739_knight_512x512.png\">
         </a>
 
         <a role=\"button\" class=\"navbar-burger\" aria-label=\"menu\" aria-expanded=\"false\" data-target=\"navbarBasicExample\">
@@ -420,7 +420,7 @@ class __TwigTemplate_b4074ef67888d687de142f5318368306073206a57a66c99acea8b00128e
             <div class=\"navbar-end\">
                 <div class=\"navbar-item\">
                     <div class=\"buttons\">
-                        <a class=\"button is-primary\" href=\"{{ path('user_edit',{'id': app.user.id})}}\">
+                        <a class=\"button is-primary\" style=\"border: 1px solid white\" href=\"{{ path('user_edit',{'id': app.user.id})}}\">
                             <strong><i class=\"fas fa-user\" ></i> Perfil</strong>
                         </a>
                         <a class=\"button is-danger\" href=\"{{ path('app_logout') }}\" >
@@ -434,7 +434,7 @@ class __TwigTemplate_b4074ef67888d687de142f5318368306073206a57a66c99acea8b00128e
             <div class=\"navbar-end\">
                 <div class=\"navbar-item\">
                     <div class=\"buttons\">
-                        <a class=\"button is-primary\" href=\"{{path('user_new')  }}\">
+                        <a class=\"button is-primary\" style=\"border: 1px solid white\" href=\"{{path('user_new')  }}\">
                             <strong>Sign up</strong>
                         </a>
                         <a class=\"button is-light\" href=\"{{path('app_login')  }}\">

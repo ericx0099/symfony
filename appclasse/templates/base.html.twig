@@ -15,10 +15,10 @@
 </head>
 <body>
 
-<nav class="navbar " role="navigation" aria-label="main navigation">
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
         <a class="navbar-item" href="{{path("inici")}}">
-            <img src="https://res.cloudinary.com/teepublic/image/private/s--98tHC0MX--/t_Preview/b_rgb:ffffff,c_lpad,f_jpg,h_630,q_90,w_1200/v1543702206/production/designs/3681922_0.jpg" width="112" height="58">
+            <img src="https://www.shareicon.net/data/128x128/2015/10/31/664739_knight_512x512.png">
         </a>
 
         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -71,7 +71,7 @@
             <div class="navbar-end">
                 <div class="navbar-item">
                     <div class="buttons">
-                        <a class="button is-primary" href="{{ path('user_edit',{'id': app.user.id})}}">
+                        <a class="button is-primary" style="border: 1px solid white" href="{{ path('user_edit',{'id': app.user.id})}}">
                             <strong><i class="fas fa-user" ></i> Perfil</strong>
                         </a>
                         <a class="button is-danger" href="{{ path('app_logout') }}" >
@@ -85,7 +85,7 @@
             <div class="navbar-end">
                 <div class="navbar-item">
                     <div class="buttons">
-                        <a class="button is-primary" href="{{path('user_new')  }}">
+                        <a class="button is-primary" style="border: 1px solid white" href="{{path('user_new')  }}">
                             <strong>Sign up</strong>
                         </a>
                         <a class="button is-light" href="{{path('app_login')  }}">
