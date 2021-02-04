@@ -90,7 +90,7 @@ class __TwigTemplate_d6eeeaa5bee8fcd28bd190003574490f2d8f70d67486bc603448366fab0
         // line 8
         ((twig_get_attribute($this->env, $this->source, (isset($context["torneig"]) || array_key_exists("torneig", $context) ? $context["torneig"] : (function () { throw new RuntimeError('Variable "torneig" does not exist.', 8, $this->source); })()), "nom", [], "any", false, false, false, 8)) ? (print (twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["torneig"]) || array_key_exists("torneig", $context) ? $context["torneig"] : (function () { throw new RuntimeError('Variable "torneig" does not exist.', 8, $this->source); })()), "nom", [], "any", false, false, false, 8), "html", null, true))) : (print ("?")));
         echo "</span></h1>
-        <div class=\"is-flex is-justify-content-center p-3\" style=\"background-color: #e6e6e6 \">
+        <div class=\"is-flex is-justify-content-center p-3\" style=\"background-color: #e6e6e6; margin-left: 1.5%; margin-right: 1.5% \">
             <div class=\"is-flex is-justify-content-space-evenly \" style=\"width: 50%\" >
                 <div class=\"level-item has-text-centered\">
                     <div>
@@ -285,6 +285,7 @@ class __TwigTemplate_d6eeeaa5bee8fcd28bd190003574490f2d8f70d67486bc603448366fab0
             </table>
         </div>
     <style>
+
         .shadow {
             border: 4px solid #00d1b2;
             border-top: none;
@@ -332,7 +333,7 @@ class __TwigTemplate_d6eeeaa5bee8fcd28bd190003574490f2d8f70d67486bc603448366fab0
             border-radius:5px;
             -moz-box-shadow: 0 1px 2px #d1d1d1;
             -webkit-box-shadow: 0 1px 2px #d1d1d1;
-            box-shadow: 0 1px 2px #d1d1d1;
+            box-shadow: 0 0 10px rgba(110,110,110, 0.5);
             text-transform: uppercase;
         }
         table a{
@@ -345,18 +346,17 @@ class __TwigTemplate_d6eeeaa5bee8fcd28bd190003574490f2d8f70d67486bc603448366fab0
         }
         table a:active,
         table a:hover {
-            color: rgb(0, 209, 178);
+            color:#00d1b2;
             text-decoration:underline;
         }
 
         table th {
+            color: white;
             padding:21px 25px 22px 25px;
-            border-top:1px solid #fafafa;
             border-bottom:1px solid #e0e0e0;
             letter-spacing: 1.5px;
-            background: #ededed;
-            background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#ebebeb));
-            background: -moz-linear-gradient(top,  #ededed,  #ebebeb);
+            background: #00d1b2;
+            font-weight: normal;
         }
         table th:first-child {
             text-align: left;
@@ -439,7 +439,7 @@ class __TwigTemplate_d6eeeaa5bee8fcd28bd190003574490f2d8f70d67486bc603448366fab0
 {% block body %}
 
         <h1 class=\"heading is-size-2 has-text-centered m-5\">Informació Del Torneig:  <span class=\"has-text-secondary has-text-weight-bold\">{{ torneig.nom ? torneig.nom : '?' }}</span></h1>
-        <div class=\"is-flex is-justify-content-center p-3\" style=\"background-color: #e6e6e6 \">
+        <div class=\"is-flex is-justify-content-center p-3\" style=\"background-color: #e6e6e6; margin-left: 1.5%; margin-right: 1.5% \">
             <div class=\"is-flex is-justify-content-space-evenly \" style=\"width: 50%\" >
                 <div class=\"level-item has-text-centered\">
                     <div>
@@ -517,6 +517,7 @@ class __TwigTemplate_d6eeeaa5bee8fcd28bd190003574490f2d8f70d67486bc603448366fab0
             </table>
         </div>
     <style>
+
         .shadow {
             border: 4px solid #00d1b2;
             border-top: none;
@@ -564,7 +565,7 @@ class __TwigTemplate_d6eeeaa5bee8fcd28bd190003574490f2d8f70d67486bc603448366fab0
             border-radius:5px;
             -moz-box-shadow: 0 1px 2px #d1d1d1;
             -webkit-box-shadow: 0 1px 2px #d1d1d1;
-            box-shadow: 0 1px 2px #d1d1d1;
+            box-shadow: 0 0 10px rgba(110,110,110, 0.5);
             text-transform: uppercase;
         }
         table a{
@@ -577,18 +578,17 @@ class __TwigTemplate_d6eeeaa5bee8fcd28bd190003574490f2d8f70d67486bc603448366fab0
         }
         table a:active,
         table a:hover {
-            color: rgb(0, 209, 178);
+            color:#00d1b2;
             text-decoration:underline;
         }
 
         table th {
+            color: white;
             padding:21px 25px 22px 25px;
-            border-top:1px solid #fafafa;
             border-bottom:1px solid #e0e0e0;
             letter-spacing: 1.5px;
-            background: #ededed;
-            background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#ebebeb));
-            background: -moz-linear-gradient(top,  #ededed,  #ebebeb);
+            background: #00d1b2;
+            font-weight: normal;
         }
         table th:first-child {
             text-align: left;
