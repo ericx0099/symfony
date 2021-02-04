@@ -161,6 +161,10 @@ class __TwigTemplate_9b02a237a3438bdf50ca5ed56a9ddd2678a523246dde3269e9757e4ab37
             </div>
         </div>
     </div>
+    <a href=\"";
+        // line 46
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ronda", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["torneig"]) || array_key_exists("torneig", $context) ? $context["torneig"] : (function () { throw new RuntimeError('Variable "torneig" does not exist.', 46, $this->source); })()), "id", [], "any", false, false, false, 46)]), "html", null, true);
+        echo "\">GO rondes</a>
     <p class=\"has-text-centered has-text-primary  is-size-2 m-5\">Rànquing inicial</p>
 
     <div class=\"is-flex is-justify-content-center\">
@@ -176,9 +180,9 @@ class __TwigTemplate_9b02a237a3438bdf50ca5ed56a9ddd2678a523246dde3269e9757e4ab37
             </thead>
             <tbody>
             ";
-        // line 60
+        // line 61
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["torneig"]) || array_key_exists("torneig", $context) ? $context["torneig"] : (function () { throw new RuntimeError('Variable "torneig" does not exist.', 60, $this->source); })()), "theParticipants", [], "any", false, false, false, 60));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["torneig"]) || array_key_exists("torneig", $context) ? $context["torneig"] : (function () { throw new RuntimeError('Variable "torneig" does not exist.', 61, $this->source); })()), "theParticipants", [], "any", false, false, false, 61));
         $context['loop'] = [
           'parent' => $context['_parent'],
           'index0' => 0,
@@ -193,25 +197,25 @@ class __TwigTemplate_9b02a237a3438bdf50ca5ed56a9ddd2678a523246dde3269e9757e4ab37
             $context['loop']['last'] = 1 === $length;
         }
         foreach ($context['_seq'] as $context["_key"] => $context["jugador"]) {
-            // line 61
+            // line 62
             echo "                <tr>
                     <td>";
-            // line 62
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 62), "html", null, true);
+            // line 63
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 63), "html", null, true);
             echo "</td>
                     <td><a href=\"";
-            // line 63
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("jugador_perfil", ["id" => twig_get_attribute($this->env, $this->source, $context["jugador"], "id", [], "any", false, false, false, 63)]), "html", null, true);
+            // line 64
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("jugador_perfil", ["id" => twig_get_attribute($this->env, $this->source, $context["jugador"], "id", [], "any", false, false, false, 64)]), "html", null, true);
             echo "\">";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jugador"], "nom", [], "any", false, false, false, 63), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jugador"], "nom", [], "any", false, false, false, 64), "html", null, true);
             echo "</a></td>
                     <td>";
-            // line 64
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jugador"], "elo", [], "any", false, false, false, 64), "html", null, true);
+            // line 65
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jugador"], "elo", [], "any", false, false, false, 65), "html", null, true);
             echo "</td>
                     <td>";
-            // line 65
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jugador"], "equip", [], "any", false, false, false, 65), "html", null, true);
+            // line 66
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jugador"], "equip", [], "any", false, false, false, 66), "html", null, true);
             echo "</td>
                 </tr>
             ";
@@ -227,7 +231,7 @@ class __TwigTemplate_9b02a237a3438bdf50ca5ed56a9ddd2678a523246dde3269e9757e4ab37
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['jugador'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 68
+        // line 69
         echo "            </tbody>
         </table>
     </div>
@@ -264,7 +268,7 @@ class __TwigTemplate_9b02a237a3438bdf50ca5ed56a9ddd2678a523246dde3269e9757e4ab37
 
     public function getDebugInfo()
     {
-        return array (  231 => 68,  214 => 65,  210 => 64,  204 => 63,  200 => 62,  197 => 61,  180 => 60,  155 => 40,  146 => 34,  137 => 28,  128 => 22,  118 => 15,  111 => 10,  101 => 8,  89 => 5,  79 => 4,  60 => 3,  37 => 1,);
+        return array (  235 => 69,  218 => 66,  214 => 65,  208 => 64,  204 => 63,  201 => 62,  184 => 61,  166 => 46,  155 => 40,  146 => 34,  137 => 28,  128 => 22,  118 => 15,  111 => 10,  101 => 8,  89 => 5,  79 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -314,6 +318,7 @@ class __TwigTemplate_9b02a237a3438bdf50ca5ed56a9ddd2678a523246dde3269e9757e4ab37
             </div>
         </div>
     </div>
+    <a href=\"{{ path(\"ronda\",{'id':torneig.id}) }}\">GO rondes</a>
     <p class=\"has-text-centered has-text-primary  is-size-2 m-5\">Rànquing inicial</p>
 
     <div class=\"is-flex is-justify-content-center\">

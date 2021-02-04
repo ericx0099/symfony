@@ -71,13 +71,16 @@ return [
                             .'|([^/]++)/deleteJugador(*:403)'
                             .'|rondes(*:417)'
                         .')'
-                        .'|/([^/]++)/start(*:441)'
+                        .'|/([^/]++)/(?'
+                            .'|start(*:444)'
+                            .'|newRound(*:460)'
+                        .')'
                     .')'
                 .')'
                 .'|/user/([^/]++)(?'
-                    .'|(*:468)'
-                    .'|/edit(*:481)'
-                    .'|(*:489)'
+                    .'|(*:488)'
+                    .'|/edit(*:501)'
+                    .'|(*:509)'
                 .')'
             .')/?$}sDu',
     ],
@@ -101,10 +104,11 @@ return [
         360 => [[['_route' => 'torneig_delete', '_controller' => 'App\\Controller\\TorneigController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
         403 => [[['_route' => 'torneig_deleteJugador', '_controller' => 'App\\Controller\\TorneigController::deleteJugador'], ['id', 'idJ'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
         417 => [[['_route' => 'torneig_gestiorondes', '_controller' => 'App\\Controller\\TorneigController::gestioRondes'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        441 => [[['_route' => 'torneig_start', '_controller' => 'App\\Controller\\TorneigController::startTourn'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        468 => [[['_route' => 'user_show', '_controller' => 'App\\Controller\\UserController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        481 => [[['_route' => 'user_edit', '_controller' => 'App\\Controller\\UserController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        489 => [
+        444 => [[['_route' => 'torneig_start', '_controller' => 'App\\Controller\\TorneigController::startTourn'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        460 => [[['_route' => 'ronda', '_controller' => 'App\\Controller\\TorneigController::new_round'], ['id'], null, null, false, false, null]],
+        488 => [[['_route' => 'user_show', '_controller' => 'App\\Controller\\UserController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        501 => [[['_route' => 'user_edit', '_controller' => 'App\\Controller\\UserController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        509 => [
             [['_route' => 'user_delete', '_controller' => 'App\\Controller\\UserController::delete'], ['id'], ['DELETE' => 0], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

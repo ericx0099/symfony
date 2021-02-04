@@ -210,8 +210,9 @@ class Torneig
         return $this;
     }
 
-    public function addRonda(){
-        $rondat = new Ronda();
-        $rondat->matching($this->theParticipants, $this->rondes);
+    public function addRonda($ronda){
+   /*     $rondat = new Ronda();
+        $rondat->matching($this->theParticipants, $this->rondes);*/
+        $this->rondes[] = $ronda;
     }
 }

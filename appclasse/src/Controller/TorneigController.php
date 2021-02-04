@@ -3,11 +3,14 @@
 namespace App\Controller;
 
 use App\Entity\Jugador;
+use App\Entity\Ronda;
+use App\Entity\Taula;
 use App\Entity\Torneig;
 use App\Entity\User;
 use App\Form\TorneigType2;
 use App\Form\TournAddJug;
 use App\Repository\JugadorRepository;
+use App\Repository\RondaRepository;
 use App\Repository\TorneigRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -280,4 +283,115 @@ class TorneigController extends AbstractController
             /*     'dataa' =>$torneig->getData()->format('Y-m-d')*/
         ]);
     }
+
+    /**
+     * @Route("/{id}/newRound", name="ronda")
+     */
+    public function new_round(Request $request, Torneig $torneig,JugadorRepository $jugadorRepository,TorneigRepository $torneigRepository, RondaRepository $rondaRepository){
+        $em = $this->getDoctrine()->getManager();
+        $rondesExistents = $torneig->getRondes();
+        $thisRonda = new Ronda();
+        $numeroRondes = count($rondesExistents);
+        $part = [];
+        $thisRonda->setNumRondes($numeroRondes+1);
+        $allJugadors = $torneig->getJugadors();
+
+        $borrats = [];
+        $disponibles = [];
+        for($i = 0;$i<count((array)$allJugadors);$i++){
+            $disponibles = $allJugadors;
+            $jugadorsEnfrontats = $this->getEnfrontaments($allJugadors[$i],$torneigRepository,$jugadorRepository);
+            array_push($jugadorsEnfrontats,$allJugadors[$i]);
+
+            if(array_search($allJugadors[$i],$borrats)){
+                continue;
+            }
+            $auxDisp = [];
+            for($e = 0; $e<count($disponibles);$e++){
+                $disp = true;
+                for($j = 0; $j< count($jugadorsEnfrontats);$j++){
+                    if($disponibles[$e]->getId() == $jugadorsEnfrontats[$j]->getId()){
+                        $disp = false;
+                    }
+                }
+                for ($j = 0;$j<count($borrats);$j++){
+                    if($disponibles[$e]->getId() == $borrats[$j]->getId()){
+                        $disp = false;
+                    }
+                }
+                if($disp){
+                    array_push($auxDisp,$disponibles[$e]);
+                }
+            }
+            $num = rand(0,count($auxDisp));
+
+            if(isset($auxDisp[$num])){
+                $jugadorEnfrontat = $auxDisp[$num];
+                array_push($borrats,$allJugadors[$i]);
+                array_push($borrats, $jugadorEnfrontat);
+                $partida = new Taula();
+                if($this->getLastPieceColour($allJugadors[$i]->getId(),$torneig,$numeroRondes) == "blanc"){
+                    $partida->setJugadorB($jugadorEnfrontat);
+                    $partida->setJugadorN($allJugadors[$i]);
+                }else{
+                    $partida->setJugadorB($allJugadors[$i]);
+                    $partida->setJugadorN($jugadorEnfrontat);
+                }
+                array_push($part,$partida);
+            }else{
+                $i = -1;
+                $disponibles = [];
+                $borrats = [];
+                $part = [];
+            }
+        }
+        foreach($part as $partida){
+            $thisRonda->addPartides($partida);
+            $em->persist($partida);
+            $em->persist($thisRonda);
+            $torneig->addRonda($thisRonda);
+            $em->persist($torneig);
+            $em->flush();
+        }
+
+        return $this->render('torneig/rounds.html.twig',[
+            'torneig' => $torneigRepository->findOneBy(array('id'=>$torneig->getId())),
+            'ronda' => $thisRonda
+        ]);
+    }
+    function getLastPieceColour($id,$torneig,$numRonda){
+        foreach ($torneig->getRondes()[$numRonda]->getPartides as $partida){
+            if($partida->getJugadorB()->getId() == $id){
+                return "blanc";
+            }else if($partida->getJugadorN()->getId == $id){
+                return "negre";
+            }
+        }
+    }
+    function getEnfrontaments($id,$torneigRepository,$jugadorRepository){
+
+        $torneigos = $torneigRepository->findAll();
+
+        $jugador = $jugadorRepository->findOneBy(array('id'=>$id));
+        $jugadorsEnfrontats = [];
+        foreach($torneigos as $torneig){
+            $rondes = $torneig->getRondes();
+            foreach($rondes as $ronda){
+                $taules = $ronda->getPartides();
+                foreach($taules as $taula){
+                    if($taula->getJugadorB->getId() == $jugador->getId()){
+                        $jugadorsEnfrontats[] = $taula->getJugadorN();
+                    }else if($taula->getJugadorN->getId() == $jugador->getId()){
+                        $jugadorsEnfrontats[] = $taula->getJugadorB();
+                    }
+                }
+            }
+        }
+        return $jugadorsEnfrontats;
+
+
+    }
+
+
+
 }

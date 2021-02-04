@@ -11,7 +11,7 @@
         <div class="level-item has-text-centered">
             <div>
                 <p class="heading">Data</p>
-                <p class="title">{{ dataa }}</p>
+                <p class="title">{{  torneig.data ? torneig.data|date('Y-m-d') : '?'}}</p>
             </div>
         </div>
         <div class="level-item has-text-centered">
@@ -33,22 +33,47 @@
             </div>
         </div>
     </div>
+    <div>
+        <p>Numero de RONDA: {{ ronda.numRondes }}</p>
+    </div>
     <table>
         <thead>
         <tr>
             <th>T.</th>
-            <th>Nom</th>
-            <th>Fide</th>
-            <th>Club/Ciutat</th>
+            <th>Jug. Blanques</th>
+            <th>Puntuacio</th>
+            <th>Jug. Negres</th>
         </tr>
         </thead>
-        {% set break = false %}
-        {% for ronda in torneig.rondes if not break %}
-            {% if ronda.numRondes == torneig.rondes|length %}
-                {% for taula in ronda.partides %}
+        <tbody>
 
-                {% set break = true %}
-            {% endif %}
-        {% endfor %}
+        {#    {% set break = false %}
+            {% for ronda in rondes if not break %}#}
+
+                    {% for taula in ronda.partides %}
+                        <tr>
+                            <td>
+                                {{ loop.index }}
+                            </td>
+                            <td>
+                                {{ taula.jugadorB.nom }}
+                            </td>
+                            <td>
+                                0-0
+                            </td>
+                            <td>
+                                {{ taula.jugadorN.nom }}
+                            </td>
+                        </tr>
+                        {% else %}
+                        <tr>
+                            <td>No Partides</td>
+                        </tr>
+                    {% endfor %}
+                    {% set break = true %}
+
+          {#  {% endfor %}#}
+        </tbody>
+
     </table>
 {% endblock %}
