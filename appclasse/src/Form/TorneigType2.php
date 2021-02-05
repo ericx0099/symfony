@@ -24,19 +24,6 @@ class TorneigType2 extends AbstractType
                     'class' => 'input'
                 ]
             ])
-            ->add('NumRondes', RangeType::class,[
-                'attr'=>[
-                    'class'=>'slider myRange',
-                    'min'=> 0,
-                    'max'=> 100,
-                    'value'=>50
-                ],
-                'label'=> false
-
-
-            ])
-
-
         ;
     }
 

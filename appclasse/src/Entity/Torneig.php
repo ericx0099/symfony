@@ -134,6 +134,14 @@ class Torneig
     public function addTheParticipants($participant): void
     {
         $this->theParticipants[] = $participant;
+        $loga2 = log(count($this->getTheParticipants()), 2);
+        $arraylog = explode(".", strval($loga2));
+        if (intval($arraylog[1]) > 0){
+            $this->setNumRondes(intval($loga2) +1);
+        }else {
+            $this->setNumRondes(intval($loga2));
+        }
+
 
     }
 
