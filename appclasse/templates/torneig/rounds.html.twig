@@ -55,6 +55,7 @@
                             <td>
                                 {{ loop.index }}
                             </td>
+
                             <td>
                                 {{ taula.jugadorB.nom }}
                             </td>
@@ -67,7 +68,7 @@
                         </tr>
                         {% else %}
                         <tr>
-                            <td>No Partides</td>
+                            <td>No Partides</td>    E : {{ e }}  M: {{ m }}  C: {{ c }}
                         </tr>
                     {% endfor %}
                     {% set break = true %}

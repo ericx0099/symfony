@@ -27,7 +27,7 @@
         {% for torneig in torneigs %}
             <tr>
                 <td>{{ torneig.id }}</td>
-                <td>{{ torneig.rondes ? torneig.rondes|join(', ') : '' }}</td>
+                <td>{{ torneig.rondes ? torneig.rondes|length }}</td>
                 <td>{{ torneig.data ? torneig.data|date('Y-m-d') : '' }}</td>
                 <td>{{ torneig.theParticipants|length}}</td>
                 <td>{{ torneig.nom }}</td>

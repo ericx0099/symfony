@@ -4247,12 +4247,13 @@
         <argument key="torneig" type="service" id=".errored..service_locator.NGGyytN.App\Entity\Torneig"/>
       </argument>
     </service>
-    <service id=".service_locator.i2tict4" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.SBUisUe" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="jugadorRepository" type="service" id="App\Repository\JugadorRepository"/>
         <argument key="rondaRepository" type="service" id="App\Repository\RondaRepository"/>
-        <argument key="torneig" type="service" id=".errored..service_locator.i2tict4.App\Entity\Torneig"/>
+        <argument key="taulaRepository" type="service" id="App\Repository\TaulaRepository"/>
+        <argument key="torneig" type="service" id=".errored..service_locator.SBUisUe.App\Entity\Torneig"/>
         <argument key="torneigRepository" type="service" id="App\Repository\TorneigRepository"/>
       </argument>
     </service>
@@ -4262,7 +4263,7 @@
         <argument key="userRepository" type="service" id="App\Repository\UserRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.mu1hYBg" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.S8PS.yY" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\JugadorController::delete" type="service" id=".service_locator.ptI9rup"/>
@@ -4283,7 +4284,7 @@
         <argument key="App\Controller\TorneigController::edit" type="service" id=".service_locator.IhHg9h8"/>
         <argument key="App\Controller\TorneigController::gestioRondes" type="service" id=".service_locator.IhHg9h8"/>
         <argument key="App\Controller\TorneigController::index" type="service" id=".service_locator.B6HzPCZ"/>
-        <argument key="App\Controller\TorneigController::new_round" type="service" id=".service_locator.i2tict4"/>
+        <argument key="App\Controller\TorneigController::new_round" type="service" id=".service_locator.SBUisUe"/>
         <argument key="App\Controller\TorneigController::show" type="service" id=".service_locator.IhHg9h8"/>
         <argument key="App\Controller\TorneigController::startTourn" type="service" id=".service_locator.IhHg9h8"/>
         <argument key="App\Controller\UserController::delete" type="service" id=".service_locator.ch4Jgvl"/>
@@ -4314,7 +4315,7 @@
         <argument key="App\Controller\TorneigController:edit" type="service" id=".service_locator.IhHg9h8"/>
         <argument key="App\Controller\TorneigController:gestioRondes" type="service" id=".service_locator.IhHg9h8"/>
         <argument key="App\Controller\TorneigController:index" type="service" id=".service_locator.B6HzPCZ"/>
-        <argument key="App\Controller\TorneigController:new_round" type="service" id=".service_locator.i2tict4"/>
+        <argument key="App\Controller\TorneigController:new_round" type="service" id=".service_locator.SBUisUe"/>
         <argument key="App\Controller\TorneigController:show" type="service" id=".service_locator.IhHg9h8"/>
         <argument key="App\Controller\TorneigController:startTourn" type="service" id=".service_locator.IhHg9h8"/>
         <argument key="App\Controller\UserController:delete" type="service" id=".service_locator.ch4Jgvl"/>
@@ -4613,12 +4614,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.mu1hYBg"/>
+      <argument type="service" id=".service_locator.S8PS.yY"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.mu1hYBg"/>
+      <argument type="service" id=".service_locator.S8PS.yY"/>
     </service>
     <service id=".errored..service_locator.KfwZsne.Symfony\Component\HttpFoundation\Response" class="Symfony\Component\HttpFoundation\Response"/>
     <service id=".errored..service_locator.KfbR3DY.Symfony\Component\Config\Loader\LoaderInterface" class="Symfony\Component\Config\Loader\LoaderInterface"/>
@@ -4630,7 +4631,7 @@
     <service id=".errored..service_locator.657b3tR.App\Entity\Torneig" class="App\Entity\Torneig"/>
     <service id=".errored..service_locator.NGGyytN.App\Entity\Jugador" class="App\Entity\Jugador"/>
     <service id=".errored..service_locator.NGGyytN.App\Entity\Torneig" class="App\Entity\Torneig"/>
-    <service id=".errored..service_locator.i2tict4.App\Entity\Torneig" class="App\Entity\Torneig"/>
+    <service id=".errored..service_locator.SBUisUe.App\Entity\Torneig" class="App\Entity\Torneig"/>
     <service id="console.command_loader" class="Symfony\Component\Console\CommandLoader\ContainerCommandLoader" public="true">
       <tag name="container.no_preload"/>
       <argument type="service" id=".service_locator.fTbkI93"/>
@@ -4983,7 +4984,7 @@
     <service id="Twig\Environment" alias="twig"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.Kbr2i2X" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.mu1hYBg"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.S8PS.yY"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface" alias="logger"/>
     <service id=".service_locator.wKF4yn1" alias=".service_locator.anofQPJ"/>

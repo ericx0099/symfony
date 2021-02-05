@@ -164,7 +164,7 @@ class __TwigTemplate_89a59a9f5e4a46cb152599d599b2e77a4eb9a503104a7ac220c344df15c
             echo "</a></td>
                         <td>";
             // line 49
-            ((twig_get_attribute($this->env, $this->source, $context["torneig"], "rondes", [], "any", false, false, false, 49)) ? (print (twig_escape_filter($this->env, twig_join_filter(twig_get_attribute($this->env, $this->source, $context["torneig"], "rondes", [], "any", false, false, false, 49), ", "), "html", null, true))) : (print ("")));
+            ((twig_get_attribute($this->env, $this->source, $context["torneig"], "rondes", [], "any", false, false, false, 49)) ? (print (twig_escape_filter($this->env, twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, $context["torneig"], "rondes", [], "any", false, false, false, 49)), "html", null, true))) : (print ("")));
             echo "</td>
                         <td>";
             // line 50
@@ -303,7 +303,7 @@ class __TwigTemplate_89a59a9f5e4a46cb152599d599b2e77a4eb9a503104a7ac220c344df15c
                 {% for torneig in user.torneigs %}
                     <tr>
                         <td><a href=\"{{ path(\"torneig_perfil\",{'id':torneig.id}) }}\">{{ torneig.nom }}</a></td>
-                        <td>{{ torneig.rondes ? torneig.rondes|join(', ') : '' }}</td>
+                        <td>{{ torneig.rondes ? torneig.rondes|length }}</td>
                         <td>{{ torneig.data ? torneig.data|date('Y-m-d') : '' }}</td>
                         <td>{{ torneig.theParticipants|length}}</td>
                         <td>{{ torneig.id }}</td>

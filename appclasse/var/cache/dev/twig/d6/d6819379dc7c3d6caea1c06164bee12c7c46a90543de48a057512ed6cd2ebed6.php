@@ -196,10 +196,11 @@ class __TwigTemplate_ee918e29e19973ade6d414906b9d36b0b0f729aa2b5bba4b6905b4bab0a
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 56), "html", null, true);
             echo "
                             </td>
+
                             <td>
                                 ";
-            // line 59
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["taula"], "jugadorB", [], "any", false, false, false, 59), "nom", [], "any", false, false, false, 59), "html", null, true);
+            // line 60
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["taula"], "jugadorB", [], "any", false, false, false, 60), "nom", [], "any", false, false, false, 60), "html", null, true);
             echo "
                             </td>
                             <td>
@@ -207,8 +208,8 @@ class __TwigTemplate_ee918e29e19973ade6d414906b9d36b0b0f729aa2b5bba4b6905b4bab0a
                             </td>
                             <td>
                                 ";
-            // line 65
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["taula"], "jugadorN", [], "any", false, false, false, 65), "nom", [], "any", false, false, false, 65), "html", null, true);
+            // line 66
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["taula"], "jugadorN", [], "any", false, false, false, 66), "nom", [], "any", false, false, false, 66), "html", null, true);
             echo "
                             </td>
                         </tr>
@@ -224,22 +225,29 @@ class __TwigTemplate_ee918e29e19973ade6d414906b9d36b0b0f729aa2b5bba4b6905b4bab0a
             }
         }
         if (!$context['_iterated']) {
-            // line 69
+            // line 70
             echo "                        <tr>
-                            <td>No Partides</td>
+                            <td>No Partides</td>    E : ";
+            // line 71
+            echo twig_escape_filter($this->env, (isset($context["e"]) || array_key_exists("e", $context) ? $context["e"] : (function () { throw new RuntimeError('Variable "e" does not exist.', 71, $this->source); })()), "html", null, true);
+            echo "  M: ";
+            echo twig_escape_filter($this->env, (isset($context["m"]) || array_key_exists("m", $context) ? $context["m"] : (function () { throw new RuntimeError('Variable "m" does not exist.', 71, $this->source); })()), "html", null, true);
+            echo "  C: ";
+            echo twig_escape_filter($this->env, (isset($context["c"]) || array_key_exists("c", $context) ? $context["c"] : (function () { throw new RuntimeError('Variable "c" does not exist.', 71, $this->source); })()), "html", null, true);
+            echo "
                         </tr>
                     ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['taula'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 73
+        // line 74
         echo "                    ";
         $context["break"] = true;
-        // line 74
+        // line 75
         echo "
           ";
-        // line 76
+        // line 77
         echo "        </tbody>
 
     </table>
@@ -264,7 +272,7 @@ class __TwigTemplate_ee918e29e19973ade6d414906b9d36b0b0f729aa2b5bba4b6905b4bab0a
 
     public function getDebugInfo()
     {
-        return array (  243 => 76,  240 => 74,  237 => 73,  228 => 69,  211 => 65,  202 => 59,  196 => 56,  192 => 54,  174 => 53,  171 => 52,  155 => 37,  147 => 32,  138 => 26,  129 => 20,  120 => 14,  111 => 9,  101 => 8,  89 => 5,  79 => 4,  60 => 3,  37 => 1,);
+        return array (  251 => 77,  248 => 75,  245 => 74,  232 => 71,  229 => 70,  212 => 66,  203 => 60,  196 => 56,  192 => 54,  174 => 53,  171 => 52,  155 => 37,  147 => 32,  138 => 26,  129 => 20,  120 => 14,  111 => 9,  101 => 8,  89 => 5,  79 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -326,6 +334,7 @@ class __TwigTemplate_ee918e29e19973ade6d414906b9d36b0b0f729aa2b5bba4b6905b4bab0a
                             <td>
                                 {{ loop.index }}
                             </td>
+
                             <td>
                                 {{ taula.jugadorB.nom }}
                             </td>
@@ -338,7 +347,7 @@ class __TwigTemplate_ee918e29e19973ade6d414906b9d36b0b0f729aa2b5bba4b6905b4bab0a
                         </tr>
                         {% else %}
                         <tr>
-                            <td>No Partides</td>
+                            <td>No Partides</td>    E : {{ e }}  M: {{ m }}  C: {{ c }}
                         </tr>
                     {% endfor %}
                     {% set break = true %}

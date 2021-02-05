@@ -11,6 +11,7 @@ use App\Form\TorneigType2;
 use App\Form\TournAddJug;
 use App\Repository\JugadorRepository;
 use App\Repository\RondaRepository;
+use App\Repository\TaulaRepository;
 use App\Repository\TorneigRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -287,19 +288,21 @@ class TorneigController extends AbstractController
     /**
      * @Route("/{id}/newRound", name="ronda")
      */
-    public function new_round(Request $request, Torneig $torneig,JugadorRepository $jugadorRepository,TorneigRepository $torneigRepository, RondaRepository $rondaRepository){
+    public function new_round(Request $request, Torneig $torneig,JugadorRepository $jugadorRepository,TaulaRepository $taulaRepository,TorneigRepository $torneigRepository, RondaRepository $rondaRepository){
         $em = $this->getDoctrine()->getManager();
         $rondesExistents = $torneig->getRondes();
         $thisRonda = new Ronda();
         $numeroRondes = count($rondesExistents);
         $part = [];
         $thisRonda->setNumRondes($numeroRondes+1);
-        $allJugadors = $torneig->getJugadors();
-
+        $allJugadors = $torneig->getTheParticipants();
+        $m = 0;
+        $c = 0;
         $borrats = [];
         $disponibles = [];
         for($i = 0;$i<count((array)$allJugadors);$i++){
             $disponibles = $allJugadors;
+            $m = count($disponibles);
             $jugadorsEnfrontats = $this->getEnfrontaments($allJugadors[$i],$torneigRepository,$jugadorRepository);
             array_push($jugadorsEnfrontats,$allJugadors[$i]);
 
@@ -326,6 +329,7 @@ class TorneigController extends AbstractController
             $num = rand(0,count($auxDisp));
 
             if(isset($auxDisp[$num])){
+                $m++;
                 $jugadorEnfrontat = $auxDisp[$num];
                 array_push($borrats,$allJugadors[$i]);
                 array_push($borrats, $jugadorEnfrontat);
@@ -339,31 +343,41 @@ class TorneigController extends AbstractController
                 }
                 array_push($part,$partida);
             }else{
+                $c++;
                 $i = -1;
                 $disponibles = [];
                 $borrats = [];
                 $part = [];
             }
         }
+        $e = 0;
         foreach($part as $partida){
-            $thisRonda->addPartides($partida);
             $em->persist($partida);
-            $em->persist($thisRonda);
-            $torneig->addRonda($thisRonda);
-            $em->persist($torneig);
-            $em->flush();
+            $e =1;
+            $thisRonda->addPartides($partida);
         }
 
+        $em->persist($thisRonda);
+        $torneig->addRonda($thisRonda);
+        $em->persist($torneig);
+        $em->flush();
         return $this->render('torneig/rounds.html.twig',[
             'torneig' => $torneigRepository->findOneBy(array('id'=>$torneig->getId())),
-            'ronda' => $thisRonda
+            'ronda' => $thisRonda,
+            'e' =>$e,
+            'm' =>$m,
+            'c' =>$c
+
         ]);
     }
     function getLastPieceColour($id,$torneig,$numRonda){
-        foreach ($torneig->getRondes()[$numRonda]->getPartides as $partida){
+        if($numRonda == 0){
+            return "negre";
+        }
+        foreach ($torneig->getRondes()[$numRonda-1]->getPartides() as $partida){
             if($partida->getJugadorB()->getId() == $id){
                 return "blanc";
-            }else if($partida->getJugadorN()->getId == $id){
+            }else if($partida->getJugadorN()->getId() == $id){
                 return "negre";
             }
         }
@@ -379,9 +393,9 @@ class TorneigController extends AbstractController
             foreach($rondes as $ronda){
                 $taules = $ronda->getPartides();
                 foreach($taules as $taula){
-                    if($taula->getJugadorB->getId() == $jugador->getId()){
+                    if($taula->getJugadorB()->getId() == $jugador->getId()){
                         $jugadorsEnfrontats[] = $taula->getJugadorN();
-                    }else if($taula->getJugadorN->getId() == $jugador->getId()){
+                    }else if($taula->getJugadorN()->getId() == $jugador->getId()){
                         $jugadorsEnfrontats[] = $taula->getJugadorB();
                     }
                 }
