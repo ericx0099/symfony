@@ -128,19 +128,19 @@ class Torneig
     public function setTheParticipants(?array $theParticipants): self
     {
         $this->theParticipants = $theParticipants;
+        $loga2 = log(count($this->getTheParticipants()), 2);
+        if(strpos($loga2,".") != false){
 
+            $this->numRondes = intval($loga2) +1;
+        }else{
+            $this->numRondes = intval($loga2);
+        }
         return $this;
     }
     public function addTheParticipants($participant): void
     {
         $this->theParticipants[] = $participant;
-        $loga2 = log(count($this->getTheParticipants()), 2);
-        $arraylog = explode(".", strval($loga2));
-        if (intval($arraylog[1]) > 0){
-            $this->setNumRondes(intval($loga2) +1);
-        }else {
-            $this->setNumRondes(intval($loga2));
-        }
+
 
 
     }

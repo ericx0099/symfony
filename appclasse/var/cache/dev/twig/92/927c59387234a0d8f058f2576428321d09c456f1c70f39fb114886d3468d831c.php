@@ -108,46 +108,40 @@ class __TwigTemplate_f49644c8ee4bbe49a85d8511eb8a69b7b0f0c78c1d4f4441e4ffe486b8c
 
         // line 9
         echo "
-<div class=\"all\">
-    <h1 class=\"has-text-weight-bold is-size-2\">Perfil del arbit:  <span class=\"has-text-primary\">";
-        // line 11
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 11, $this->source); })()), "nom", [], "any", false, false, false, 11), "html", null, true);
-        echo "</span></h1>
-    <table class=\"table\">
-        <tbody>
-        <tr>
-            <th>Email</th>
-            <td>";
-        // line 16
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 16, $this->source); })()), "email", [], "any", false, false, false, 16), "html", null, true);
-        echo "</td>
-        </tr>
-        <tr>
-            <th>Nom</th>
-            <td>";
-        // line 20
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 20, $this->source); })()), "nom", [], "any", false, false, false, 20), "html", null, true);
-        echo "</td>
-        </tr>
-        </tbody>
-    </table>
+    <div class=\"all\">
+        <div class=\"background\" style=\"width: 100%; margin-top: 1%; background-color: #e0e0e0\">
+            <h1 class=\"has-text-weight-bold is-size-2\" style=\"text-align: center;\">Informació Àrbitre</h1>
+            <figure class=\"image is-128x128\" style=\"margin-left: auto; margin-right: auto; margin-top: 2%\">
+                <img class=\"is-rounded\" src=\"https://pngimage.net/wp-content/uploads/2018/06/no-photo-avatar-png-6.png\">
+            </figure>
+            <div class=\"info\" style=\"text-align: center; padding-bottom: 70px\">
+                <p class=\"heading is-size-5\" style=\"margin-top: 2%\">Nom: ";
+        // line 17
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 17, $this->source); })()), "nom", [], "any", false, false, false, 17), "html", null, true);
+        echo "</p>
+                <p class=\"heading is-size-5\" style=\"margin-top: 1%\">Email: ";
+        // line 18
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 18, $this->source); })()), "email", [], "any", false, false, false, 18), "html", null, true);
+        echo "</p>
+            </div>
 
-    <h2 class=\"has-text-weight-bold is-size-4\">Ha Organitzat <span class=\"has-text-primary\">";
-        // line 25
-        echo twig_escape_filter($this->env, twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 25, $this->source); })()), "torneigs", [], "any", false, false, false, 25)), "html", null, true);
+        </div>
+        <h2 class=\"has-text-weight-bold is-size-4\" style=\"margin-top: 3%; text-align: center\">Ha Organitzat <span class=\"has-text-primary\">";
+        // line 22
+        echo twig_escape_filter($this->env, twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 22, $this->source); })()), "torneigs", [], "any", false, false, false, 22)), "html", null, true);
         echo "</span> torneigos</h2>
-    <table>
-        <thead>
+        <table>
+            <thead>
             <tr>
                 <th>Num.</th>
                 <th>Torneig</th>
                 <th>Data</th>
             </tr>
-        </thead>
-        ";
-        // line 34
+            </thead>
+            ";
+        // line 31
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 34, $this->source); })()), "torneigs", [], "any", false, false, false, 34));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 31, $this->source); })()), "torneigs", [], "any", false, false, false, 31));
         $context['_iterated'] = false;
         $context['loop'] = [
           'parent' => $context['_parent'],
@@ -163,26 +157,26 @@ class __TwigTemplate_f49644c8ee4bbe49a85d8511eb8a69b7b0f0c78c1d4f4441e4ffe486b8c
             $context['loop']['last'] = 1 === $length;
         }
         foreach ($context['_seq'] as $context["_key"] => $context["torneig"]) {
-            // line 35
-            echo "            <tbody>
+            // line 32
+            echo "                <tbody>
                 <tr>
                     <td>";
-            // line 37
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 37), "html", null, true);
+            // line 34
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 34), "html", null, true);
             echo "</td>
                     <td><a href=\"";
-            // line 38
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("torneig_perfil", ["id" => twig_get_attribute($this->env, $this->source, $context["torneig"], "id", [], "any", false, false, false, 38)]), "html", null, true);
+            // line 35
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("torneig_perfil", ["id" => twig_get_attribute($this->env, $this->source, $context["torneig"], "id", [], "any", false, false, false, 35)]), "html", null, true);
             echo "\">";
-            ((twig_get_attribute($this->env, $this->source, $context["torneig"], "nom", [], "any", false, false, false, 38)) ? (print (twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["torneig"], "nom", [], "any", false, false, false, 38), "html", null, true))) : (print ("?")));
+            ((twig_get_attribute($this->env, $this->source, $context["torneig"], "nom", [], "any", false, false, false, 35)) ? (print (twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["torneig"], "nom", [], "any", false, false, false, 35), "html", null, true))) : (print ("?")));
             echo "</a></td>
                     <td>";
-            // line 39
-            ((twig_get_attribute($this->env, $this->source, $context["torneig"], "data", [], "any", false, false, false, 39)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["torneig"], "data", [], "any", false, false, false, 39), "Y-m-d"), "html", null, true))) : (print ("?")));
+            // line 36
+            ((twig_get_attribute($this->env, $this->source, $context["torneig"], "data", [], "any", false, false, false, 36)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["torneig"], "data", [], "any", false, false, false, 36), "Y-m-d"), "html", null, true))) : (print ("?")));
             echo "</td>
                 </tr>
-            </tbody>
-        ";
+                </tbody>
+            ";
             $context['_iterated'] = true;
             ++$context['loop']['index0'];
             ++$context['loop']['index'];
@@ -194,20 +188,25 @@ class __TwigTemplate_f49644c8ee4bbe49a85d8511eb8a69b7b0f0c78c1d4f4441e4ffe486b8c
             }
         }
         if (!$context['_iterated']) {
-            // line 43
-            echo "            <p>No ha Organitzat en cap torneig :(</p>
-        ";
+            // line 40
+            echo "                <p>No ha Organitzat en cap torneig :(</p>
+            ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['torneig'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 45
-        echo "    </table>
-</div>
+        // line 42
+        echo "        </table>
+    </div>
 
     <style>
         .all{
             padding :2%;
+        }
+
+        h1:first-letter
+        {
+            text-transform: uppercase;
         }
 
         .jugadorsTorn
@@ -244,14 +243,16 @@ class __TwigTemplate_f49644c8ee4bbe49a85d8511eb8a69b7b0f0c78c1d4f4441e4ffe486b8c
             color:#666;
             font-size:25px;
             text-shadow: 1px 1px 0px #fff;
-            margin:20px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 3%;
             border:#ccc 1px solid;
             -moz-border-radius:3px;
             -webkit-border-radius:3px;
             border-radius:5px;
             -moz-box-shadow: 0 1px 2px #d1d1d1;
             -webkit-box-shadow: 0 1px 2px #d1d1d1;
-            box-shadow: 0 1px 2px #d1d1d1;
+            box-shadow: 0 0 10px rgba(110,110,110, 0.5);
             text-transform: uppercase;
         }
         table a{
@@ -264,18 +265,17 @@ class __TwigTemplate_f49644c8ee4bbe49a85d8511eb8a69b7b0f0c78c1d4f4441e4ffe486b8c
         }
         table a:active,
         table a:hover {
-            color: rgb(0, 209, 178);
+            color:#00d1b2;
             text-decoration:underline;
         }
 
         table th {
+            color: white;
             padding:21px 25px 22px 25px;
-            border-top:1px solid #fafafa;
             border-bottom:1px solid #e0e0e0;
             letter-spacing: 1.5px;
-            background: #ededed;
-            background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#ebebeb));
-            background: -moz-linear-gradient(top,  #ededed,  #ebebeb);
+            background: #00d1b2;
+            font-weight: normal;
         }
         table th:first-child {
             text-align: left;
@@ -346,7 +346,7 @@ class __TwigTemplate_f49644c8ee4bbe49a85d8511eb8a69b7b0f0c78c1d4f4441e4ffe486b8c
 
     public function getDebugInfo()
     {
-        return array (  205 => 45,  198 => 43,  181 => 39,  175 => 38,  171 => 37,  167 => 35,  149 => 34,  137 => 25,  129 => 20,  122 => 16,  114 => 11,  110 => 9,  100 => 8,  89 => 6,  79 => 5,  60 => 4,  37 => 1,);
+        return array (  199 => 42,  192 => 40,  175 => 36,  169 => 35,  165 => 34,  161 => 32,  143 => 31,  131 => 22,  124 => 18,  120 => 17,  110 => 9,  100 => 8,  89 => 6,  79 => 5,  60 => 4,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -360,47 +360,49 @@ class __TwigTemplate_f49644c8ee4bbe49a85d8511eb8a69b7b0f0c78c1d4f4441e4ffe486b8c
 {% endblock %}
 {% block body %}
 
-<div class=\"all\">
-    <h1 class=\"has-text-weight-bold is-size-2\">Perfil del arbit:  <span class=\"has-text-primary\">{{ user.nom }}</span></h1>
-    <table class=\"table\">
-        <tbody>
-        <tr>
-            <th>Email</th>
-            <td>{{ user.email }}</td>
-        </tr>
-        <tr>
-            <th>Nom</th>
-            <td>{{ user.nom }}</td>
-        </tr>
-        </tbody>
-    </table>
+    <div class=\"all\">
+        <div class=\"background\" style=\"width: 100%; margin-top: 1%; background-color: #e0e0e0\">
+            <h1 class=\"has-text-weight-bold is-size-2\" style=\"text-align: center;\">Informació Àrbitre</h1>
+            <figure class=\"image is-128x128\" style=\"margin-left: auto; margin-right: auto; margin-top: 2%\">
+                <img class=\"is-rounded\" src=\"https://pngimage.net/wp-content/uploads/2018/06/no-photo-avatar-png-6.png\">
+            </figure>
+            <div class=\"info\" style=\"text-align: center; padding-bottom: 70px\">
+                <p class=\"heading is-size-5\" style=\"margin-top: 2%\">Nom: {{ user.nom }}</p>
+                <p class=\"heading is-size-5\" style=\"margin-top: 1%\">Email: {{ user.email}}</p>
+            </div>
 
-    <h2 class=\"has-text-weight-bold is-size-4\">Ha Organitzat <span class=\"has-text-primary\">{{ user.torneigs|length }}</span> torneigos</h2>
-    <table>
-        <thead>
+        </div>
+        <h2 class=\"has-text-weight-bold is-size-4\" style=\"margin-top: 3%; text-align: center\">Ha Organitzat <span class=\"has-text-primary\">{{ user.torneigs|length }}</span> torneigos</h2>
+        <table>
+            <thead>
             <tr>
                 <th>Num.</th>
                 <th>Torneig</th>
                 <th>Data</th>
             </tr>
-        </thead>
-        {% for torneig in user.torneigs %}
-            <tbody>
+            </thead>
+            {% for torneig in user.torneigs %}
+                <tbody>
                 <tr>
                     <td>{{ loop.index }}</td>
                     <td><a href=\"{{ path('torneig_perfil',{ 'id':torneig.id }) }}\">{{ torneig.nom ? torneig.nom : '?'}}</a></td>
                     <td>{{ torneig.data ? torneig.data|date('Y-m-d') : '?' }}</td>
                 </tr>
-            </tbody>
-        {% else %}
-            <p>No ha Organitzat en cap torneig :(</p>
-        {% endfor %}
-    </table>
-</div>
+                </tbody>
+            {% else %}
+                <p>No ha Organitzat en cap torneig :(</p>
+            {% endfor %}
+        </table>
+    </div>
 
     <style>
         .all{
             padding :2%;
+        }
+
+        h1:first-letter
+        {
+            text-transform: uppercase;
         }
 
         .jugadorsTorn
@@ -437,14 +439,16 @@ class __TwigTemplate_f49644c8ee4bbe49a85d8511eb8a69b7b0f0c78c1d4f4441e4ffe486b8c
             color:#666;
             font-size:25px;
             text-shadow: 1px 1px 0px #fff;
-            margin:20px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 3%;
             border:#ccc 1px solid;
             -moz-border-radius:3px;
             -webkit-border-radius:3px;
             border-radius:5px;
             -moz-box-shadow: 0 1px 2px #d1d1d1;
             -webkit-box-shadow: 0 1px 2px #d1d1d1;
-            box-shadow: 0 1px 2px #d1d1d1;
+            box-shadow: 0 0 10px rgba(110,110,110, 0.5);
             text-transform: uppercase;
         }
         table a{
@@ -457,18 +461,17 @@ class __TwigTemplate_f49644c8ee4bbe49a85d8511eb8a69b7b0f0c78c1d4f4441e4ffe486b8c
         }
         table a:active,
         table a:hover {
-            color: rgb(0, 209, 178);
+            color:#00d1b2;
             text-decoration:underline;
         }
 
         table th {
+            color: white;
             padding:21px 25px 22px 25px;
-            border-top:1px solid #fafafa;
             border-bottom:1px solid #e0e0e0;
             letter-spacing: 1.5px;
-            background: #ededed;
-            background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#ebebeb));
-            background: -moz-linear-gradient(top,  #ededed,  #ebebeb);
+            background: #00d1b2;
+            font-weight: normal;
         }
         table th:first-child {
             text-align: left;
@@ -518,7 +521,6 @@ class __TwigTemplate_f49644c8ee4bbe49a85d8511eb8a69b7b0f0c78c1d4f4441e4ffe486b8c
         }
     </style>
 
-{% endblock %}
-", "user/profile.html.twig", "/app/appclasse/templates/user/profile.html.twig");
+{% endblock %}", "user/profile.html.twig", "/app/appclasse/templates/user/profile.html.twig");
     }
 }
