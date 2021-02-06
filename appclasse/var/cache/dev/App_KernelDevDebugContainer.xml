@@ -3013,6 +3013,13 @@
         </argument>
         <argument>null</argument>
       </call>
+      <call method="add">
+        <argument type="service" id=".security.request_matcher.KoEpaR_"/>
+        <argument type="collection">
+          <argument>ROLE_USER</argument>
+        </argument>
+        <argument>null</argument>
+      </call>
     </service>
     <service id="security.context_listener" class="Symfony\Component\Security\Http\Firewall\ContextListener">
       <tag name="monolog.logger" channel="security"/>
@@ -3474,6 +3481,9 @@
     </service>
     <service id=".security.request_matcher._Klewus" class="Symfony\Component\HttpFoundation\RequestMatcher">
       <argument>^/ronda</argument>
+    </service>
+    <service id=".security.request_matcher.KoEpaR_" class="Symfony\Component\HttpFoundation\RequestMatcher">
+      <argument>^/user</argument>
     </service>
     <service id="security.command.user_password_encoder" class="Symfony\Bundle\SecurityBundle\Command\UserPasswordEncoderCommand">
       <tag name="console.command" command="security:encode-password"/>
@@ -4191,6 +4201,12 @@
         <argument key="jugador" type="service" id=".errored..service_locator.ptI9rup.App\Entity\Jugador"/>
       </argument>
     </service>
+    <service id=".service_locator.DUnTj19" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="ronda" type="service" id=".errored..service_locator.DUnTj19.App\Entity\Ronda"/>
+      </argument>
+    </service>
     <service id=".service_locator.UDgw6Ol" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -4273,13 +4289,14 @@
         <argument key="userRepository" type="service" id="App\Repository\UserRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.S8PS.yY" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator._dnDS4S" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\JugadorController::delete" type="service" id=".service_locator.ptI9rup"/>
         <argument key="App\Controller\JugadorController::edit" type="service" id=".service_locator.ptI9rup"/>
         <argument key="App\Controller\JugadorController::index" type="service" id=".service_locator.GsJGm31"/>
         <argument key="App\Controller\JugadorController::show" type="service" id=".service_locator.ptI9rup"/>
+        <argument key="App\Controller\RondaController::round_profile" type="service" id=".service_locator.DUnTj19"/>
         <argument key="App\Controller\SecurityController::login" type="service" id=".service_locator.UDgw6Ol"/>
         <argument key="App\Controller\TestController::arbitreProfile" type="service" id=".service_locator.ch4Jgvl"/>
         <argument key="App\Controller\TestController::miPerfil" type="service" id=".service_locator.EDW3bs1"/>
@@ -4311,6 +4328,7 @@
         <argument key="App\Controller\JugadorController:edit" type="service" id=".service_locator.ptI9rup"/>
         <argument key="App\Controller\JugadorController:index" type="service" id=".service_locator.GsJGm31"/>
         <argument key="App\Controller\JugadorController:show" type="service" id=".service_locator.ptI9rup"/>
+        <argument key="App\Controller\RondaController:round_profile" type="service" id=".service_locator.DUnTj19"/>
         <argument key="App\Controller\SecurityController:login" type="service" id=".service_locator.UDgw6Ol"/>
         <argument key="App\Controller\TestController:arbitreProfile" type="service" id=".service_locator.ch4Jgvl"/>
         <argument key="App\Controller\TestController:miPerfil" type="service" id=".service_locator.EDW3bs1"/>
@@ -4630,16 +4648,17 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.S8PS.yY"/>
+      <argument type="service" id=".service_locator._dnDS4S"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.S8PS.yY"/>
+      <argument type="service" id=".service_locator._dnDS4S"/>
     </service>
     <service id=".errored..service_locator.KfwZsne.Symfony\Component\HttpFoundation\Response" class="Symfony\Component\HttpFoundation\Response"/>
     <service id=".errored..service_locator.KfbR3DY.Symfony\Component\Config\Loader\LoaderInterface" class="Symfony\Component\Config\Loader\LoaderInterface"/>
     <service id=".errored..service_locator.ptI9rup.App\Entity\Jugador" class="App\Entity\Jugador"/>
+    <service id=".errored..service_locator.DUnTj19.App\Entity\Ronda" class="App\Entity\Ronda"/>
     <service id=".errored..service_locator.tj2DXap.App\Entity\Jugador" class="App\Entity\Jugador"/>
     <service id=".errored..service_locator.ch4Jgvl.App\Entity\User" class="App\Entity\User"/>
     <service id=".errored..service_locator.gJXMHQI.App\Entity\Torneig" class="App\Entity\Torneig"/>
@@ -5000,7 +5019,7 @@
     <service id="Twig\Environment" alias="twig"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.Kbr2i2X" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.S8PS.yY"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator._dnDS4S"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface" alias="logger"/>
     <service id=".service_locator.wKF4yn1" alias=".service_locator.anofQPJ"/>

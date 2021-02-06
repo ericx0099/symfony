@@ -155,7 +155,9 @@ class __TwigTemplate_d6eeeaa5bee8fcd28bd190003574490f2d8f70d67486bc603448366fab0
         }
         foreach ($context['_seq'] as $context["_key"] => $context["ronda"]) {
             // line 42
-            echo "                     <p><a href=\"\">Ronda ";
+            echo "                     <p><a href=\"";
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ronda_profile", ["id" => twig_get_attribute($this->env, $this->source, $context["ronda"], "id", [], "any", false, false, false, 42)]), "html", null, true);
+            echo "\">Ronda ";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 42), "html", null, true);
             echo "</a></p>
                  ";
@@ -426,7 +428,7 @@ class __TwigTemplate_d6eeeaa5bee8fcd28bd190003574490f2d8f70d67486bc603448366fab0
 
     public function getDebugInfo()
     {
-        return array (  284 => 83,  275 => 79,  262 => 78,  255 => 74,  251 => 73,  245 => 72,  241 => 71,  238 => 70,  231 => 66,  227 => 65,  221 => 64,  217 => 63,  214 => 62,  211 => 61,  193 => 60,  175 => 44,  158 => 42,  141 => 41,  127 => 32,  118 => 26,  109 => 20,  100 => 14,  91 => 8,  88 => 7,  78 => 6,  59 => 4,  36 => 1,);
+        return array (  286 => 83,  277 => 79,  264 => 78,  257 => 74,  253 => 73,  247 => 72,  243 => 71,  240 => 70,  233 => 66,  229 => 65,  223 => 64,  219 => 63,  216 => 62,  213 => 61,  195 => 60,  177 => 44,  158 => 42,  141 => 41,  127 => 32,  118 => 26,  109 => 20,  100 => 14,  91 => 8,  88 => 7,  78 => 6,  59 => 4,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -472,7 +474,7 @@ class __TwigTemplate_d6eeeaa5bee8fcd28bd190003574490f2d8f70d67486bc603448366fab0
              <p class=\"has-text-weight-bold is-size-4 has-text-centered\">Rondes:</p>
              <div class=\"is-flex is-justify-content-space-around\">
                  {% for ronda in torneig.rondes %}
-                     <p><a href=\"\">Ronda {{ loop.index }}</a></p>
+                     <p><a href=\"{{ path(\"ronda_profile\",{'id':ronda.id}) }}\">Ronda {{ loop.index }}</a></p>
                  {% endfor %}
              </div>
          </div>

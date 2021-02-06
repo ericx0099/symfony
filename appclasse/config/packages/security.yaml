@@ -42,4 +42,5 @@ security:
          - { path: ^/jugador, roles: ROLE_USER }
          - { path: ^/torneigadmin, roles: ROLE_USER }
          - { path: ^/ronda, roles: ROLE_USER }
+         - { path: ^/user, roles: ROLE_USER }
         # - { path: ^/profile, roles: ROLE_USER }

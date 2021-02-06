@@ -291,7 +291,12 @@ class TorneigController extends AbstractController
     public function new_round(Request $request, Torneig $torneig,JugadorRepository $jugadorRepository,TaulaRepository $taulaRepository,TorneigRepository $torneigRepository, RondaRepository $rondaRepository){
 
 
+        if(count($torneig->getRondes())+1 > $torneig->getNumRondes()){
+            return $this->render('torneig/profile.html.twig',[
+                'torneig' => $torneig,
 
+            ]);
+        }
         $em = $this->getDoctrine()->getManager();
         $thisRonda = new Ronda();
         $torneig->addRonda($thisRonda);
@@ -301,12 +306,7 @@ class TorneigController extends AbstractController
         $part = [];
         $thisRonda->setNumRondes($numeroRondes+1);
         $allJugadors = $torneig->getTheParticipants();
-        if($torneig->getNumRondes() < $numeroRondes){
-            return $this->render('torneig/profile.html.twig',[
-                'torneig' => $torneigRepository->findOneBy(array('id'=>$torneig->getId())),
 
-            ]);
-        }
         $borrats = [];
         $disponibles = [];
         for($i = 0;$i<count((array)$allJugadors);$i++){
@@ -361,13 +361,12 @@ class TorneigController extends AbstractController
         }
 
         foreach($part as $partida){
-            $em->persist($partida);
-
+            /*$em->persist($partida);*/
             $thisRonda->addPartides($partida);
         }
 
         $em->persist($thisRonda);
-        $torneig->addRonda($thisRonda);
+       /* $torneig->addRonda($thisRonda);*/
         $em->persist($torneig);
         $em->flush();
         return $this->render('torneig/rounds.html.twig',[

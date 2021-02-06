@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Jugador;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\BirthdayType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -39,7 +40,7 @@ class JugadorType extends AbstractType
                     'class' => 'input'
                 ]
             ])
-            ->add('dataNaixament',DateType::class,[
+            ->add('dataNaixament',BirthdayType::class,[
                 'attr' =>[
                     'color' => 'blue',
                   

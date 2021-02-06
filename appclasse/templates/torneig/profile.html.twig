@@ -39,7 +39,7 @@
              <p class="has-text-weight-bold is-size-4 has-text-centered">Rondes:</p>
              <div class="is-flex is-justify-content-space-around">
                  {% for ronda in torneig.rondes %}
-                     <p><a href="">Ronda {{ loop.index }}</a></p>
+                     <p><a href="{{ path("ronda_profile",{'id':ronda.id}) }}">Ronda {{ loop.index }}</a></p>
                  {% endfor %}
              </div>
          </div>

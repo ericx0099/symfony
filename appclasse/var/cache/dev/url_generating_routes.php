@@ -22,6 +22,7 @@ return [
     'jugador_show' => [['id'], ['_controller' => 'App\\Controller\\JugadorController::show'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/jugador']], [], []],
     'jugador_edit' => [['id'], ['_controller' => 'App\\Controller\\JugadorController::edit'], [], [['text', '/edit'], ['variable', '/', '[^/]++', 'id', true], ['text', '/jugador']], [], []],
     'jugador_delete' => [['id'], ['_controller' => 'App\\Controller\\JugadorController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/jugador']], [], []],
+    'ronda_profile' => [['id'], ['_controller' => 'App\\Controller\\RondaController::round_profile'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/ronda']], [], []],
     'app_login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/login']], [], []],
     'app_logout' => [[], ['_controller' => 'App\\Controller\\SecurityController::logout'], [], [['text', '/logout']], [], []],
     'inici' => [[], ['_controller' => 'App\\Controller\\TestController::index'], [], [['text', '/']], [], []],
