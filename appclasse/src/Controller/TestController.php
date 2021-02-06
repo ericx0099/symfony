@@ -5,7 +5,9 @@ namespace App\Controller;
 use App\Entity\Jugador;
 use App\Entity\Torneig;
 use App\Entity\User;
+use App\Repository\JugadorRepository;
 use App\Repository\TorneigRepository;
+use App\Repository\UserRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -65,6 +67,22 @@ class TestController extends AbstractController
         return $this->render('jugador/profile.html.twig', [
             'jugador' => $jugador,
             'torneigosParticipat' => $torneigosParticipat
+        ]);
+    }
+    /**
+     * @Route("/jugadors",  name="jugadors")
+     */
+    public function jugadors(Request $request, JugadorRepository $jugadorRepository){
+        return $this->render('jugador/all.html.twig', [
+            'jugadors' => $jugadorRepository->findAll()
+        ]);
+    }
+    /**
+     * @Route("/arbitres",  name="arbitres")
+     */
+    public function arbitres(Request $request, UserRepository $userRepository){
+        return $this->render('user/all.html.twig', [
+            'users' => $userRepository->findAll()
         ]);
     }
     /**

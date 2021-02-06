@@ -290,16 +290,17 @@ class TorneigController extends AbstractController
      */
     public function new_round(Request $request, Torneig $torneig,JugadorRepository $jugadorRepository,TaulaRepository $taulaRepository,TorneigRepository $torneigRepository, RondaRepository $rondaRepository){
 
-
-        if(count($torneig->getRondes())+1 > $torneig->getNumRondes()){
+        if((count($torneig->getRondes())+1) > $torneig->getNumRondes()){
             return $this->render('torneig/profile.html.twig',[
                 'torneig' => $torneig,
 
             ]);
         }
+       
+
         $em = $this->getDoctrine()->getManager();
         $thisRonda = new Ronda();
-        $torneig->addRonda($thisRonda);
+
         $rondesExistents = $torneig->getRondes();
 
         $numeroRondes = count($rondesExistents);
@@ -366,7 +367,7 @@ class TorneigController extends AbstractController
         }
 
         $em->persist($thisRonda);
-       /* $torneig->addRonda($thisRonda);*/
+       $torneig->addRonda($thisRonda);
         $em->persist($torneig);
         $em->flush();
         return $this->render('torneig/rounds.html.twig',[

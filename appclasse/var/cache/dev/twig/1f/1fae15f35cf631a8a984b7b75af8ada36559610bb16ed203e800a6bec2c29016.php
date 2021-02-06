@@ -90,9 +90,9 @@ class __TwigTemplate_0455575a1fb934c838b5293d171513080270d58504783982e6633f6e1a8
         // line 11
         echo "
 
-    <h1>Torneig index</h1>
+    <h1 class=\"has-text-centered is-size-3 m-5 has-text-weight-bold \">Torneig index</h1>
 
-    <table class=\"table\">
+    <table >
         <thead>
             <tr>
                 <th>Id</th>
@@ -167,9 +167,131 @@ class __TwigTemplate_0455575a1fb934c838b5293d171513080270d58504783982e6633f6e1a8
         // line 46
         echo "        </tbody>
     </table>
+    <style>
+        .container{
+            height: 100%;
+        }
+        .shadow {
+            border: 2px solid #00d1b2;
+            border-top: none;
+            border-bottom: none;
+        }
+        .jugadorsTorn
+        {
+            text-decoration: none;
+            color: rgb(0, 209, 178);
+            font-weight: bold;
+        }
 
+        .jugadorsTorn:hover
+        {
+            color: rgb(0, 209, 178);
+            text-decoration: underline;
+        }
+
+        .refTorn
+        {
+            text-decoration: none;
+            color: rgb(0, 209, 178);
+        }
+
+        .refTorn:hover
+        {
+            text-decoration: underline;
+            color: rgb(0, 209, 178);
+        }
+
+        p:first-letter
+        {
+            text-transform: uppercase;
+        }
+
+        table {
+            color:#666;
+            font-size:25px;
+            text-shadow: 1px 1px 0px #fff;
+            margin:20px;
+            border:#ccc 1px solid;
+            -moz-border-radius:3px;
+            -webkit-border-radius:3px;
+
+            -moz-box-shadow: 0 1px 2px #d1d1d1;
+            -webkit-box-shadow: 0 1px 2px #d1d1d1;
+            box-shadow: 0 0 10px rgba(110,110,110, 0.5);
+            text-transform: uppercase;
+
+        }
+        table a{
+            color:#00d1b2;
+        }
+        table a:link {
+            color:#00d1b2;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        table a:active,
+        table a:hover {
+            color:#00d1b2;
+            text-decoration:underline;
+        }
+
+        table th {
+            color: white;
+            padding:21px 25px 22px 25px;
+            border-bottom:1px solid #e0e0e0;
+            letter-spacing: 1.5px;
+            background: #00d1b2;
+            font-weight: normal;
+        }
+        table th:first-child {
+            text-align: left;
+            padding-left:20px;
+        }
+        table tr:first-child th:first-child {
+            -moz-border-radius-topleft:3px;
+            -webkit-border-top-left-radius:3px;
+            border-top-left-radius:3px;
+        }
+        table tr:first-child th:last-child {
+            -moz-border-radius-topright:3px;
+            -webkit-border-top-right-radius:3px;
+            border-top-right-radius:3px;
+        }
+        table tr {
+            text-align: center;
+            padding-left:20px;
+        }
+        table td:first-child {
+            text-align: left;
+            padding-left:20px;
+            border-left: 0;
+        }
+        table td {
+            padding:18px;
+            border-top: 1px solid #ffffff;
+            border-bottom:1px solid #e0e0e0;
+            border-left: 1px solid #e0e0e0;
+
+            /*     background: #fafafa;
+                 background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#fafafa));
+                 background: -moz-linear-gradient(top,  #fbfbfb,  #fafafa);*/
+        }
+        table tr:last-child td {
+            border-bottom:0;
+        }
+        table tr:last-child td:first-child {
+            -moz-border-radius-bottomleft:3px;
+            -webkit-border-bottom-left-radius:3px;
+            border-bottom-left-radius:3px;
+        }
+        table tr:last-child td:last-child {
+            -moz-border-radius-bottomright:3px;
+            -webkit-border-bottom-right-radius:3px;
+            border-bottom-right-radius:3px;
+        }
+    </style>
     <a href=\"";
-        // line 49
+        // line 171
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("torneig_new");
         echo "\">Create new</a>
 ";
@@ -193,7 +315,7 @@ class __TwigTemplate_0455575a1fb934c838b5293d171513080270d58504783982e6633f6e1a8
 
     public function getDebugInfo()
     {
-        return array (  173 => 49,  168 => 46,  159 => 42,  150 => 38,  146 => 37,  142 => 36,  138 => 35,  133 => 33,  129 => 32,  125 => 31,  121 => 30,  117 => 29,  114 => 28,  109 => 27,  91 => 11,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  295 => 171,  168 => 46,  159 => 42,  150 => 38,  146 => 37,  142 => 36,  138 => 35,  133 => 33,  129 => 32,  125 => 31,  121 => 30,  117 => 29,  114 => 28,  109 => 27,  91 => 11,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -210,9 +332,9 @@ class __TwigTemplate_0455575a1fb934c838b5293d171513080270d58504783982e6633f6e1a8
         </script>#}
 
 
-    <h1>Torneig index</h1>
+    <h1 class=\"has-text-centered is-size-3 m-5 has-text-weight-bold \">Torneig index</h1>
 
-    <table class=\"table\">
+    <table >
         <thead>
             <tr>
                 <th>Id</th>
@@ -245,7 +367,129 @@ class __TwigTemplate_0455575a1fb934c838b5293d171513080270d58504783982e6633f6e1a8
         {% endfor %}
         </tbody>
     </table>
+    <style>
+        .container{
+            height: 100%;
+        }
+        .shadow {
+            border: 2px solid #00d1b2;
+            border-top: none;
+            border-bottom: none;
+        }
+        .jugadorsTorn
+        {
+            text-decoration: none;
+            color: rgb(0, 209, 178);
+            font-weight: bold;
+        }
 
+        .jugadorsTorn:hover
+        {
+            color: rgb(0, 209, 178);
+            text-decoration: underline;
+        }
+
+        .refTorn
+        {
+            text-decoration: none;
+            color: rgb(0, 209, 178);
+        }
+
+        .refTorn:hover
+        {
+            text-decoration: underline;
+            color: rgb(0, 209, 178);
+        }
+
+        p:first-letter
+        {
+            text-transform: uppercase;
+        }
+
+        table {
+            color:#666;
+            font-size:25px;
+            text-shadow: 1px 1px 0px #fff;
+            margin:20px;
+            border:#ccc 1px solid;
+            -moz-border-radius:3px;
+            -webkit-border-radius:3px;
+
+            -moz-box-shadow: 0 1px 2px #d1d1d1;
+            -webkit-box-shadow: 0 1px 2px #d1d1d1;
+            box-shadow: 0 0 10px rgba(110,110,110, 0.5);
+            text-transform: uppercase;
+
+        }
+        table a{
+            color:#00d1b2;
+        }
+        table a:link {
+            color:#00d1b2;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        table a:active,
+        table a:hover {
+            color:#00d1b2;
+            text-decoration:underline;
+        }
+
+        table th {
+            color: white;
+            padding:21px 25px 22px 25px;
+            border-bottom:1px solid #e0e0e0;
+            letter-spacing: 1.5px;
+            background: #00d1b2;
+            font-weight: normal;
+        }
+        table th:first-child {
+            text-align: left;
+            padding-left:20px;
+        }
+        table tr:first-child th:first-child {
+            -moz-border-radius-topleft:3px;
+            -webkit-border-top-left-radius:3px;
+            border-top-left-radius:3px;
+        }
+        table tr:first-child th:last-child {
+            -moz-border-radius-topright:3px;
+            -webkit-border-top-right-radius:3px;
+            border-top-right-radius:3px;
+        }
+        table tr {
+            text-align: center;
+            padding-left:20px;
+        }
+        table td:first-child {
+            text-align: left;
+            padding-left:20px;
+            border-left: 0;
+        }
+        table td {
+            padding:18px;
+            border-top: 1px solid #ffffff;
+            border-bottom:1px solid #e0e0e0;
+            border-left: 1px solid #e0e0e0;
+
+            /*     background: #fafafa;
+                 background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#fafafa));
+                 background: -moz-linear-gradient(top,  #fbfbfb,  #fafafa);*/
+        }
+        table tr:last-child td {
+            border-bottom:0;
+        }
+        table tr:last-child td:first-child {
+            -moz-border-radius-bottomleft:3px;
+            -webkit-border-bottom-left-radius:3px;
+            border-bottom-left-radius:3px;
+        }
+        table tr:last-child td:last-child {
+            -moz-border-radius-bottomright:3px;
+            -webkit-border-bottom-right-radius:3px;
+            border-bottom-right-radius:3px;
+        }
+    </style>
     <a href=\"{{ path('torneig_new') }}\">Create new</a>
 {% endblock %}
 ", "torneig/index.html.twig", "/app/appclasse/templates/torneig/index.html.twig");

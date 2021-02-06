@@ -28,4 +28,9 @@ class RondaController extends AbstractController
         ]);
     }
 
+    /**
+     * @Route("/ronda/{id}", name="ronda_profile")
+     */
+
+
 }

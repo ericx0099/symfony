@@ -29,6 +29,8 @@ return [
     'test' => [[], ['_controller' => 'App\\Controller\\TestController::miPerfil'], [], [['text', '/miPerfil']], [], []],
     'user_torneigos' => [[], ['_controller' => 'App\\Controller\\TestController::misTorneos'], [], [['text', '/misTorneos']], [], []],
     'jugador_perfil' => [['id'], ['_controller' => 'App\\Controller\\TestController::userProfile'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/perfil']], [], []],
+    'jugadors' => [[], ['_controller' => 'App\\Controller\\TestController::jugadors'], [], [['text', '/jugadors']], [], []],
+    'arbitres' => [[], ['_controller' => 'App\\Controller\\TestController::arbitres'], [], [['text', '/arbitres']], [], []],
     'arbitre_perfil' => [['id'], ['_controller' => 'App\\Controller\\TestController::arbitreProfile'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/arbitre']], [], []],
     'torneig_perfil' => [['id'], ['_controller' => 'App\\Controller\\TestController::torneigPerfil'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/torneig']], [], []],
     'torneig_all_public' => [[], ['_controller' => 'App\\Controller\\TestController::torneigs'], [], [['text', '/torneig']], [], []],

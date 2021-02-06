@@ -116,33 +116,35 @@ class __TwigTemplate_1613e958576b89aaa2d54b9cda135fe674b5aff5373d3e841457992123d
         })
     </script>
 
-    <h1 class=\"is-size-4 has-text-centered mt-5\">Afageix i Elimina usuaris del torneig <span class=\"is-size-3 is-family-code has-text-primary has-text-weight-bold\">";
+    <h1 class=\"has-text-centered is-size-3 m-5 has-text-weight-bold\">Afageix i Elimina usuaris del torneig <span class=\"is-size-3 is-family-code has-text-primary has-text-weight-bold\">";
         // line 17
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["torneig"]) || array_key_exists("torneig", $context) ? $context["torneig"] : (function () { throw new RuntimeError('Variable "torneig" does not exist.', 17, $this->source); })()), "nom", [], "any", false, false, false, 17), "html", null, true);
         echo "</span></h1>
-   <div>
-       ";
-        // line 19
-        if ( !twig_get_attribute($this->env, $this->source, (isset($context["torneig"]) || array_key_exists("torneig", $context) ? $context["torneig"] : (function () { throw new RuntimeError('Variable "torneig" does not exist.', 19, $this->source); })()), "nom", [], "any", false, false, false, 19)) {
-            // line 20
-            echo "           <a class=\"button is-success is-light\" href=\"";
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("torneig_edit", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["torneig"]) || array_key_exists("torneig", $context) ? $context["torneig"] : (function () { throw new RuntimeError('Variable "torneig" does not exist.', 20, $this->source); })()), "id", [], "any", false, false, false, 20)]), "html", null, true);
-            echo "\">Continuar</a>
-           <form method=\"post\" action=\"";
+    <div class=\"is-flex is-justify-content-center\"style=\"width: 100%;\"  >
+        <div class=\"is-flex is-justify-content-space-between\" style=\"width: 50%;\" >
+            ";
+        // line 20
+        if ( !twig_get_attribute($this->env, $this->source, (isset($context["torneig"]) || array_key_exists("torneig", $context) ? $context["torneig"] : (function () { throw new RuntimeError('Variable "torneig" does not exist.', 20, $this->source); })()), "nom", [], "any", false, false, false, 20)) {
             // line 21
+            echo "                <form method=\"post\" action=\"";
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("torneig_delete", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["torneig"]) || array_key_exists("torneig", $context) ? $context["torneig"] : (function () { throw new RuntimeError('Variable "torneig" does not exist.', 21, $this->source); })()), "id", [], "any", false, false, false, 21)]), "html", null, true);
             echo "\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
-               <input type=\"hidden\" name=\"_method\" value=\"DELETE\">
-               <input type=\"hidden\" name=\"_token\" value=\"";
+                    <input type=\"hidden\" name=\"_method\" value=\"DELETE\">
+                    <input type=\"hidden\" name=\"_token\" value=\"";
             // line 23
             echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . twig_get_attribute($this->env, $this->source, (isset($context["torneig"]) || array_key_exists("torneig", $context) ? $context["torneig"] : (function () { throw new RuntimeError('Variable "torneig" does not exist.', 23, $this->source); })()), "id", [], "any", false, false, false, 23))), "html", null, true);
             echo "\">
-               <button class=\"button is-danger is-light\">Cancelar</button>
-           </form>
-       ";
+                    <button class=\"button is-danger is-light\" style=\"border-color:red;\">Cancelar</button>
+                </form>
+                <a class=\"button is-success is-light\" href=\"";
+            // line 26
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("torneig_edit", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["torneig"]) || array_key_exists("torneig", $context) ? $context["torneig"] : (function () { throw new RuntimeError('Variable "torneig" does not exist.', 26, $this->source); })()), "id", [], "any", false, false, false, 26)]), "html", null, true);
+            echo "\"  style=\"border-color:green;\">Continuar</a>
+            ";
         }
-        // line 27
-        echo "   </div>
+        // line 28
+        echo "        </div>
+    </div>
 
     <div class=\"is-flex is-justify-content-center mt-5\">
 
@@ -155,104 +157,104 @@ class __TwigTemplate_1613e958576b89aaa2d54b9cda135fe674b5aff5373d3e841457992123d
                 <th>Elo Fide</th>
                 <th>Pais</th>
                 <th> ";
-        // line 39
-        echo twig_escape_filter($this->env, twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["torneig"]) || array_key_exists("torneig", $context) ? $context["torneig"] : (function () { throw new RuntimeError('Variable "torneig" does not exist.', 39, $this->source); })()), "theParticipants", [], "any", false, false, false, 39)), "html", null, true);
+        // line 41
+        echo twig_escape_filter($this->env, twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["torneig"]) || array_key_exists("torneig", $context) ? $context["torneig"] : (function () { throw new RuntimeError('Variable "torneig" does not exist.', 41, $this->source); })()), "theParticipants", [], "any", false, false, false, 41)), "html", null, true);
         echo "</th>
             </tr>
             </thead>
 
             <tbody>
             ";
-        // line 44
+        // line 46
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["jugadors"]) || array_key_exists("jugadors", $context) ? $context["jugadors"] : (function () { throw new RuntimeError('Variable "jugadors" does not exist.', 44, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["jugadors"]) || array_key_exists("jugadors", $context) ? $context["jugadors"] : (function () { throw new RuntimeError('Variable "jugadors" does not exist.', 46, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["jugador"]) {
-            // line 45
+            // line 47
             echo "
                 <tr>
                     <td>";
-            // line 47
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jugador"], "nom", [], "any", false, false, false, 47), "html", null, true);
-            echo "</td>
-                    <td>";
-            // line 48
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jugador"], "codiFide", [], "any", false, false, false, 48), "html", null, true);
-            echo "</td>
-                    <td>";
             // line 49
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jugador"], "elo", [], "any", false, false, false, 49), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jugador"], "nom", [], "any", false, false, false, 49), "html", null, true);
             echo "</td>
                     <td>";
             // line 50
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jugador"], "pais", [], "any", false, false, false, 50), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jugador"], "codiFide", [], "any", false, false, false, 50), "html", null, true);
+            echo "</td>
+                    <td>";
+            // line 51
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jugador"], "elo", [], "any", false, false, false, 51), "html", null, true);
+            echo "</td>
+                    <td>";
+            // line 52
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jugador"], "pais", [], "any", false, false, false, 52), "html", null, true);
             echo "</td>
                     ";
-            // line 51
+            // line 53
             $context["alreadyIn"] = false;
-            // line 52
+            // line 54
             echo "                    ";
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable((isset($context["jugadorsInTournament"]) || array_key_exists("jugadorsInTournament", $context) ? $context["jugadorsInTournament"] : (function () { throw new RuntimeError('Variable "jugadorsInTournament" does not exist.', 52, $this->source); })()));
+            $context['_seq'] = twig_ensure_traversable((isset($context["jugadorsInTournament"]) || array_key_exists("jugadorsInTournament", $context) ? $context["jugadorsInTournament"] : (function () { throw new RuntimeError('Variable "jugadorsInTournament" does not exist.', 54, $this->source); })()));
             foreach ($context['_seq'] as $context["_key"] => $context["theplay"]) {
-                // line 53
+                // line 55
                 echo "                        ";
-                if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["theplay"], "nom", [], "any", false, false, false, 53), twig_get_attribute($this->env, $this->source, $context["jugador"], "nom", [], "any", false, false, false, 53)))) {
-                    // line 54
+                if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["theplay"], "nom", [], "any", false, false, false, 55), twig_get_attribute($this->env, $this->source, $context["jugador"], "nom", [], "any", false, false, false, 55)))) {
+                    // line 56
                     echo "                            ";
                     $context["alreadyIn"] = true;
-                    // line 55
+                    // line 57
                     echo "                        ";
                 }
-                // line 56
+                // line 58
                 echo "                    ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['theplay'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 57
+            // line 59
             echo "                    ";
-            if ((0 === twig_compare((isset($context["alreadyIn"]) || array_key_exists("alreadyIn", $context) ? $context["alreadyIn"] : (function () { throw new RuntimeError('Variable "alreadyIn" does not exist.', 57, $this->source); })()), true))) {
-                // line 58
+            if ((0 === twig_compare((isset($context["alreadyIn"]) || array_key_exists("alreadyIn", $context) ? $context["alreadyIn"] : (function () { throw new RuntimeError('Variable "alreadyIn" does not exist.', 59, $this->source); })()), true))) {
+                // line 60
                 echo "                        <td>
                             <form ";
-                // line 59
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("torneig_addJugadors", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["torneig"]) || array_key_exists("torneig", $context) ? $context["torneig"] : (function () { throw new RuntimeError('Variable "torneig" does not exist.', 59, $this->source); })()), "id", [], "any", false, false, false, 59)]), "html", null, true);
+                // line 61
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("torneig_addJugadors", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["torneig"]) || array_key_exists("torneig", $context) ? $context["torneig"] : (function () { throw new RuntimeError('Variable "torneig" does not exist.', 61, $this->source); })()), "id", [], "any", false, false, false, 61)]), "html", null, true);
                 echo " method=\"post\">
                                 <input type=\"hidden\" value=\"delete\" name=\"action\">
                                 <input type=\"hidden\" value=\"";
-                // line 61
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jugador"], "id", [], "any", false, false, false, 61), "html", null, true);
+                // line 63
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jugador"], "id", [], "any", false, false, false, 63), "html", null, true);
                 echo "\" name=\"idJug\">
                                 <button id=\"idBut\"class=\"button is-danger is-small\" onclick=\"changeButtonState(this)\">Elimina</button>
                             </form>
                         </td>
                     ";
             } else {
-                // line 66
+                // line 68
                 echo "                        <td>
                             <form ";
-                // line 67
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("torneig_addJugadors", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["torneig"]) || array_key_exists("torneig", $context) ? $context["torneig"] : (function () { throw new RuntimeError('Variable "torneig" does not exist.', 67, $this->source); })()), "id", [], "any", false, false, false, 67)]), "html", null, true);
+                // line 69
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("torneig_addJugadors", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["torneig"]) || array_key_exists("torneig", $context) ? $context["torneig"] : (function () { throw new RuntimeError('Variable "torneig" does not exist.', 69, $this->source); })()), "id", [], "any", false, false, false, 69)]), "html", null, true);
                 echo " method=\"post\">
                                 <input type=\"hidden\" value=\"add\" name=\"action\">
                                 <input type=\"hidden\" value=\"";
-                // line 69
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jugador"], "id", [], "any", false, false, false, 69), "html", null, true);
+                // line 71
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jugador"], "id", [], "any", false, false, false, 71), "html", null, true);
                 echo "\" name=\"idJug\">
                                 <button id=\"idBut\"class=\"button is-success is-small\" onclick=\"changeButtonState(this)\">Afageix</button>
                             </form>
                         </td>
                     ";
             }
-            // line 74
+            // line 76
             echo "                </tr>
 
             ";
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 77
+            // line 79
             echo "
                 <tr>
                     <td colspan=\"6\">no records found</td>
@@ -262,7 +264,7 @@ class __TwigTemplate_1613e958576b89aaa2d54b9cda135fe674b5aff5373d3e841457992123d
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['jugador'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 82
+        // line 84
         echo "            </tbody>
 
 
@@ -303,7 +305,7 @@ class __TwigTemplate_1613e958576b89aaa2d54b9cda135fe674b5aff5373d3e841457992123d
 
     public function getDebugInfo()
     {
-        return array (  266 => 82,  256 => 77,  249 => 74,  241 => 69,  236 => 67,  233 => 66,  225 => 61,  220 => 59,  217 => 58,  214 => 57,  208 => 56,  205 => 55,  202 => 54,  199 => 53,  194 => 52,  192 => 51,  188 => 50,  184 => 49,  180 => 48,  176 => 47,  172 => 45,  167 => 44,  159 => 39,  145 => 27,  138 => 23,  133 => 21,  128 => 20,  126 => 19,  121 => 17,  111 => 9,  101 => 8,  89 => 5,  79 => 4,  60 => 3,  37 => 1,);
+        return array (  268 => 84,  258 => 79,  251 => 76,  243 => 71,  238 => 69,  235 => 68,  227 => 63,  222 => 61,  219 => 60,  216 => 59,  210 => 58,  207 => 57,  204 => 56,  201 => 55,  196 => 54,  194 => 53,  190 => 52,  186 => 51,  182 => 50,  178 => 49,  174 => 47,  169 => 46,  161 => 41,  146 => 28,  141 => 26,  135 => 23,  129 => 21,  127 => 20,  121 => 17,  111 => 9,  101 => 8,  89 => 5,  79 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -324,17 +326,19 @@ class __TwigTemplate_1613e958576b89aaa2d54b9cda135fe674b5aff5373d3e841457992123d
         })
     </script>
 
-    <h1 class=\"is-size-4 has-text-centered mt-5\">Afageix i Elimina usuaris del torneig <span class=\"is-size-3 is-family-code has-text-primary has-text-weight-bold\">{{ torneig.nom }}</span></h1>
-   <div>
-       {% if not torneig.nom %}
-           <a class=\"button is-success is-light\" href=\"{{ path('torneig_edit', {'id': torneig.id}) }}\">Continuar</a>
-           <form method=\"post\" action=\"{{ path('torneig_delete', {'id': torneig.id}) }}\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
-               <input type=\"hidden\" name=\"_method\" value=\"DELETE\">
-               <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ torneig.id) }}\">
-               <button class=\"button is-danger is-light\">Cancelar</button>
-           </form>
-       {% endif %}
-   </div>
+    <h1 class=\"has-text-centered is-size-3 m-5 has-text-weight-bold\">Afageix i Elimina usuaris del torneig <span class=\"is-size-3 is-family-code has-text-primary has-text-weight-bold\">{{ torneig.nom }}</span></h1>
+    <div class=\"is-flex is-justify-content-center\"style=\"width: 100%;\"  >
+        <div class=\"is-flex is-justify-content-space-between\" style=\"width: 50%;\" >
+            {% if not torneig.nom %}
+                <form method=\"post\" action=\"{{ path('torneig_delete', {'id': torneig.id}) }}\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
+                    <input type=\"hidden\" name=\"_method\" value=\"DELETE\">
+                    <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ torneig.id) }}\">
+                    <button class=\"button is-danger is-light\" style=\"border-color:red;\">Cancelar</button>
+                </form>
+                <a class=\"button is-success is-light\" href=\"{{ path('torneig_edit', {'id': torneig.id}) }}\"  style=\"border-color:green;\">Continuar</a>
+            {% endif %}
+        </div>
+    </div>
 
     <div class=\"is-flex is-justify-content-center mt-5\">
 

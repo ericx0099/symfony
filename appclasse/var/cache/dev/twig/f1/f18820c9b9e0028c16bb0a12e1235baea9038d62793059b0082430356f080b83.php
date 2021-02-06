@@ -87,7 +87,7 @@ class __TwigTemplate_0a3a351e0379bdc2024c684ff5442994d9b364c9d7417fda3127a999def
         // line 6
         echo "    <h1>Jugador</h1>
 
-    <table class=\"table\">
+    <table>
         <tbody>
             <tr>
                 <th>Id</th>
@@ -195,7 +195,7 @@ class __TwigTemplate_0a3a351e0379bdc2024c684ff5442994d9b364c9d7417fda3127a999def
 {% block body %}
     <h1>Jugador</h1>
 
-    <table class=\"table\">
+    <table>
         <tbody>
             <tr>
                 <th>Id</th>

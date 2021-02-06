@@ -14,17 +14,19 @@
         })
     </script>
 
-    <h1 class="is-size-4 has-text-centered mt-5">Afageix i Elimina usuaris del torneig <span class="is-size-3 is-family-code has-text-primary has-text-weight-bold">{{ torneig.nom }}</span></h1>
-   <div>
-       {% if not torneig.nom %}
-           <a class="button is-success is-light" href="{{ path('torneig_edit', {'id': torneig.id}) }}">Continuar</a>
-           <form method="post" action="{{ path('torneig_delete', {'id': torneig.id}) }}" onsubmit="return confirm('Are you sure you want to delete this item?');">
-               <input type="hidden" name="_method" value="DELETE">
-               <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ torneig.id) }}">
-               <button class="button is-danger is-light">Cancelar</button>
-           </form>
-       {% endif %}
-   </div>
+    <h1 class="has-text-centered is-size-3 m-5 has-text-weight-bold">Afageix i Elimina usuaris del torneig <span class="is-size-3 is-family-code has-text-primary has-text-weight-bold">{{ torneig.nom }}</span></h1>
+    <div class="is-flex is-justify-content-center"style="width: 100%;"  >
+        <div class="is-flex is-justify-content-space-between" style="width: 50%;" >
+            {% if not torneig.nom %}
+                <form method="post" action="{{ path('torneig_delete', {'id': torneig.id}) }}" onsubmit="return confirm('Are you sure you want to delete this item?');">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ torneig.id) }}">
+                    <button class="button is-danger is-light" style="border-color:red;">Cancelar</button>
+                </form>
+                <a class="button is-success is-light" href="{{ path('torneig_edit', {'id': torneig.id}) }}"  style="border-color:green;">Continuar</a>
+            {% endif %}
+        </div>
+    </div>
 
     <div class="is-flex is-justify-content-center mt-5">
 

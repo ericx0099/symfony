@@ -25,6 +25,8 @@ return [
         ],
         '/miPerfil' => [[['_route' => 'test', '_controller' => 'App\\Controller\\TestController::miPerfil'], null, null, null, false, false, null]],
         '/misTorneos' => [[['_route' => 'user_torneigos', '_controller' => 'App\\Controller\\TestController::misTorneos'], null, null, null, false, false, null]],
+        '/jugadors' => [[['_route' => 'jugadors', '_controller' => 'App\\Controller\\TestController::jugadors'], null, null, null, false, false, null]],
+        '/arbitres' => [[['_route' => 'arbitres', '_controller' => 'App\\Controller\\TestController::arbitres'], null, null, null, false, false, null]],
         '/torneig' => [[['_route' => 'torneig_all_public', '_controller' => 'App\\Controller\\TestController::torneigs'], null, null, null, false, false, null]],
         '/torneigadmin' => [[['_route' => 'torneig_index', '_controller' => 'App\\Controller\\TorneigController::index'], null, ['GET' => 0], null, true, false, null]],
         '/torneigadmin/new' => [[['_route' => 'torneig_new', '_controller' => 'App\\Controller\\TorneigController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
