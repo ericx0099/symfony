@@ -48,22 +48,23 @@ class __TwigTemplate_b4074ef67888d687de142f5318368306073206a57a66c99acea8b00128e
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
     <title>Arbitre Registre</title>
     <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css\">
+    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">
     <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css\">
     <link rel=\"stylesheet\" href=\"../styles/css/regArbit-style.css\">
     <link rel=\"stylesheet\" href=\"//cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css\">
     <script src=\"//cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js\"></script>
     <script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js\"></script>
     ";
-        // line 12
+        // line 13
         $this->displayBlock('style', $context, $blocks);
-        // line 15
+        // line 16
         echo "</head>
 <body>
 
 <nav class=\"navbar is-primary\" role=\"navigation\" aria-label=\"main navigation\">
     <div class=\"navbar-brand\">
         <a class=\"navbar-item\" href=\"";
-        // line 20
+        // line 21
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("inici");
         echo "\">
             <img src=\"https://www.shareicon.net/data/128x128/2015/10/31/664739_knight_512x512.png\">
@@ -82,9 +83,9 @@ class __TwigTemplate_b4074ef67888d687de142f5318368306073206a57a66c99acea8b00128e
                 Home
             </a>
             ";
-        // line 36
+        // line 37
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_USER")) {
-            // line 37
+            // line 38
             echo "                <a class=\"navbar-item is-selected\" href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("user_torneigos");
             echo "\">
@@ -92,7 +93,7 @@ class __TwigTemplate_b4074ef67888d687de142f5318368306073206a57a66c99acea8b00128e
                 </a>
             ";
         } else {
-            // line 41
+            // line 42
             echo "                <a class=\"navbar-item\" href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("torneig_all_public");
             echo "\">
@@ -100,7 +101,7 @@ class __TwigTemplate_b4074ef67888d687de142f5318368306073206a57a66c99acea8b00128e
                 </a>
             ";
         }
-        // line 45
+        // line 46
         echo "
 
             <div class=\"navbar-item has-dropdown is-hoverable\">
@@ -127,20 +128,20 @@ class __TwigTemplate_b4074ef67888d687de142f5318368306073206a57a66c99acea8b00128e
         </div>
 
         ";
-        // line 70
+        // line 71
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_USER")) {
-            // line 71
+            // line 72
             echo "            <div class=\"navbar-end\">
                 <div class=\"navbar-item\">
                     <div class=\"buttons\">
                         <a class=\"button is-primary\" style=\"border: 1px solid white\" href=\"";
-            // line 74
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("user_edit", ["id" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 74, $this->source); })()), "user", [], "any", false, false, false, 74), "id", [], "any", false, false, false, 74)]), "html", null, true);
+            // line 75
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("user_edit", ["id" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 75, $this->source); })()), "user", [], "any", false, false, false, 75), "id", [], "any", false, false, false, 75)]), "html", null, true);
             echo "\">
                             <strong><i class=\"fas fa-user\" ></i> Perfil</strong>
                         </a>
                         <a class=\"button is-danger\" href=\"";
-            // line 77
+            // line 78
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
             echo "\" >
                             <strong><i class=\"fas fa-sign-out-alt\"></i> Logout</strong>
@@ -150,19 +151,19 @@ class __TwigTemplate_b4074ef67888d687de142f5318368306073206a57a66c99acea8b00128e
             </div>
         ";
         } else {
-            // line 84
+            // line 85
             echo "
             <div class=\"navbar-end\">
                 <div class=\"navbar-item\">
                     <div class=\"buttons\">
                         <a class=\"button is-primary\" style=\"border: 1px solid white\" href=\"";
-            // line 88
+            // line 89
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("user_new");
             echo "\">
                             <strong>Sign up</strong>
                         </a>
                         <a class=\"button is-light\" href=\"";
-            // line 91
+            // line 92
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
             echo "\">
                             Log in
@@ -172,12 +173,12 @@ class __TwigTemplate_b4074ef67888d687de142f5318368306073206a57a66c99acea8b00128e
             </div>
         ";
         }
-        // line 98
+        // line 99
         echo "    </div>
 </nav>";
-        // line 102
+        // line 103
         $this->displayBlock('body', $context, $blocks);
-        // line 105
+        // line 106
         echo "<script type=\"application/javascript\">
     document.addEventListener('DOMContentLoaded', () => {
         (document.querySelectorAll('.notification .delete') || []).forEach((\$delete) => {
@@ -190,10 +191,18 @@ class __TwigTemplate_b4074ef67888d687de142f5318368306073206a57a66c99acea8b00128e
     });
 </script>
 </body>
+<footer>
+    <div class=\"footerContent\">
+        <div class=\"faBox\">
+            <a href=\"#\" class=\"fab fa-twitter\"></a>
+            <a href=\"#\" class=\"fab fa-linkedin\"></a>
+            <a href=\"#\" class=\"fab fa-instagram\"></a>
+            <a href=\"#\" class=\"fab fa-facebook\"></a>
+        </div>
+        <p>&copy; Torneig</p>
+    </div>
+</footer>
 <style>
-
-
-
     :root {
         --brandColor: hsl(166, 67%, 51%);
         --background: rgb(247, 247, 247);
@@ -268,6 +277,34 @@ class __TwigTemplate_b4074ef67888d687de142f5318368306073206a57a66c99acea8b00128e
         box-shadow: 0 0 0 1px var(--brandColor) !important;
     }
 
+    footer
+    {
+        margin-top: 60em;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background: transparent;
+        min-height: 6vh;
+    }
+
+    footer p
+    {
+        color: black;
+        bottom: 0;
+        margin-top: 5px;
+        text-align: center;
+    }
+
+    .faBox
+    {
+        font-size: 40px;
+        width: 100%;
+        justify-content: space-around;
+        text-align: center;
+        display: flex;
+
+    }
+
     .fab,
     .fas {
         color: var(--textLight);
@@ -275,6 +312,19 @@ class __TwigTemplate_b4074ef67888d687de142f5318368306073206a57a66c99acea8b00128e
     }
     .valtext{
         vertical-align: center;
+    }
+
+    .fab
+    {
+        color: #00d1b2;
+        text-decoration: none;
+    }
+
+    .fab:hover
+    {
+        transform: scale(1.5);
+        transition: all ease 500ms;
+        cursor: pointer;
     }
 
 </style>
@@ -305,7 +355,6 @@ class __TwigTemplate_b4074ef67888d687de142f5318368306073206a57a66c99acea8b00128e
 
     });
 </script>
-</body>
 </html>";
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -315,7 +364,7 @@ class __TwigTemplate_b4074ef67888d687de142f5318368306073206a57a66c99acea8b00128e
 
     }
 
-    // line 12
+    // line 13
     public function block_style($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -325,7 +374,7 @@ class __TwigTemplate_b4074ef67888d687de142f5318368306073206a57a66c99acea8b00128e
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "style"));
 
-        // line 13
+        // line 14
         echo "
     ";
         
@@ -336,7 +385,7 @@ class __TwigTemplate_b4074ef67888d687de142f5318368306073206a57a66c99acea8b00128e
 
     }
 
-    // line 102
+    // line 103
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -346,7 +395,7 @@ class __TwigTemplate_b4074ef67888d687de142f5318368306073206a57a66c99acea8b00128e
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 103
+        // line 104
         echo "
 ";
         
@@ -369,7 +418,7 @@ class __TwigTemplate_b4074ef67888d687de142f5318368306073206a57a66c99acea8b00128e
 
     public function getDebugInfo()
     {
-        return array (  350 => 103,  340 => 102,  329 => 13,  319 => 12,  181 => 105,  179 => 102,  176 => 98,  166 => 91,  160 => 88,  154 => 84,  144 => 77,  138 => 74,  133 => 71,  131 => 70,  104 => 45,  96 => 41,  88 => 37,  86 => 36,  67 => 20,  60 => 15,  58 => 12,  45 => 1,);
+        return array (  399 => 104,  389 => 103,  378 => 14,  368 => 13,  182 => 106,  180 => 103,  177 => 99,  167 => 92,  161 => 89,  155 => 85,  145 => 78,  139 => 75,  134 => 72,  132 => 71,  105 => 46,  97 => 42,  89 => 38,  87 => 37,  68 => 21,  61 => 16,  59 => 13,  45 => 1,);
     }
 
     public function getSourceContext()
@@ -380,6 +429,7 @@ class __TwigTemplate_b4074ef67888d687de142f5318368306073206a57a66c99acea8b00128e
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
     <title>Arbitre Registre</title>
     <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css\">
+    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">
     <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css\">
     <link rel=\"stylesheet\" href=\"../styles/css/regArbit-style.css\">
     <link rel=\"stylesheet\" href=\"//cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css\">
@@ -490,10 +540,18 @@ class __TwigTemplate_b4074ef67888d687de142f5318368306073206a57a66c99acea8b00128e
     });
 </script>
 </body>
+<footer>
+    <div class=\"footerContent\">
+        <div class=\"faBox\">
+            <a href=\"#\" class=\"fab fa-twitter\"></a>
+            <a href=\"#\" class=\"fab fa-linkedin\"></a>
+            <a href=\"#\" class=\"fab fa-instagram\"></a>
+            <a href=\"#\" class=\"fab fa-facebook\"></a>
+        </div>
+        <p>&copy; Torneig</p>
+    </div>
+</footer>
 <style>
-
-
-
     :root {
         --brandColor: hsl(166, 67%, 51%);
         --background: rgb(247, 247, 247);
@@ -568,6 +626,34 @@ class __TwigTemplate_b4074ef67888d687de142f5318368306073206a57a66c99acea8b00128e
         box-shadow: 0 0 0 1px var(--brandColor) !important;
     }
 
+    footer
+    {
+        margin-top: 60em;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background: transparent;
+        min-height: 6vh;
+    }
+
+    footer p
+    {
+        color: black;
+        bottom: 0;
+        margin-top: 5px;
+        text-align: center;
+    }
+
+    .faBox
+    {
+        font-size: 40px;
+        width: 100%;
+        justify-content: space-around;
+        text-align: center;
+        display: flex;
+
+    }
+
     .fab,
     .fas {
         color: var(--textLight);
@@ -575,6 +661,19 @@ class __TwigTemplate_b4074ef67888d687de142f5318368306073206a57a66c99acea8b00128e
     }
     .valtext{
         vertical-align: center;
+    }
+
+    .fab
+    {
+        color: #00d1b2;
+        text-decoration: none;
+    }
+
+    .fab:hover
+    {
+        transform: scale(1.5);
+        transition: all ease 500ms;
+        cursor: pointer;
     }
 
 </style>
@@ -605,7 +704,6 @@ class __TwigTemplate_b4074ef67888d687de142f5318368306073206a57a66c99acea8b00128e
 
     });
 </script>
-</body>
 </html>", "base.html.twig", "/app/appclasse/templates/base.html.twig");
     }
 }

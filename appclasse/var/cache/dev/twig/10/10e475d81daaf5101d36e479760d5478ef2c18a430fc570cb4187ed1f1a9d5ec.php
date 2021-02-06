@@ -85,29 +85,147 @@ class __TwigTemplate_22f819aee4ece20065a5b15bfb0a44a2a1f823beb0964aeb88034d18d0d
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+        echo "    <div class=\"mainPart\">
+        <div class=\"mainInfo\">
+            <img src=\"https://wallpaperaccess.com/full/446984.jpg\" alt=\"\">
+            <div class=\"info\">
+                <h2 class=\"is-family-secondary\">Organitza Torneigos Online!</h2>
+                <p>Connecta amb gent <span class=\"has-text-primary\">#ChessFans</span></p>
+                <button class=\"button is-primary\" style=\"margin-top: 3%; padding: 1.5%; font-weight: bold;letter-spacing: 1.2px\">
+                <span class=\"icon\">
+                  <i class=\"far fa-user\" style=\"font-weight: bold\"></i>
+                </span>
+                    <span>Registra't</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class=\"secondPart is-flex is-justify-content-center\">
+        <div class=\"container is-flex is-justify-content-space-around\" style=\"width: 85%; color: #393b44\">
+            <div class=\"menu1\">
+                <div>
+                    <div class=\"infoTorneig\">
+                        <p>Busca torneigos</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta ducimus error</p>
+                    </div>
+                    <div class=\"torneigButton\">
+                        <button class=\"button is-primary\" style=\"font-weight: bold;letter-spacing: 1.2px\">
+                            <span class=\"icon\">
+                              <i class=\"far fa-user\" style=\"font-weight: bold\"></i>
+                            </span>
+                            <span>Torneigos</span>
+                        </button>
+                    </div>
+                    <div class=\"imatgeTorneig\">
 
-<div class=\"example-wrapper\">
-    <h1>Hello ";
-        // line 12
-        echo twig_escape_filter($this->env, (isset($context["controller_name"]) || array_key_exists("controller_name", $context) ? $context["controller_name"] : (function () { throw new RuntimeError('Variable "controller_name" does not exist.', 12, $this->source); })()), "html", null, true);
-        echo "! ✅</h1>
+                    </div>
+                </div>
+            </div>
+            <div class=\"menu2\">
+                <div>
+                    <div class=\"infoTorneig\">
+                        <p>Busca torneigos</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta ducimus error</p>
+                    </div>
+                    <div class=\"torneigButton\">
+                        <button class=\"button is-primary\" style=\"font-weight: bold;letter-spacing: 1.2px\">
+                            <span class=\"icon\">
+                              <i class=\"far fa-user\" style=\"font-weight: bold\"></i>
+                            </span>
+                            <span>Torneigos</span>
+                        </button>
+                    </div>
+                    <div class=\"imatgeTorneig\">
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href=\"";
-        // line 16
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\CodeExtension']->getFileLink("/app/appclasse/src/Controller/TestController.php", 0), "html", null, true);
-        echo "\">src/Controller/TestController.php</a></code></li>
-        <li>Your template at <code><a href=\"";
-        // line 17
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\CodeExtension']->getFileLink("/app/appclasse/templates/test/index.html.twig", 0), "html", null, true);
-        echo "\">templates/test/index.html.twig</a></code></li>
-    </ul>
-</div>
+                    </div>
+                </div>
+            </div>
+            <div class=\"menu3\">
+                <div>
+                    <div class=\"infoTorneig\">
+                        <p>Busca àrbitres</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta ducimus error</p>
+                    </div>
+                    <div class=\"torneigButton\">
+                        <button class=\"button is-primary\" style=\"font-weight: bold;letter-spacing: 1.2px\">
+                            <span class=\"icon\">
+                              <i class=\"far fa-user\" style=\"font-weight: bold\"></i>
+                            </span>
+                            <span>Àrbitres</span>
+                        </button>
+                    </div>
+                    <div class=\"imatgeTorneig\">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+
+        .infoTorneig p:first-child
+        {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .container > div
+        {
+
+            width: 30%;
+            padding: 1%;
+            background-color: #161b22;
+            margin: 1%;
+            border-radius: 2%;
+        }
+        .mainPart
+        {
+            margin:auto;
+            width: 100%;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .secondPart
+        {
+            background-color: #030303;
+        }
+
+        .mainInfo
+        {
+            position: relative;
+            overflow: hidden;
+            background: transparent;
+        }
+
+        .mainInfo img
+        {
+            width: 100%;
+        }
+
+        .info
+        {
+            position: absolute;
+            top: 10%;
+            width: 100%;
+            text-align: center;
+        }
+
+        h2
+        {
+            letter-spacing: 2px;
+            color: black;
+            text-align: center;
+            font-size: 80px;
+        }
+
+        .info p
+        {
+            color: rgba(0,0,0,0.8);
+            font-size: 30px;
+            text-align: center;
+        }
+    </style>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -129,7 +247,7 @@ class __TwigTemplate_22f819aee4ece20065a5b15bfb0a44a2a1f823beb0964aeb88034d18d0d
 
     public function getDebugInfo()
     {
-        return array (  107 => 17,  103 => 16,  96 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -139,20 +257,147 @@ class __TwigTemplate_22f819aee4ece20065a5b15bfb0a44a2a1f823beb0964aeb88034d18d0d
 {% block title %}Hello TestController!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <div class=\"mainPart\">
+        <div class=\"mainInfo\">
+            <img src=\"https://wallpaperaccess.com/full/446984.jpg\" alt=\"\">
+            <div class=\"info\">
+                <h2 class=\"is-family-secondary\">Organitza Torneigos Online!</h2>
+                <p>Connecta amb gent <span class=\"has-text-primary\">#ChessFans</span></p>
+                <button class=\"button is-primary\" style=\"margin-top: 3%; padding: 1.5%; font-weight: bold;letter-spacing: 1.2px\">
+                <span class=\"icon\">
+                  <i class=\"far fa-user\" style=\"font-weight: bold\"></i>
+                </span>
+                    <span>Registra't</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class=\"secondPart is-flex is-justify-content-center\">
+        <div class=\"container is-flex is-justify-content-space-around\" style=\"width: 85%; color: #393b44\">
+            <div class=\"menu1\">
+                <div>
+                    <div class=\"infoTorneig\">
+                        <p>Busca torneigos</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta ducimus error</p>
+                    </div>
+                    <div class=\"torneigButton\">
+                        <button class=\"button is-primary\" style=\"font-weight: bold;letter-spacing: 1.2px\">
+                            <span class=\"icon\">
+                              <i class=\"far fa-user\" style=\"font-weight: bold\"></i>
+                            </span>
+                            <span>Torneigos</span>
+                        </button>
+                    </div>
+                    <div class=\"imatgeTorneig\">
 
-<div class=\"example-wrapper\">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+                    </div>
+                </div>
+            </div>
+            <div class=\"menu2\">
+                <div>
+                    <div class=\"infoTorneig\">
+                        <p>Busca torneigos</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta ducimus error</p>
+                    </div>
+                    <div class=\"torneigButton\">
+                        <button class=\"button is-primary\" style=\"font-weight: bold;letter-spacing: 1.2px\">
+                            <span class=\"icon\">
+                              <i class=\"far fa-user\" style=\"font-weight: bold\"></i>
+                            </span>
+                            <span>Torneigos</span>
+                        </button>
+                    </div>
+                    <div class=\"imatgeTorneig\">
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href=\"{{ '/app/appclasse/src/Controller/TestController.php'|file_link(0) }}\">src/Controller/TestController.php</a></code></li>
-        <li>Your template at <code><a href=\"{{ '/app/appclasse/templates/test/index.html.twig'|file_link(0) }}\">templates/test/index.html.twig</a></code></li>
-    </ul>
-</div>
+                    </div>
+                </div>
+            </div>
+            <div class=\"menu3\">
+                <div>
+                    <div class=\"infoTorneig\">
+                        <p>Busca àrbitres</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta ducimus error</p>
+                    </div>
+                    <div class=\"torneigButton\">
+                        <button class=\"button is-primary\" style=\"font-weight: bold;letter-spacing: 1.2px\">
+                            <span class=\"icon\">
+                              <i class=\"far fa-user\" style=\"font-weight: bold\"></i>
+                            </span>
+                            <span>Àrbitres</span>
+                        </button>
+                    </div>
+                    <div class=\"imatgeTorneig\">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+
+        .infoTorneig p:first-child
+        {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .container > div
+        {
+
+            width: 30%;
+            padding: 1%;
+            background-color: #161b22;
+            margin: 1%;
+            border-radius: 2%;
+        }
+        .mainPart
+        {
+            margin:auto;
+            width: 100%;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .secondPart
+        {
+            background-color: #030303;
+        }
+
+        .mainInfo
+        {
+            position: relative;
+            overflow: hidden;
+            background: transparent;
+        }
+
+        .mainInfo img
+        {
+            width: 100%;
+        }
+
+        .info
+        {
+            position: absolute;
+            top: 10%;
+            width: 100%;
+            text-align: center;
+        }
+
+        h2
+        {
+            letter-spacing: 2px;
+            color: black;
+            text-align: center;
+            font-size: 80px;
+        }
+
+        .info p
+        {
+            color: rgba(0,0,0,0.8);
+            font-size: 30px;
+            text-align: center;
+        }
+    </style>
 {% endblock %}
 ", "test/index.html.twig", "/app/appclasse/templates/test/index.html.twig");
     }

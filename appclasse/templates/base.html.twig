@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Arbitre Registre</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="../styles/css/regArbit-style.css">
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
@@ -114,10 +115,18 @@
     });
 </script>
 </body>
+<footer>
+    <div class="footerContent">
+        <div class="faBox">
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-facebook"></a>
+        </div>
+        <p>&copy; Torneig</p>
+    </div>
+</footer>
 <style>
-
-
-
     :root {
         --brandColor: hsl(166, 67%, 51%);
         --background: rgb(247, 247, 247);
@@ -192,6 +201,34 @@
         box-shadow: 0 0 0 1px var(--brandColor) !important;
     }
 
+    footer
+    {
+        margin-top: 60em;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background: transparent;
+        min-height: 6vh;
+    }
+
+    footer p
+    {
+        color: black;
+        bottom: 0;
+        margin-top: 5px;
+        text-align: center;
+    }
+
+    .faBox
+    {
+        font-size: 40px;
+        width: 100%;
+        justify-content: space-around;
+        text-align: center;
+        display: flex;
+
+    }
+
     .fab,
     .fas {
         color: var(--textLight);
@@ -199,6 +236,19 @@
     }
     .valtext{
         vertical-align: center;
+    }
+
+    .fab
+    {
+        color: #00d1b2;
+        text-decoration: none;
+    }
+
+    .fab:hover
+    {
+        transform: scale(1.5);
+        transition: all ease 500ms;
+        cursor: pointer;
     }
 
 </style>
@@ -229,5 +279,4 @@
 
     });
 </script>
-</body>
 </html>
