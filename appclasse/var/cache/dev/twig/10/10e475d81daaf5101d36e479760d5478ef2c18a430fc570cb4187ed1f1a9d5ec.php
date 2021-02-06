@@ -90,7 +90,7 @@ class __TwigTemplate_22f819aee4ece20065a5b15bfb0a44a2a1f823beb0964aeb88034d18d0d
             <img src=\"https://wallpaperaccess.com/full/446984.jpg\" alt=\"\">
             <div class=\"info\">
                 <h2 class=\"is-family-secondary\">Organitza Torneigos Online!</h2>
-                <p>Connecta amb gent <span class=\"has-text-primary\">#ChessFans</span></p>
+                <p>Connecta amb gent <span class=\"has-text-primary\">#WeLoveChess</span></p>
                 <button class=\"button is-primary\" style=\"margin-top: 3%; padding: 1.5%; font-weight: bold;letter-spacing: 1.2px\">
                 <span class=\"icon\">
                   <i class=\"far fa-user\" style=\"font-weight: bold\"></i>
@@ -136,7 +136,7 @@ class __TwigTemplate_22f819aee4ece20065a5b15bfb0a44a2a1f823beb0964aeb88034d18d0d
                         </button>
                     </div>
                     <div class=\"imatgeTorneig\">
-
+                        <img src=\"trophy.png\" alt=\"\"  width=\"50px\" height=\"50px\">
                     </div>
                 </div>
             </div>
@@ -162,6 +162,10 @@ class __TwigTemplate_22f819aee4ece20065a5b15bfb0a44a2a1f823beb0964aeb88034d18d0d
         </div>
     </div>
     <style>
+
+     .secondPart{
+         padding-bottom: 5%;
+     }
 
         .infoTorneig p:first-child
         {
@@ -262,7 +266,7 @@ class __TwigTemplate_22f819aee4ece20065a5b15bfb0a44a2a1f823beb0964aeb88034d18d0d
             <img src=\"https://wallpaperaccess.com/full/446984.jpg\" alt=\"\">
             <div class=\"info\">
                 <h2 class=\"is-family-secondary\">Organitza Torneigos Online!</h2>
-                <p>Connecta amb gent <span class=\"has-text-primary\">#ChessFans</span></p>
+                <p>Connecta amb gent <span class=\"has-text-primary\">#WeLoveChess</span></p>
                 <button class=\"button is-primary\" style=\"margin-top: 3%; padding: 1.5%; font-weight: bold;letter-spacing: 1.2px\">
                 <span class=\"icon\">
                   <i class=\"far fa-user\" style=\"font-weight: bold\"></i>
@@ -308,7 +312,7 @@ class __TwigTemplate_22f819aee4ece20065a5b15bfb0a44a2a1f823beb0964aeb88034d18d0d
                         </button>
                     </div>
                     <div class=\"imatgeTorneig\">
-
+                        <img src=\"trophy.png\" alt=\"\"  width=\"50px\" height=\"50px\">
                     </div>
                 </div>
             </div>
@@ -334,6 +338,10 @@ class __TwigTemplate_22f819aee4ece20065a5b15bfb0a44a2a1f823beb0964aeb88034d18d0d
         </div>
     </div>
     <style>
+
+     .secondPart{
+         padding-bottom: 5%;
+     }
 
         .infoTorneig p:first-child
         {
