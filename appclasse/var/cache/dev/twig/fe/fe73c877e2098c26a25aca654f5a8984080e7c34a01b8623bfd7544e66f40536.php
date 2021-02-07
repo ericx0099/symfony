@@ -26,6 +26,7 @@ class __TwigTemplate_815997259e811c28f8391851ffe7fe6a745cd89bc92e4399bae857f06bc
 
         $this->blocks = [
             'title' => [$this, 'block_title'],
+            'style' => [$this, 'block_style'],
             'body' => [$this, 'block_body'],
         ];
     }
@@ -74,7 +75,28 @@ class __TwigTemplate_815997259e811c28f8391851ffe7fe6a745cd89bc92e4399bae857f06bc
 
     }
 
-    // line 5
+    // line 4
+    public function block_style($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "style"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "style"));
+
+        // line 5
+        echo "    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js\" integrity=\"sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==\" crossorigin=\"anonymous\"></script>
+";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 7
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -84,7 +106,7 @@ class __TwigTemplate_815997259e811c28f8391851ffe7fe6a745cd89bc92e4399bae857f06bc
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 6
+        // line 8
         echo "    <div class=\"mainPart\">
         <div class=\"mainInfo\">
             <img src=\"https://wallpaperaccess.com/full/446984.jpg\" alt=\"\">
@@ -96,7 +118,7 @@ class __TwigTemplate_815997259e811c28f8391851ffe7fe6a745cd89bc92e4399bae857f06bc
                   <i class=\"far fa-user\"></i>
                 </span>
                     <span><a style=\"color:white\" href=\"";
-        // line 16
+        // line 18
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("user_new");
         echo "\">Registra't</a> </span>
                 </button>
@@ -117,7 +139,7 @@ class __TwigTemplate_815997259e811c28f8391851ffe7fe6a745cd89bc92e4399bae857f06bc
                     </div>
                     <div class=\"torneigButton\">
                         <a href=\"";
-        // line 34
+        // line 36
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("torneig_all_public");
         echo "\" class=\"button\">
                             <span class=\"icon\">
@@ -139,7 +161,7 @@ class __TwigTemplate_815997259e811c28f8391851ffe7fe6a745cd89bc92e4399bae857f06bc
                     </div>
                     <div class=\"torneigButton\">
                         <a href=\"";
-        // line 53
+        // line 55
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("jugadors");
         echo "\" class=\"button\">
                             <span class=\"icon\">
@@ -161,7 +183,7 @@ class __TwigTemplate_815997259e811c28f8391851ffe7fe6a745cd89bc92e4399bae857f06bc
                     </div>
                     <div class=\"torneigButton\">
                         <a href=\"";
-        // line 72
+        // line 74
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("arbitres");
         echo "\" class=\"button\">
                             <span class=\"icon\">
@@ -179,8 +201,8 @@ class __TwigTemplate_815997259e811c28f8391851ffe7fe6a745cd89bc92e4399bae857f06bc
     </div>
     <script>
         \$(document).ready(function (){
-            \$('.button').mouseover(function (){
-                \$(this).children('i').css('color', 'white');
+            \$('.button').hover(function (){
+                \$(this).children(\"span\").children(\"i\").css('color', 'white');
             });
         });
     </script>
@@ -190,39 +212,39 @@ class __TwigTemplate_815997259e811c28f8391851ffe7fe6a745cd89bc92e4399bae857f06bc
             filter:invert(100%);
         }
 
-    .menu1 > div *,.menu2 > div *,.menu3 > div *{
-        margin:2%
-    }
+        .menu1 > div *,.menu2 > div *,.menu3 > div *{
+            margin:2%
+        }
 
-    .torneigButton > a:hover
-    {
-        color: white;
-    }
+        .torneigButton > a:hover
+        {
+            color: white;
+        }
 
-    .infoTorneig p
-    {
-        color: rgba(255,255,255,0.6);
-    }
+        .infoTorneig p
+        {
+            color: rgba(255,255,255,0.6);
+        }
 
-    .button:hover
-    {
-        border: 1px solid white;
-    }
+        .button:hover
+        {
+            border: 1px solid white;
+        }
 
-    .icon > i
-    {
-        font-weight: bold;
-        color: black;
-    }
+        .icon > i
+        {
+            font-weight: bold;
+            color: black;
+        }
 
-    .torneigButton > a
-    {
-        font-weight: bold;
-        letter-spacing: 1.2px;
-        background-color: white;
-        border:none;
-        color:black
-    }
+        .torneigButton > a
+        {
+            font-weight: bold;
+            letter-spacing: 1.2px;
+            background-color: white;
+            border:none;
+            color:black
+        }
 
         .torneigButton > a:hover
         {
@@ -231,13 +253,13 @@ class __TwigTemplate_815997259e811c28f8391851ffe7fe6a745cd89bc92e4399bae857f06bc
             border: none;
         }
 
-     .secondPartTitle{
-         background-color: #030303;
-         color:white;
-         text-align: center;
-         font-size: 4vmin;
-         padding-bottom:3%;
-     }
+        .secondPartTitle{
+            background-color: #030303;
+            color:white;
+            text-align: center;
+            font-size: 4vmin;
+            padding-bottom:3%;
+        }
 
 
         .infoTorneig p:first-child
@@ -328,7 +350,7 @@ class __TwigTemplate_815997259e811c28f8391851ffe7fe6a745cd89bc92e4399bae857f06bc
 
     public function getDebugInfo()
     {
-        return array (  165 => 72,  143 => 53,  121 => 34,  100 => 16,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  187 => 74,  165 => 55,  143 => 36,  122 => 18,  110 => 8,  100 => 7,  89 => 5,  79 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -336,7 +358,9 @@ class __TwigTemplate_815997259e811c28f8391851ffe7fe6a745cd89bc92e4399bae857f06bc
         return new Source("{% extends 'base.html.twig' %}
 
 {% block title %}Hello TestController!{% endblock %}
-
+{% block style %}
+    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js\" integrity=\"sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==\" crossorigin=\"anonymous\"></script>
+{% endblock %}
 {% block body %}
     <div class=\"mainPart\">
         <div class=\"mainInfo\">
@@ -420,8 +444,8 @@ class __TwigTemplate_815997259e811c28f8391851ffe7fe6a745cd89bc92e4399bae857f06bc
     </div>
     <script>
         \$(document).ready(function (){
-            \$('.button').mouseover(function (){
-                \$(this).children('i').css('color', 'white');
+            \$('.button').hover(function (){
+                \$(this).children(\"span\").children(\"i\").css('color', 'white');
             });
         });
     </script>
@@ -431,39 +455,39 @@ class __TwigTemplate_815997259e811c28f8391851ffe7fe6a745cd89bc92e4399bae857f06bc
             filter:invert(100%);
         }
 
-    .menu1 > div *,.menu2 > div *,.menu3 > div *{
-        margin:2%
-    }
+        .menu1 > div *,.menu2 > div *,.menu3 > div *{
+            margin:2%
+        }
 
-    .torneigButton > a:hover
-    {
-        color: white;
-    }
+        .torneigButton > a:hover
+        {
+            color: white;
+        }
 
-    .infoTorneig p
-    {
-        color: rgba(255,255,255,0.6);
-    }
+        .infoTorneig p
+        {
+            color: rgba(255,255,255,0.6);
+        }
 
-    .button:hover
-    {
-        border: 1px solid white;
-    }
+        .button:hover
+        {
+            border: 1px solid white;
+        }
 
-    .icon > i
-    {
-        font-weight: bold;
-        color: black;
-    }
+        .icon > i
+        {
+            font-weight: bold;
+            color: black;
+        }
 
-    .torneigButton > a
-    {
-        font-weight: bold;
-        letter-spacing: 1.2px;
-        background-color: white;
-        border:none;
-        color:black
-    }
+        .torneigButton > a
+        {
+            font-weight: bold;
+            letter-spacing: 1.2px;
+            background-color: white;
+            border:none;
+            color:black
+        }
 
         .torneigButton > a:hover
         {
@@ -472,13 +496,13 @@ class __TwigTemplate_815997259e811c28f8391851ffe7fe6a745cd89bc92e4399bae857f06bc
             border: none;
         }
 
-     .secondPartTitle{
-         background-color: #030303;
-         color:white;
-         text-align: center;
-         font-size: 4vmin;
-         padding-bottom:3%;
-     }
+        .secondPartTitle{
+            background-color: #030303;
+            color:white;
+            text-align: center;
+            font-size: 4vmin;
+            padding-bottom:3%;
+        }
 
 
         .infoTorneig p:first-child
@@ -548,7 +572,6 @@ class __TwigTemplate_815997259e811c28f8391851ffe7fe6a745cd89bc92e4399bae857f06bc
             text-align: center;
         }
     </style>
-{% endblock %}
-", "test/index.html.twig", "/app/appclasse/templates/test/index.html.twig");
+{% endblock %}", "test/index.html.twig", "/app/appclasse/templates/test/index.html.twig");
     }
 }

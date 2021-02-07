@@ -149,12 +149,17 @@ class __TwigTemplate_15d0ff5cd41fa80d8c16b40173dcf923146f13cde06303430963be72e0a
             </div>
         </div>
     </div>
-    <div>
-        <p>Numero de RONDA: ";
+    <div class=\"is-flex is-justify-content-center\">
+        <h3>Numero de RONDA: ";
         // line 37
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["ronda"]) || array_key_exists("ronda", $context) ? $context["ronda"] : (function () { throw new RuntimeError('Variable "ronda" does not exist.', 37, $this->source); })()), "numRondes", [], "any", false, false, false, 37), "html", null, true);
-        echo "</p>
+        echo "</h3>
+
     </div>
+    <a class=\"button is-success\" href=\"";
+        // line 40
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ronda", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["torneig"]) || array_key_exists("torneig", $context) ? $context["torneig"] : (function () { throw new RuntimeError('Variable "torneig" does not exist.', 40, $this->source); })()), "id", [], "any", false, false, false, 40)]), "html", null, true);
+        echo "\">Next Round</a>
     <table>
         <thead>
         <tr>
@@ -167,12 +172,12 @@ class __TwigTemplate_15d0ff5cd41fa80d8c16b40173dcf923146f13cde06303430963be72e0a
         <tbody>
 
         ";
-        // line 52
+        // line 54
         echo "
                     ";
-        // line 53
+        // line 55
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["ronda"]) || array_key_exists("ronda", $context) ? $context["ronda"] : (function () { throw new RuntimeError('Variable "ronda" does not exist.', 53, $this->source); })()), "partides", [], "any", false, false, false, 53));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["ronda"]) || array_key_exists("ronda", $context) ? $context["ronda"] : (function () { throw new RuntimeError('Variable "ronda" does not exist.', 55, $this->source); })()), "partides", [], "any", false, false, false, 55));
         $context['_iterated'] = false;
         $context['loop'] = [
           'parent' => $context['_parent'],
@@ -188,19 +193,19 @@ class __TwigTemplate_15d0ff5cd41fa80d8c16b40173dcf923146f13cde06303430963be72e0a
             $context['loop']['last'] = 1 === $length;
         }
         foreach ($context['_seq'] as $context["_key"] => $context["taula"]) {
-            // line 54
+            // line 56
             echo "                        <tr>
                             <td>
                                 ";
-            // line 56
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 56), "html", null, true);
+            // line 58
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 58), "html", null, true);
             echo "
                             </td>
 
                             <td>
                                 ";
-            // line 60
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["taula"], "jugadorB", [], "any", false, false, false, 60), "nom", [], "any", false, false, false, 60), "html", null, true);
+            // line 62
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["taula"], "jugadorB", [], "any", false, false, false, 62), "nom", [], "any", false, false, false, 62), "html", null, true);
             echo "
                             </td>
 
@@ -209,8 +214,8 @@ class __TwigTemplate_15d0ff5cd41fa80d8c16b40173dcf923146f13cde06303430963be72e0a
                             </td>
                             <td>
                                 ";
-            // line 67
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["taula"], "jugadorN", [], "any", false, false, false, 67), "nom", [], "any", false, false, false, 67), "html", null, true);
+            // line 69
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["taula"], "jugadorN", [], "any", false, false, false, 69), "nom", [], "any", false, false, false, 69), "html", null, true);
             echo "
                             </td>
                         </tr>
@@ -226,7 +231,7 @@ class __TwigTemplate_15d0ff5cd41fa80d8c16b40173dcf923146f13cde06303430963be72e0a
             }
         }
         if (!$context['_iterated']) {
-            // line 71
+            // line 73
             echo "                        <tr>
                             <td>No Partides</td>
                         </tr>
@@ -235,16 +240,140 @@ class __TwigTemplate_15d0ff5cd41fa80d8c16b40173dcf923146f13cde06303430963be72e0a
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['taula'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 75
+        // line 77
         echo "                    ";
         $context["break"] = true;
-        // line 76
+        // line 78
         echo "
           ";
-        // line 78
+        // line 80
         echo "        </tbody>
 
     </table>
+
+    <style>
+        .container{
+            height: 100%;
+        }
+        .shadow {
+            border: 2px solid #00d1b2;
+            border-top: none;
+            border-bottom: none;
+        }
+        .jugadorsTorn
+        {
+            text-decoration: none;
+            color: rgb(0, 209, 178);
+            font-weight: bold;
+        }
+
+        .jugadorsTorn:hover
+        {
+            color: rgb(0, 209, 178);
+            text-decoration: underline;
+        }
+
+        .refTorn
+        {
+            text-decoration: none;
+            color: rgb(0, 209, 178);
+        }
+
+        .refTorn:hover
+        {
+            text-decoration: underline;
+            color: rgb(0, 209, 178);
+        }
+
+        p:first-letter
+        {
+            text-transform: uppercase;
+        }
+
+        table {
+            color:#666;
+            font-size:25px;
+            text-shadow: 1px 1px 0px #fff;
+            margin:20px;
+            border:#ccc 1px solid;
+            -moz-border-radius:3px;
+            -webkit-border-radius:3px;
+
+            -moz-box-shadow: 0 1px 2px #d1d1d1;
+            -webkit-box-shadow: 0 1px 2px #d1d1d1;
+            box-shadow: 0 0 10px rgba(110,110,110, 0.5);
+            text-transform: uppercase;
+
+        }
+        table a{
+            color:#00d1b2;
+        }
+        table a:link {
+            color:#00d1b2;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        table a:active,
+        table a:hover {
+            color:#00d1b2;
+            text-decoration:underline;
+        }
+
+        table th {
+            color: white;
+            padding:21px 25px 22px 25px;
+            border-bottom:1px solid #e0e0e0;
+            letter-spacing: 1.5px;
+            background: #00d1b2;
+            font-weight: normal;
+        }
+        table th:first-child {
+            text-align: left;
+            padding-left:20px;
+        }
+        table tr:first-child th:first-child {
+            -moz-border-radius-topleft:3px;
+            -webkit-border-top-left-radius:3px;
+            border-top-left-radius:3px;
+        }
+        table tr:first-child th:last-child {
+            -moz-border-radius-topright:3px;
+            -webkit-border-top-right-radius:3px;
+            border-top-right-radius:3px;
+        }
+        table tr {
+            text-align: center;
+            padding-left:20px;
+        }
+        table td:first-child {
+            text-align: left;
+            padding-left:20px;
+            border-left: 0;
+        }
+        table td {
+            padding:18px;
+            border-top: 1px solid #ffffff;
+            border-bottom:1px solid #e0e0e0;
+            border-left: 1px solid #e0e0e0;
+
+            /*     background: #fafafa;
+                 background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#fafafa));
+                 background: -moz-linear-gradient(top,  #fbfbfb,  #fafafa);*/
+        }
+        table tr:last-child td {
+            border-bottom:0;
+        }
+        table tr:last-child td:first-child {
+            -moz-border-radius-bottomleft:3px;
+            -webkit-border-bottom-left-radius:3px;
+            border-bottom-left-radius:3px;
+        }
+        table tr:last-child td:last-child {
+            -moz-border-radius-bottomright:3px;
+            -webkit-border-bottom-right-radius:3px;
+            border-bottom-right-radius:3px;
+        }
+    </style>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -266,7 +395,7 @@ class __TwigTemplate_15d0ff5cd41fa80d8c16b40173dcf923146f13cde06303430963be72e0a
 
     public function getDebugInfo()
     {
-        return array (  245 => 78,  242 => 76,  239 => 75,  230 => 71,  213 => 67,  203 => 60,  196 => 56,  192 => 54,  174 => 53,  171 => 52,  155 => 37,  147 => 32,  138 => 26,  129 => 20,  120 => 14,  111 => 9,  101 => 8,  89 => 5,  79 => 4,  60 => 3,  37 => 1,);
+        return array (  250 => 80,  247 => 78,  244 => 77,  235 => 73,  218 => 69,  208 => 62,  201 => 58,  197 => 56,  179 => 55,  176 => 54,  161 => 40,  155 => 37,  147 => 32,  138 => 26,  129 => 20,  120 => 14,  111 => 9,  101 => 8,  89 => 5,  79 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -306,9 +435,11 @@ class __TwigTemplate_15d0ff5cd41fa80d8c16b40173dcf923146f13cde06303430963be72e0a
             </div>
         </div>
     </div>
-    <div>
-        <p>Numero de RONDA: {{ ronda.numRondes }}</p>
+    <div class=\"is-flex is-justify-content-center\">
+        <h3>Numero de RONDA: {{ ronda.numRondes }}</h3>
+
     </div>
+    <a class=\"button is-success\" href=\"{{ path(\"ronda\",{'id':torneig.id}) }}\">Next Round</a>
     <table>
         <thead>
         <tr>
@@ -351,6 +482,130 @@ class __TwigTemplate_15d0ff5cd41fa80d8c16b40173dcf923146f13cde06303430963be72e0a
         </tbody>
 
     </table>
+
+    <style>
+        .container{
+            height: 100%;
+        }
+        .shadow {
+            border: 2px solid #00d1b2;
+            border-top: none;
+            border-bottom: none;
+        }
+        .jugadorsTorn
+        {
+            text-decoration: none;
+            color: rgb(0, 209, 178);
+            font-weight: bold;
+        }
+
+        .jugadorsTorn:hover
+        {
+            color: rgb(0, 209, 178);
+            text-decoration: underline;
+        }
+
+        .refTorn
+        {
+            text-decoration: none;
+            color: rgb(0, 209, 178);
+        }
+
+        .refTorn:hover
+        {
+            text-decoration: underline;
+            color: rgb(0, 209, 178);
+        }
+
+        p:first-letter
+        {
+            text-transform: uppercase;
+        }
+
+        table {
+            color:#666;
+            font-size:25px;
+            text-shadow: 1px 1px 0px #fff;
+            margin:20px;
+            border:#ccc 1px solid;
+            -moz-border-radius:3px;
+            -webkit-border-radius:3px;
+
+            -moz-box-shadow: 0 1px 2px #d1d1d1;
+            -webkit-box-shadow: 0 1px 2px #d1d1d1;
+            box-shadow: 0 0 10px rgba(110,110,110, 0.5);
+            text-transform: uppercase;
+
+        }
+        table a{
+            color:#00d1b2;
+        }
+        table a:link {
+            color:#00d1b2;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        table a:active,
+        table a:hover {
+            color:#00d1b2;
+            text-decoration:underline;
+        }
+
+        table th {
+            color: white;
+            padding:21px 25px 22px 25px;
+            border-bottom:1px solid #e0e0e0;
+            letter-spacing: 1.5px;
+            background: #00d1b2;
+            font-weight: normal;
+        }
+        table th:first-child {
+            text-align: left;
+            padding-left:20px;
+        }
+        table tr:first-child th:first-child {
+            -moz-border-radius-topleft:3px;
+            -webkit-border-top-left-radius:3px;
+            border-top-left-radius:3px;
+        }
+        table tr:first-child th:last-child {
+            -moz-border-radius-topright:3px;
+            -webkit-border-top-right-radius:3px;
+            border-top-right-radius:3px;
+        }
+        table tr {
+            text-align: center;
+            padding-left:20px;
+        }
+        table td:first-child {
+            text-align: left;
+            padding-left:20px;
+            border-left: 0;
+        }
+        table td {
+            padding:18px;
+            border-top: 1px solid #ffffff;
+            border-bottom:1px solid #e0e0e0;
+            border-left: 1px solid #e0e0e0;
+
+            /*     background: #fafafa;
+                 background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#fafafa));
+                 background: -moz-linear-gradient(top,  #fbfbfb,  #fafafa);*/
+        }
+        table tr:last-child td {
+            border-bottom:0;
+        }
+        table tr:last-child td:first-child {
+            -moz-border-radius-bottomleft:3px;
+            -webkit-border-bottom-left-radius:3px;
+            border-bottom-left-radius:3px;
+        }
+        table tr:last-child td:last-child {
+            -moz-border-radius-bottomright:3px;
+            -webkit-border-bottom-right-radius:3px;
+            border-bottom-right-radius:3px;
+        }
+    </style>
 {% endblock %}", "torneig/rounds.html.twig", "/app/appclasse/templates/torneig/rounds.html.twig");
     }
 }

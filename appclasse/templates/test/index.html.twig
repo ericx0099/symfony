@@ -1,7 +1,9 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Hello TestController!{% endblock %}
-
+{% block style %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+{% endblock %}
 {% block body %}
     <div class="mainPart">
         <div class="mainInfo">
@@ -85,8 +87,8 @@
     </div>
     <script>
         $(document).ready(function (){
-            $('.button').mouseover(function (){
-                $(this).children('i').css('color', 'white');
+            $('.button').hover(function (){
+                $(this).children("span").children("i").css('color', 'white');
             });
         });
     </script>
@@ -96,39 +98,39 @@
             filter:invert(100%);
         }
 
-    .menu1 > div *,.menu2 > div *,.menu3 > div *{
-        margin:2%
-    }
+        .menu1 > div *,.menu2 > div *,.menu3 > div *{
+            margin:2%
+        }
 
-    .torneigButton > a:hover
-    {
-        color: white;
-    }
+        .torneigButton > a:hover
+        {
+            color: white;
+        }
 
-    .infoTorneig p
-    {
-        color: rgba(255,255,255,0.6);
-    }
+        .infoTorneig p
+        {
+            color: rgba(255,255,255,0.6);
+        }
 
-    .button:hover
-    {
-        border: 1px solid white;
-    }
+        .button:hover
+        {
+            border: 1px solid white;
+        }
 
-    .icon > i
-    {
-        font-weight: bold;
-        color: black;
-    }
+        .icon > i
+        {
+            font-weight: bold;
+            color: black;
+        }
 
-    .torneigButton > a
-    {
-        font-weight: bold;
-        letter-spacing: 1.2px;
-        background-color: white;
-        border:none;
-        color:black
-    }
+        .torneigButton > a
+        {
+            font-weight: bold;
+            letter-spacing: 1.2px;
+            background-color: white;
+            border:none;
+            color:black
+        }
 
         .torneigButton > a:hover
         {
@@ -137,13 +139,13 @@
             border: none;
         }
 
-     .secondPartTitle{
-         background-color: #030303;
-         color:white;
-         text-align: center;
-         font-size: 4vmin;
-         padding-bottom:3%;
-     }
+        .secondPartTitle{
+            background-color: #030303;
+            color:white;
+            text-align: center;
+            font-size: 4vmin;
+            padding-bottom:3%;
+        }
 
 
         .infoTorneig p:first-child
