@@ -93,7 +93,7 @@ class __TwigTemplate_815997259e811c28f8391851ffe7fe6a745cd89bc92e4399bae857f06bc
                 <p>Connecta amb gent <span class=\"has-text-primary\">#WeLoveChess</span></p>
                 <button class=\"button is-primary\" style=\"margin-top: 3%; padding: 1.5%; font-weight: bold;letter-spacing: 1.2px\">
                 <span class=\"icon\">
-                  <i class=\"far fa-user\" style=\"font-weight: bold\"></i>
+                  <i class=\"far fa-user\"></i>
                 </span>
                     <span><a style=\"color:white\" href=\"";
         // line 16
@@ -113,15 +113,15 @@ class __TwigTemplate_815997259e811c28f8391851ffe7fe6a745cd89bc92e4399bae857f06bc
                 <div>
                     <div class=\"infoTorneig\">
                         <p>Busca torneigos</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta ducimus error</p>
+                        <p>Busca i troba infromació sobre els nostres intents torneigos</p>
                     </div>
                     <div class=\"torneigButton\">
                         <a href=\"";
         // line 34
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("torneig_all_public");
-        echo "\" class=\"button \" style=\"font-weight: bold;letter-spacing: 1.2px;background-color: #6A6C6F;border:none;color:black\">
+        echo "\" class=\"button\">
                             <span class=\"icon\">
-                              <i class=\"far fa-trophy\" style=\"font-weight: bold\"></i>
+                              <i class=\"far fa-trophy\"></i>
                             </span>
                             <span>Explorar..</span>
                         </a>
@@ -135,13 +135,13 @@ class __TwigTemplate_815997259e811c28f8391851ffe7fe6a745cd89bc92e4399bae857f06bc
                 <div>
                     <div class=\"infoTorneig\">
                         <p>Busca jugadors</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta ducimus error</p>
+                        <p>Busca i mira informació detallada sobre els jugadors</p>
                     </div>
                     <div class=\"torneigButton\">
                         <a href=\"";
         // line 53
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("jugadors");
-        echo "\" class=\"button \" style=\"font-weight: bold;letter-spacing: 1.2px;background-color: #6A6C6F;color:black;border:1px solid #383A3F\">
+        echo "\" class=\"button\">
                             <span class=\"icon\">
                               <i class=\"far fa-user\" style=\"font-weight: bold\"></i>
                             </span>
@@ -157,26 +157,33 @@ class __TwigTemplate_815997259e811c28f8391851ffe7fe6a745cd89bc92e4399bae857f06bc
                 <div>
                     <div class=\"infoTorneig\">
                         <p>Busca àrbitres</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta ducimus error</p>
+                        <p>Busca i mira informació sobre àrbitres de arreu del món</p>
                     </div>
                     <div class=\"torneigButton\">
                         <a href=\"";
         // line 72
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("arbitres");
-        echo "\" class=\"button\" style=\"font-weight: bold;letter-spacing: 1.2px;background-color: #6A6C6F;border:none;color:black\">
+        echo "\" class=\"button\">
                             <span class=\"icon\">
-                                <i class=\"fas fa-user-shield\" style=\"font-weight: bold;color:black;\"></i>
+                                <i class=\"fas fa-user-shield\"></i>
                             </span>
                             <span>Explorar..</span>
                         </a>
                     </div>
                     <div class=\"imatgeTorneig is-flex is-justify-content-center\">
-                        <img class=\"playerIcon\" src=\"https://i.dlpng.com/static/png/5289768-referee-svg-png-icon-free-download-530994-onlinewebfontscom-referee-png-980_968_preview.png\" width=\"200min\">
+                        <img src=\"https://www.svgrepo.com/show/277600/referee.svg\" width=\"200min\">
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        \$(document).ready(function (){
+            \$('.button').mouseover(function (){
+                \$(this).children('i').css('color', 'white');
+            });
+        });
+    </script>
     <style>
 
         .playerIcon{
@@ -187,6 +194,43 @@ class __TwigTemplate_815997259e811c28f8391851ffe7fe6a745cd89bc92e4399bae857f06bc
         margin:2%
     }
 
+    .torneigButton > a:hover
+    {
+        color: white;
+    }
+
+    .infoTorneig p
+    {
+        color: rgba(255,255,255,0.6);
+    }
+
+    .button:hover
+    {
+        border: 1px solid white;
+    }
+
+    .icon > i
+    {
+        font-weight: bold;
+        color: black;
+    }
+
+    .torneigButton > a
+    {
+        font-weight: bold;
+        letter-spacing: 1.2px;
+        background-color: white;
+        border:none;
+        color:black
+    }
+
+        .torneigButton > a:hover
+        {
+            background-color: black;
+            color: white;
+            border: none;
+        }
+
      .secondPartTitle{
          background-color: #030303;
          color:white;
@@ -195,12 +239,14 @@ class __TwigTemplate_815997259e811c28f8391851ffe7fe6a745cd89bc92e4399bae857f06bc
          padding-bottom:3%;
      }
 
+
         .infoTorneig p:first-child
         {
             font-size: 1.5rem;
             font-weight: bold;
             color: #DDDDDD;
         }
+
 
         .container > div
         {
@@ -300,7 +346,7 @@ class __TwigTemplate_815997259e811c28f8391851ffe7fe6a745cd89bc92e4399bae857f06bc
                 <p>Connecta amb gent <span class=\"has-text-primary\">#WeLoveChess</span></p>
                 <button class=\"button is-primary\" style=\"margin-top: 3%; padding: 1.5%; font-weight: bold;letter-spacing: 1.2px\">
                 <span class=\"icon\">
-                  <i class=\"far fa-user\" style=\"font-weight: bold\"></i>
+                  <i class=\"far fa-user\"></i>
                 </span>
                     <span><a style=\"color:white\" href=\"{{path('user_new')  }}\">Registra't</a> </span>
                 </button>
@@ -317,12 +363,12 @@ class __TwigTemplate_815997259e811c28f8391851ffe7fe6a745cd89bc92e4399bae857f06bc
                 <div>
                     <div class=\"infoTorneig\">
                         <p>Busca torneigos</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta ducimus error</p>
+                        <p>Busca i troba infromació sobre els nostres intents torneigos</p>
                     </div>
                     <div class=\"torneigButton\">
-                        <a href=\"{{ path('torneig_all_public') }}\" class=\"button \" style=\"font-weight: bold;letter-spacing: 1.2px;background-color: #6A6C6F;border:none;color:black\">
+                        <a href=\"{{ path('torneig_all_public') }}\" class=\"button\">
                             <span class=\"icon\">
-                              <i class=\"far fa-trophy\" style=\"font-weight: bold\"></i>
+                              <i class=\"far fa-trophy\"></i>
                             </span>
                             <span>Explorar..</span>
                         </a>
@@ -336,10 +382,10 @@ class __TwigTemplate_815997259e811c28f8391851ffe7fe6a745cd89bc92e4399bae857f06bc
                 <div>
                     <div class=\"infoTorneig\">
                         <p>Busca jugadors</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta ducimus error</p>
+                        <p>Busca i mira informació detallada sobre els jugadors</p>
                     </div>
                     <div class=\"torneigButton\">
-                        <a href=\"{{ path(\"jugadors\") }}\" class=\"button \" style=\"font-weight: bold;letter-spacing: 1.2px;background-color: #6A6C6F;color:black;border:1px solid #383A3F\">
+                        <a href=\"{{ path(\"jugadors\") }}\" class=\"button\">
                             <span class=\"icon\">
                               <i class=\"far fa-user\" style=\"font-weight: bold\"></i>
                             </span>
@@ -355,23 +401,30 @@ class __TwigTemplate_815997259e811c28f8391851ffe7fe6a745cd89bc92e4399bae857f06bc
                 <div>
                     <div class=\"infoTorneig\">
                         <p>Busca àrbitres</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta ducimus error</p>
+                        <p>Busca i mira informació sobre àrbitres de arreu del món</p>
                     </div>
                     <div class=\"torneigButton\">
-                        <a href=\"{{ path('arbitres') }}\" class=\"button\" style=\"font-weight: bold;letter-spacing: 1.2px;background-color: #6A6C6F;border:none;color:black\">
+                        <a href=\"{{ path('arbitres') }}\" class=\"button\">
                             <span class=\"icon\">
-                                <i class=\"fas fa-user-shield\" style=\"font-weight: bold;color:black;\"></i>
+                                <i class=\"fas fa-user-shield\"></i>
                             </span>
                             <span>Explorar..</span>
                         </a>
                     </div>
                     <div class=\"imatgeTorneig is-flex is-justify-content-center\">
-                        <img class=\"playerIcon\" src=\"https://i.dlpng.com/static/png/5289768-referee-svg-png-icon-free-download-530994-onlinewebfontscom-referee-png-980_968_preview.png\" width=\"200min\">
+                        <img src=\"https://www.svgrepo.com/show/277600/referee.svg\" width=\"200min\">
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        \$(document).ready(function (){
+            \$('.button').mouseover(function (){
+                \$(this).children('i').css('color', 'white');
+            });
+        });
+    </script>
     <style>
 
         .playerIcon{
@@ -382,6 +435,43 @@ class __TwigTemplate_815997259e811c28f8391851ffe7fe6a745cd89bc92e4399bae857f06bc
         margin:2%
     }
 
+    .torneigButton > a:hover
+    {
+        color: white;
+    }
+
+    .infoTorneig p
+    {
+        color: rgba(255,255,255,0.6);
+    }
+
+    .button:hover
+    {
+        border: 1px solid white;
+    }
+
+    .icon > i
+    {
+        font-weight: bold;
+        color: black;
+    }
+
+    .torneigButton > a
+    {
+        font-weight: bold;
+        letter-spacing: 1.2px;
+        background-color: white;
+        border:none;
+        color:black
+    }
+
+        .torneigButton > a:hover
+        {
+            background-color: black;
+            color: white;
+            border: none;
+        }
+
      .secondPartTitle{
          background-color: #030303;
          color:white;
@@ -390,12 +480,14 @@ class __TwigTemplate_815997259e811c28f8391851ffe7fe6a745cd89bc92e4399bae857f06bc
          padding-bottom:3%;
      }
 
+
         .infoTorneig p:first-child
         {
             font-size: 1.5rem;
             font-weight: bold;
             color: #DDDDDD;
         }
+
 
         .container > div
         {

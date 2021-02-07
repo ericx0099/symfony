@@ -330,6 +330,7 @@ class __TwigTemplate_ab808f6f431abcdd36a7cab48ff6cc630a14c5e2b49d969b6d24194e078
 
     .fab:hover
     {
+        color: #00d1b2;
         transform: scale(1.5);
         transition: all ease 500ms;
         cursor: pointer;
@@ -426,7 +427,7 @@ class __TwigTemplate_ab808f6f431abcdd36a7cab48ff6cc630a14c5e2b49d969b6d24194e078
 
     public function getDebugInfo()
     {
-        return array (  407 => 100,  397 => 99,  386 => 14,  376 => 13,  190 => 102,  188 => 99,  185 => 95,  175 => 88,  169 => 85,  163 => 81,  153 => 74,  147 => 71,  142 => 68,  140 => 67,  130 => 60,  124 => 57,  118 => 54,  108 => 46,  100 => 42,  92 => 38,  90 => 37,  84 => 34,  68 => 21,  61 => 16,  59 => 13,  45 => 1,);
+        return array (  408 => 100,  398 => 99,  387 => 14,  377 => 13,  190 => 102,  188 => 99,  185 => 95,  175 => 88,  169 => 85,  163 => 81,  153 => 74,  147 => 71,  142 => 68,  140 => 67,  130 => 60,  124 => 57,  118 => 54,  108 => 46,  100 => 42,  92 => 38,  90 => 37,  84 => 34,  68 => 21,  61 => 16,  59 => 13,  45 => 1,);
     }
 
     public function getSourceContext()
@@ -675,6 +676,7 @@ class __TwigTemplate_ab808f6f431abcdd36a7cab48ff6cc630a14c5e2b49d969b6d24194e078
 
     .fab:hover
     {
+        color: #00d1b2;
         transform: scale(1.5);
         transition: all ease 500ms;
         cursor: pointer;
