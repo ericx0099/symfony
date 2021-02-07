@@ -161,10 +161,12 @@ class __TwigTemplate_1504e3d8b8f7d9d20f47c5b6cc11a06b36d409c29e8b6f357024ffdb00f
             </div>
         </div>
     </div>
-    <a href=\"";
-        // line 46
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ronda", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["torneig"]) || array_key_exists("torneig", $context) ? $context["torneig"] : (function () { throw new RuntimeError('Variable "torneig" does not exist.', 46, $this->source); })()), "id", [], "any", false, false, false, 46)]), "html", null, true);
-        echo "\">GO rondes</a>
+    <div class=\"is-flex is-justify-content-center\">
+        <a href=\"";
+        // line 47
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ronda", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["torneig"]) || array_key_exists("torneig", $context) ? $context["torneig"] : (function () { throw new RuntimeError('Variable "torneig" does not exist.', 47, $this->source); })()), "id", [], "any", false, false, false, 47)]), "html", null, true);
+        echo "\" class=\"button is-success\">Start Rondes</a>
+    </div>
     <p class=\"has-text-centered has-text-primary  is-size-2 m-5\">Rànquing inicial</p>
 
     <div class=\"is-flex is-justify-content-center\">
@@ -180,9 +182,9 @@ class __TwigTemplate_1504e3d8b8f7d9d20f47c5b6cc11a06b36d409c29e8b6f357024ffdb00f
             </thead>
             <tbody>
             ";
-        // line 61
+        // line 63
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["torneig"]) || array_key_exists("torneig", $context) ? $context["torneig"] : (function () { throw new RuntimeError('Variable "torneig" does not exist.', 61, $this->source); })()), "theParticipants", [], "any", false, false, false, 61));
+        $context['_seq'] = twig_ensure_traversable((isset($context["jugadors"]) || array_key_exists("jugadors", $context) ? $context["jugadors"] : (function () { throw new RuntimeError('Variable "jugadors" does not exist.', 63, $this->source); })()));
         $context['loop'] = [
           'parent' => $context['_parent'],
           'index0' => 0,
@@ -197,25 +199,25 @@ class __TwigTemplate_1504e3d8b8f7d9d20f47c5b6cc11a06b36d409c29e8b6f357024ffdb00f
             $context['loop']['last'] = 1 === $length;
         }
         foreach ($context['_seq'] as $context["_key"] => $context["jugador"]) {
-            // line 62
+            // line 64
             echo "                <tr>
                     <td>";
-            // line 63
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 63), "html", null, true);
+            // line 65
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 65), "html", null, true);
             echo "</td>
                     <td><a href=\"";
-            // line 64
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("jugador_perfil", ["id" => twig_get_attribute($this->env, $this->source, $context["jugador"], "id", [], "any", false, false, false, 64)]), "html", null, true);
+            // line 66
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("jugador_perfil", ["id" => twig_get_attribute($this->env, $this->source, $context["jugador"], "id", [], "any", false, false, false, 66)]), "html", null, true);
             echo "\">";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jugador"], "nom", [], "any", false, false, false, 64), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jugador"], "nom", [], "any", false, false, false, 66), "html", null, true);
             echo "</a></td>
                     <td>";
-            // line 65
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jugador"], "elo", [], "any", false, false, false, 65), "html", null, true);
+            // line 67
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jugador"], "elo", [], "any", false, false, false, 67), "html", null, true);
             echo "</td>
                     <td>";
-            // line 66
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jugador"], "equip", [], "any", false, false, false, 66), "html", null, true);
+            // line 68
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jugador"], "equip", [], "any", false, false, false, 68), "html", null, true);
             echo "</td>
                 </tr>
             ";
@@ -231,7 +233,7 @@ class __TwigTemplate_1504e3d8b8f7d9d20f47c5b6cc11a06b36d409c29e8b6f357024ffdb00f
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['jugador'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 69
+        // line 71
         echo "            </tbody>
         </table>
     </div>
@@ -301,10 +303,10 @@ class __TwigTemplate_1504e3d8b8f7d9d20f47c5b6cc11a06b36d409c29e8b6f357024ffdb00f
             text-transform: uppercase;
 
         }
-        table a{
+        table a, p a{
             color:#00d1b2;
         }
-        table a:link {
+        table a:link, p a:link {
             color:#00d1b2;
             font-weight: bold;
             text-decoration: none;
@@ -391,7 +393,7 @@ class __TwigTemplate_1504e3d8b8f7d9d20f47c5b6cc11a06b36d409c29e8b6f357024ffdb00f
 
     public function getDebugInfo()
     {
-        return array (  235 => 69,  218 => 66,  214 => 65,  208 => 64,  204 => 63,  201 => 62,  184 => 61,  166 => 46,  155 => 40,  146 => 34,  137 => 28,  128 => 22,  118 => 15,  111 => 10,  101 => 8,  89 => 5,  79 => 4,  60 => 3,  37 => 1,);
+        return array (  237 => 71,  220 => 68,  216 => 67,  210 => 66,  206 => 65,  203 => 64,  186 => 63,  167 => 47,  155 => 40,  146 => 34,  137 => 28,  128 => 22,  118 => 15,  111 => 10,  101 => 8,  89 => 5,  79 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -441,7 +443,9 @@ class __TwigTemplate_1504e3d8b8f7d9d20f47c5b6cc11a06b36d409c29e8b6f357024ffdb00f
             </div>
         </div>
     </div>
-    <a href=\"{{ path(\"ronda\",{'id':torneig.id}) }}\">GO rondes</a>
+    <div class=\"is-flex is-justify-content-center\">
+        <a href=\"{{ path(\"ronda\",{'id':torneig.id}) }}\" class=\"button is-success\">Start Rondes</a>
+    </div>
     <p class=\"has-text-centered has-text-primary  is-size-2 m-5\">Rànquing inicial</p>
 
     <div class=\"is-flex is-justify-content-center\">
@@ -456,7 +460,7 @@ class __TwigTemplate_1504e3d8b8f7d9d20f47c5b6cc11a06b36d409c29e8b6f357024ffdb00f
             </tr>
             </thead>
             <tbody>
-            {% for jugador in torneig.theParticipants %}
+            {% for jugador in jugadors %}
                 <tr>
                     <td>{{ loop.index }}</td>
                     <td><a href=\"{{ path(\"jugador_perfil\",{'id':jugador.id}) }}\">{{ jugador.nom }}</a></td>
@@ -533,10 +537,10 @@ class __TwigTemplate_1504e3d8b8f7d9d20f47c5b6cc11a06b36d409c29e8b6f357024ffdb00f
             text-transform: uppercase;
 
         }
-        table a{
+        table a, p a{
             color:#00d1b2;
         }
-        table a:link {
+        table a:link, p a:link {
             color:#00d1b2;
             font-weight: bold;
             text-decoration: none;

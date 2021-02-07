@@ -43,7 +43,9 @@
             </div>
         </div>
     </div>
-    <a href="{{ path("ronda",{'id':torneig.id}) }}">GO rondes</a>
+    <div class="is-flex is-justify-content-center">
+        <a href="{{ path("ronda",{'id':torneig.id}) }}" class="button is-success">Start Rondes</a>
+    </div>
     <p class="has-text-centered has-text-primary  is-size-2 m-5">Rànquing inicial</p>
 
     <div class="is-flex is-justify-content-center">
@@ -58,7 +60,7 @@
             </tr>
             </thead>
             <tbody>
-            {% for jugador in torneig.theParticipants %}
+            {% for jugador in jugadors %}
                 <tr>
                     <td>{{ loop.index }}</td>
                     <td><a href="{{ path("jugador_perfil",{'id':jugador.id}) }}">{{ jugador.nom }}</a></td>
@@ -135,10 +137,10 @@
             text-transform: uppercase;
 
         }
-        table a{
+        table a, p a{
             color:#00d1b2;
         }
-        table a:link {
+        table a:link, p a:link {
             color:#00d1b2;
             font-weight: bold;
             text-decoration: none;

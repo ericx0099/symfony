@@ -42,7 +42,7 @@ return [
     'torneig_addJugadors' => [['id'], ['_controller' => 'App\\Controller\\TorneigController::addJugadors'], [], [['text', '/addJugadors'], ['variable', '/', '[^/]++', 'id', true], ['text', '/torneigadmin']], [], []],
     'torneig_delete' => [['id'], ['_controller' => 'App\\Controller\\TorneigController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/torneigadmin']], [], []],
     'torneig_deleteJugador' => [['id', 'idJ'], ['_controller' => 'App\\Controller\\TorneigController::deleteJugador'], [], [['text', '/deleteJugador'], ['variable', '/', '[^/]++', 'idJ', true], ['variable', '', '[^/]++', 'id', true], ['text', '/torneigadmin']], [], []],
-    'torneig_gestiorondes' => [['id'], ['_controller' => 'App\\Controller\\TorneigController::gestioRondes'], [], [['text', '/rondes'], ['variable', '', '[^/]++', 'id', true], ['text', '/torneigadmin']], [], []],
+    'torneig_gestiorondes' => [['id'], ['_controller' => 'App\\Controller\\TorneigController::gestioRondes'], [], [['text', '/rondes'], ['variable', '/', '[^/]++', 'id', true], ['text', '/torneigadmin']], [], []],
     'torneig_start' => [['id'], ['_controller' => 'App\\Controller\\TorneigController::startTourn'], [], [['text', '/start'], ['variable', '/', '[^/]++', 'id', true], ['text', '/torneigadmin']], [], []],
     'ronda' => [['id'], ['_controller' => 'App\\Controller\\TorneigController::new_round'], [], [['text', '/newRound'], ['variable', '/', '[^/]++', 'id', true], ['text', '/torneigadmin']], [], []],
     'user_index' => [[], ['_controller' => 'App\\Controller\\UserController::index'], [], [['text', '/user/']], [], []],

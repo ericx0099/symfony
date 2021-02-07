@@ -266,7 +266,7 @@ class TorneigController extends AbstractController
 
 
     /**
-     * @Route("{id}/rondes", name="torneig_gestiorondes", methods={"GET","POST"})
+     * @Route("/{id}/rondes", name="torneig_gestiorondes", methods={"GET","POST"})
      */
     public function gestioRondes(Request $request, Torneig $torneig) : Response
     {
@@ -279,9 +279,13 @@ class TorneigController extends AbstractController
      * @Route("/{id}/start", name="torneig_start", methods={"GET","POST"})
      */
     public function startTourn(Request $request,Torneig $torneig){
+        $arrayJujadors = $torneig->getTheParticipants();
+        usort($arrayJujadors, function($a, $b) {
+            return $a->getElo() < $b->getElo();
+        });
         return $this->render('torneig/go.html.twig',[
             'torneig' => $torneig,
-            /*     'dataa' =>$torneig->getData()->format('Y-m-d')*/
+            'jugadors' => $arrayJujadors
         ]);
     }
 
@@ -371,7 +375,7 @@ class TorneigController extends AbstractController
         $em->persist($torneig);
         $em->flush();
         return $this->render('torneig/rounds.html.twig',[
-            'torneig' => $torneigRepository->findOneBy(array('id'=>$torneig->getId())),
+            'torneig' => $torneig,
             'ronda' => $thisRonda,
         ]);
     }

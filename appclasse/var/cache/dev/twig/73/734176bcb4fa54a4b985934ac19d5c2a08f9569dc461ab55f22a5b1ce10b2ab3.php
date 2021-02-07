@@ -86,7 +86,7 @@ class __TwigTemplate_4878195e17cdbe5b1a5b1f164a05fd2cc9a41c96eafc4512234a8d3d88c
 
         // line 7
         echo "
-        <h1 class=\"heading is-size-2 has-text-centered m-5\">Informació Del Torneig:  <span class=\"has-text-secondary has-text-weight-bold\">";
+    <h1 class=\"heading is-size-2 has-text-centered m-5\">Informació Del Torneig:  <span class=\"has-text-secondary has-text-weight-bold\">";
         // line 8
         ((twig_get_attribute($this->env, $this->source, (isset($context["torneig"]) || array_key_exists("torneig", $context) ? $context["torneig"] : (function () { throw new RuntimeError('Variable "torneig" does not exist.', 8, $this->source); })()), "nom", [], "any", false, false, false, 8)) ? (print (twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["torneig"]) || array_key_exists("torneig", $context) ? $context["torneig"] : (function () { throw new RuntimeError('Variable "torneig" does not exist.', 8, $this->source); })()), "nom", [], "any", false, false, false, 8), "html", null, true))) : (print ("?")));
         echo "</span></h1>
@@ -133,42 +133,21 @@ class __TwigTemplate_4878195e17cdbe5b1a5b1f164a05fd2cc9a41c96eafc4512234a8d3d88c
             </div>
         </div>
     <div class=\"is-flex is-justify-content-center\">
-         <div>
+         <div style =\"width:50%\">
              <p class=\"has-text-weight-bold is-size-4 has-text-centered\">Rondes:</p>
-             <div class=\"is-flex is-justify-content-space-around\">
+             <div class=\"is-flex is-justify-content-space-around\" style=\"background-color: lightgrey;margin-top:1%\">
                  ";
         // line 41
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["torneig"]) || array_key_exists("torneig", $context) ? $context["torneig"] : (function () { throw new RuntimeError('Variable "torneig" does not exist.', 41, $this->source); })()), "rondes", [], "any", false, false, false, 41));
-        $context['loop'] = [
-          'parent' => $context['_parent'],
-          'index0' => 0,
-          'index'  => 1,
-          'first'  => true,
-        ];
-        if (is_array($context['_seq']) || (is_object($context['_seq']) && $context['_seq'] instanceof \Countable)) {
-            $length = count($context['_seq']);
-            $context['loop']['revindex0'] = $length - 1;
-            $context['loop']['revindex'] = $length;
-            $context['loop']['length'] = $length;
-            $context['loop']['last'] = 1 === $length;
-        }
         foreach ($context['_seq'] as $context["_key"] => $context["ronda"]) {
             // line 42
             echo "                     <p><a href=\"";
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ronda_profile", ["id" => twig_get_attribute($this->env, $this->source, $context["ronda"], "id", [], "any", false, false, false, 42)]), "html", null, true);
-            echo "\">Ronda ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 42), "html", null, true);
+            echo "\" style=\"color: #00d1b2\"> Ronda ";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["ronda"], "numRondes", [], "any", false, false, false, 42), "html", null, true);
             echo "</a></p>
                  ";
-            ++$context['loop']['index0'];
-            ++$context['loop']['index'];
-            $context['loop']['first'] = false;
-            if (isset($context['loop']['length'])) {
-                --$context['loop']['revindex0'];
-                --$context['loop']['revindex'];
-                $context['loop']['last'] = 0 === $context['loop']['revindex0'];
-            }
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['ronda'], $context['_parent'], $context['loop']);
@@ -407,7 +386,7 @@ class __TwigTemplate_4878195e17cdbe5b1a5b1f164a05fd2cc9a41c96eafc4512234a8d3d88c
             border-bottom-right-radius:3px;
         }
     </style>
-";
+        ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -428,7 +407,7 @@ class __TwigTemplate_4878195e17cdbe5b1a5b1f164a05fd2cc9a41c96eafc4512234a8d3d88c
 
     public function getDebugInfo()
     {
-        return array (  286 => 83,  277 => 79,  264 => 78,  257 => 74,  253 => 73,  247 => 72,  243 => 71,  240 => 70,  233 => 66,  229 => 65,  223 => 64,  219 => 63,  216 => 62,  213 => 61,  195 => 60,  177 => 44,  158 => 42,  141 => 41,  127 => 32,  118 => 26,  109 => 20,  100 => 14,  91 => 8,  88 => 7,  78 => 6,  59 => 4,  36 => 1,);
+        return array (  265 => 83,  256 => 79,  243 => 78,  236 => 74,  232 => 73,  226 => 72,  222 => 71,  219 => 70,  212 => 66,  208 => 65,  202 => 64,  198 => 63,  195 => 62,  192 => 61,  174 => 60,  156 => 44,  145 => 42,  141 => 41,  127 => 32,  118 => 26,  109 => 20,  100 => 14,  91 => 8,  88 => 7,  78 => 6,  59 => 4,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -440,7 +419,7 @@ class __TwigTemplate_4878195e17cdbe5b1a5b1f164a05fd2cc9a41c96eafc4512234a8d3d88c
 
 {% block body %}
 
-        <h1 class=\"heading is-size-2 has-text-centered m-5\">Informació Del Torneig:  <span class=\"has-text-secondary has-text-weight-bold\">{{ torneig.nom ? torneig.nom : '?' }}</span></h1>
+    <h1 class=\"heading is-size-2 has-text-centered m-5\">Informació Del Torneig:  <span class=\"has-text-secondary has-text-weight-bold\">{{ torneig.nom ? torneig.nom : '?' }}</span></h1>
         <div class=\"is-flex is-justify-content-center p-3\" style=\"background-color: #e6e6e6; margin-left: 1.5%; margin-right: 1.5% \">
             <div class=\"is-flex is-justify-content-space-evenly \" style=\"width: 50%\" >
                 <div class=\"level-item has-text-centered\">
@@ -470,11 +449,11 @@ class __TwigTemplate_4878195e17cdbe5b1a5b1f164a05fd2cc9a41c96eafc4512234a8d3d88c
             </div>
         </div>
     <div class=\"is-flex is-justify-content-center\">
-         <div>
+         <div style =\"width:50%\">
              <p class=\"has-text-weight-bold is-size-4 has-text-centered\">Rondes:</p>
-             <div class=\"is-flex is-justify-content-space-around\">
+             <div class=\"is-flex is-justify-content-space-around\" style=\"background-color: lightgrey;margin-top:1%\">
                  {% for ronda in torneig.rondes %}
-                     <p><a href=\"{{ path(\"ronda_profile\",{'id':ronda.id}) }}\">Ronda {{ loop.index }}</a></p>
+                     <p><a href=\"{{  path(\"ronda_profile\",{ 'id':ronda.id }) }}\" style=\"color: #00d1b2\"> Ronda {{ ronda.numRondes }}</a></p>
                  {% endfor %}
              </div>
          </div>
@@ -639,6 +618,6 @@ class __TwigTemplate_4878195e17cdbe5b1a5b1f164a05fd2cc9a41c96eafc4512234a8d3d88c
             border-bottom-right-radius:3px;
         }
     </style>
-{% endblock %}", "torneig/profile.html.twig", "/app/appclasse/templates/torneig/profile.html.twig");
+        {% endblock %}", "torneig/profile.html.twig", "/app/appclasse/templates/torneig/profile.html.twig");
     }
 }
