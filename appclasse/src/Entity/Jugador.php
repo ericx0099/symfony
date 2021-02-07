@@ -219,4 +219,10 @@ class Jugador
 
         return $this;
     }
+
+    public function addActPunts(?float $actPunts): self
+    {
+        $this->actPunts += $actPunts;
+        return $this;
+    }
 }

@@ -1,1 +1,35 @@
-<h1>{{ ronda.id }}</h1>
+<h1>Ronde num {{ ronda.id }}</h1>
+<table class="table">
+    <thead>
+    <tr>
+        {#<th>Elo</th>#}
+        <th>Jugador Blanques</th>
+        <th>Punt Blanques</th>
+        <th></th>
+        <th>Punt Negres</th>
+        <th>Jugador Negrs</th>
+        {#<th>Elo</th>#}
+    </tr>
+    </thead>
+    <tbody>
+    {% for taula in ronda.partides %}
+        <tr>
+            <td>{{ taula.jugadorB }}</td>
+            <td>{{ taula.puntB }}</td>
+            <td> - </td>
+            <td>{{ taula.puntN}}</td>
+            <td>{{ taula.jugadorN }}</td>
+            {#<td>
+                <a href="{{ path('torneig_show', {'id': torneig.id}) }}">show</a>
+                <a href="{{ path('torneig_edit', {'id': torneig.id}) }}">edit</a>
+                <a href="{{ path('torneig_addJugadors', {'id': torneig.id}) }}">Afegir Jugador</a>
+                <a href="{{ path('torneig_gestiorondes', {'id': torneig.id}) }}">Gestionar Rondes</a>
+            </td>#}
+        </tr>
+    {% else %}
+        <tr>
+            <td colspan="6">no records found</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
